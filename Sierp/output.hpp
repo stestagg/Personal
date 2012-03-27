@@ -3,7 +3,7 @@
 
 #include "common.hpp"
 #include <stdint.h> 
-#import <libpng/png.h>
+#include <libpng/png.h>
 
 namespace png{
 	static const int PENDING = -1;
@@ -54,6 +54,7 @@ namespace png{
 
 			png_write_png(png_ptr, info_ptr, transforms, NULL);
 			status = OK;
+			fclose(fp);
 			return;
 		};
 

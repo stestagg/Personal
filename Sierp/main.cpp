@@ -5,18 +5,18 @@
 #include <math.h>
 
 
-static const size_t WIDTH = 4000;
-static const size_t HEIGHT = 4000;
-static const uint8_t STEP = 1;
+static const size_t WIDTH = 1000;
+static const size_t HEIGHT = 1000;
+static const uint8_t STEP = 5;
 static const size_t ITERS = 50000000000;
-static const size_t NUM_SATURATES = 1000;
+static const size_t NUM_SATURATES = 10;
 
 int main(){
-	
+	#pragma omp parallel for
 	for (int nn=3; nn<20; ++nn){
 		size_t left = NUM_SATURATES;
-		grid<uint8_t> grd(WIDTH,HEIGHT);
-		grd.fill(255);
+		grid<uint16_t> grd(WIDTH,HEIGHT);
+		grd.fill(UINT16_MAX);
 
 		sierp::Model<double> mm;
 		mm.points.push_back(sierp::Point<double>(0.5,0.5));
@@ -25,7 +25,7 @@ int main(){
 		for (int i=0; i< ITERS; ){
 			mm.next();
 			sierp::Point<size_t> pos = mm.get_position(WIDTH, HEIGHT);	
-			uint8_t &point = grd.get_point(pos.x, pos.y);
+			uint16_t &point = grd.get_point(pos.x, pos.y);
 			if (point >= STEP) point -= STEP;
 			else{
 				left -= 1;
