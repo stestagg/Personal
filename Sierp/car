@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set +e
+
+g++ -O2 -lpng main.cpp mtrand.cpp -o mand
+./mand
