@@ -17,8 +17,8 @@ int render(grid<uint8_t> &output){
     
     
     
-    grid<uint8_t> *current = a;
-    grid<uint8_t> *next = b;
+    grid<uint8_t> *current = &a;
+    grid<uint8_t> *next = &b;
     sierp::Point<uint8_t> points[3];
     points[0].x = 0; points[0].y = HEIGHT;
     points[1].x = WIDTH; points[1].y = HEIGHT;
@@ -41,12 +41,16 @@ int render(grid<uint8_t> &output){
                         uint8_t &tval = output.get_point(new_x, new_y);
                         if (tval < val) return;
                         tval -= val;
-                        next.get_point(new_x, new_y) += val;
+                        (*next).get_point(new_x, new_y) += val;
+                    }
                 }
             }
         }
+        grid<uint8_t>*temp = next;
+        next = current;
+        current = temp;
+        next.fill(0);
     }
-}
 
 int main(int argc, const char **argv){
     
