@@ -11,18 +11,6 @@ static const uint16_t STEP = 500;
 static const size_t ITERS = 50000000000;
 static const size_t NUM_SATURATES = 10;
 
-int main(int argc, const char **argv){
-	
-    grid<uint8_t> output(WIDTH, HEIGHT);
-    render(output);
-    
-    char file_name[255];
-	sprintf(file_name, "out.png");
-	printf("Output\n");	
-	png::write(output, file_name);
-
-};
-
 int render(grid<uint8_t> &output){
     grid<uint8_t> a(WIDTH, HEIGHT);
     grid<uint8_t> b(WIDTH, HEIGHT);
@@ -59,3 +47,15 @@ int render(grid<uint8_t> &output){
         }
     }
 }
+
+int main(int argc, const char **argv){
+    
+    grid<uint8_t> output(WIDTH, HEIGHT);
+    render(output);
+    
+    char file_name[255];
+	sprintf(file_name, "out.png");
+	printf("Output\n");	
+	png::write(output, file_name);
+
+};
