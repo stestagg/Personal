@@ -33,7 +33,7 @@ int render(grid<uint8_t> &output){
         for (int y=0; y<HEIGHT; ++y){
             size_t y_ofs = y * WIDTH;
             for (int x=0; x<WIDTH; ++x){
-                uint8_t val = current[x + y_ofs];
+                uint8_t val = (*current)[x + y_ofs];
                 if (val > 0){
                     for (int c=0; c < 3; ++c){
                         size_t new_x = (x + points[c].x) / 2;
