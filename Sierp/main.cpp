@@ -13,6 +13,10 @@ static const size_t NUM_SATURATES = 10;
 
 int main(int argc, const char **argv){
 	
+    grid<uint8_t> a(WIDTH, HEIGHT);
+    grid<uint8_t> b(WIDTH, HEIGHT);
+    
+    a.fill(0);
     
     
     int blanks = atol(argv[1]);
