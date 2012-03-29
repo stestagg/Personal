@@ -12,11 +12,10 @@ static const size_t ITERS = 50000000000;
 static const size_t NUM_SATURATES = 10;
 
 int main(int argc, const char **argv){
-	if (argc != 2){
-		printf("Usage: prog num_blanks\n");
-		return 1;
-	}
-	int blanks = atol(argv[1]);
+	
+    
+    
+    int blanks = atol(argv[1]);
 	printf("Blanks: %i\n", blanks);
 
 		for (int nn=3; nn<20; ++nn){
