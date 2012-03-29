@@ -10,6 +10,7 @@ static const size_t HEIGHT = 500;
 static const uint16_t STEP = 500;
 static const size_t ITERS = 50000000000;
 static const size_t NUM_SATURATES = 10;
+static const size_t POINTS = 4; 
 
 int render(grid<uint8_t> &output){
     grid<uint8_t> a(WIDTH, HEIGHT);
@@ -19,10 +20,16 @@ int render(grid<uint8_t> &output){
     
     grid<uint8_t> *current = &a;
     grid<uint8_t> *next = &b;
-    sierp::Point<size_t> points[3];
-    points[0].x = 0; points[0].y = HEIGHT;
-    points[1].x = WIDTH; points[1].y = HEIGHT;
-    points[2].x = WIDTH/2; points[2].y = 0;
+    
+    sierp::Model<double> model;
+    model.points.push_back(Point<double>(0.5, 0.5));
+    model.points.add_regular(POINTS-1);
+    
+    sierp::Point<size_t> points[POINTS];
+    for (int c=0; c<POINTS; ++c){
+        points[c].x = (size_t)(model.points[c].x * WIDTH);
+        points[c].y = (size_t)(model.points[c].y * HEIGHT);
+    }
     
     a.fill(0);
     a.get_point(WIDTH/2, HEIGHT/2) = 1;
@@ -35,7 +42,7 @@ int render(grid<uint8_t> &output){
             for (int x=0; x<WIDTH; ++x){
                 uint8_t val = (*current)[x + y_ofs];
                 if (val > 0){
-                    for (int c=0; c < 3; ++c){
+                    for (int c=0; c < POINTS; ++c){
                         size_t new_x = (x + points[c].x) / 2;
                         size_t new_y = (y + points[c].y) / 2;
                         uint8_t &tval = output.get_point(new_x, new_y);
