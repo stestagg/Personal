@@ -41,6 +41,9 @@ public:
 		}
 	}
 
+    T &operator[](size_t index){
+        return self.data[index];
+    }
 
 	T &get_point(size_t x, size_t y){
 		return this->data[x + (y * width)];
