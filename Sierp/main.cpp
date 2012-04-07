@@ -2,6 +2,7 @@
 #include "common.hpp"
 #include "output.hpp"
 #include "sierp.hpp"
+#include "color.hpp"
 #include <math.h>
 
 
@@ -10,6 +11,7 @@ static const size_t HEIGHT = 500;
 static const uint16_t STEP = 500;
 static const size_t ITERS = 50000000000;
 static const size_t NUM_SATURATES = 10;
+static const double OFFSET = 0.1;
 
 int main(int argc, const char **argv){
 	if (argc != 2){

@@ -73,7 +73,7 @@ namespace png{
 
 	};
 
-	template <> void WritePng<rgba>::setup_png(){
+	template <> void WritePng<rgba<uint8_t> >::setup_png(){
 		png_set_IHDR(png_ptr, info_ptr, grd->width, grd->height,
        				8, PNG_COLOR_TYPE_RGBA, PNG_INTERLACE_NONE,
        				PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT); 
