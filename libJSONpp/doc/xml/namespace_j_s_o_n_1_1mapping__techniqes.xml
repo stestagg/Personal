@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="namespace_j_s_o_n_1_1mapping__techniqes" kind="namespace">
+    <compoundname>JSON::mapping_techniqes</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_j_s_o_n_1_1mapping__techniqes_1e5252c32051d12d5341d247291ec6f58" prot="public" static="no">
+        <name>mapping_techniqes</name>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniqes_1e5252c32051d12d5341d247291ec6f5808c57e2fa7c3612be3765d5cea6c3425" prot="public">
+          <name>unmapped</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniqes_1e5252c32051d12d5341d247291ec6f58b5be32b504bd9844d3918edfe6f20664" prot="public">
+          <name>direct</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniqes_1e5252c32051d12d5341d247291ec6f5826522d3ab8e1482fbe1727fdfa1a955d" prot="public">
+          <name>mmap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="27" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="27" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="26"/>
+  </compounddef>
+</doxygen>

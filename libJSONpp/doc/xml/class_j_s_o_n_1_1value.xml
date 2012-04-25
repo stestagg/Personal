@@ -1,0 +1,1561 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="class_j_s_o_n_1_1value" kind="class" prot="public">
+    <compoundname>JSON::value</compoundname>
+    <includes local="no">value.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_j_s_o_n_1_1value_127497b62d6da4f7824d6ab2cf4381c1e" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" kindref="member">datatype::dt</ref></type>
+        <definition>datatype::dt JSON::value::dt</definition>
+        <argsstring></argsstring>
+        <name>dt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="103" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1value_135c0319d8ab716876096ce8e1a0ec71d" prot="private" static="no" mutable="no">
+        <type><ref refid="union_j_s_o_n_1_1dataptr" kindref="compound">dataptr</ref></type>
+        <definition>dataptr JSON::value::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="104" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref></type>
+        <definition>value value::nullval</definition>
+        <argsstring></argsstring>
+        <name>nullval</name>
+        <briefdescription>
+<para>Used by any function that should return a reference to a <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> but may not be able to, for example in search functions. It is a major hack, but to test for a valid response from these functions, compare the address of the returned reference to this variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="114" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1d08b4c900efc427c06b41a981939393c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" kindref="member">datatype::dt</ref></type>
+        <definition>datatype::dt value::getdatatype</definition>
+        <argsstring>()</argsstring>
+        <name>getdatatype</name>
+        <briefdescription>
+<para>returns the curent <ref refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" kindref="member">datatype::dt</ref> of this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>one</bold> of the values in JSON::dataype::dt </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="116" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1117" bodyend="1119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_13a9e44d9a1b41d63e77cdf961a4dc664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setstring</definition>
+        <argsstring>()</argsstring>
+        <name>setstring</name>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an empty string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="118" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="500" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1640f0e2626ba280e61d2d642a8e9f41d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setstring</definition>
+        <argsstring>(const wchar_t *newval)</argsstring>
+        <name>setstring</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a string containing a copy of <computeroutput>newval</computeroutput>. Character set conversions between UTF-8 and Unicode will be handled automatically. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="119" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="515" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_190d7846ba03921b0f37b981b8604d437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setstring</definition>
+        <argsstring>(const std::wstring &amp;newval)</argsstring>
+        <name>setstring</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a string containing a copy of <computeroutput>newval</computeroutput>. Character set conversions between UTF-8 and Unicode will be handled automatically. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="120" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="532" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1e8deed99bd9ac3fab920e66120f6ff89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setstring</definition>
+        <argsstring>(const char *nval)</argsstring>
+        <name>setstring</name>
+        <param>
+          <type>const char *</type>
+          <declname>nval</declname>
+          <defname>newval</defname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a string containing a copy of <computeroutput>newval</computeroutput>. Character set conversions between UTF-8 and Unicode will be handled automatically. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="121" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="549" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_17e9e9f889f3d5cb40a5c4e07a3d5fb8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setstring</definition>
+        <argsstring>(const std::string &amp;newval)</argsstring>
+        <name>setstring</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a string containing a copy of <computeroutput>newval</computeroutput>. Character set conversions between UTF-8 and Unicode will be handled automatically. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="122" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="566" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_163b5aaae241ca9ca1631b02bd2c127e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setint</definition>
+        <argsstring>()</argsstring>
+        <name>setint</name>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an integer JSON Number. The float is not initialised to any specific number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="124" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="598" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1befee3582d3174f28a7f1862a7bf9686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setfloat</definition>
+        <argsstring>()</argsstring>
+        <name>setfloat</name>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a floating point JSON Number. The float is not initialised to any specific number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="125" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="583" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_16074f585985cf33e6d4f3e5163d33a4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setnumber</definition>
+        <argsstring>(int64_t newval)</argsstring>
+        <name>setnumber</name>
+        <param>
+          <type>int64_t</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an integer JSON Number. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is not available if the compile-time switch JSON_NO_int64 is defined</para><para><simplesect kind="return"><para><bold>true</bold> if the new data matches <computeroutput>newval</computeroutput> allocation error exceptions in the stdlib will be passed through. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="127" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="616" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1233ef2435ad31fb89146463907910cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(int64_t)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>int64_t</type>
+          <defname>newval</defname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an integer JSON Number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the new data matches <computeroutput>newval</computeroutput> </para></simplesect>
+Previous values are deleted This function is not available if the compile-time switch JSON_NO_int64 is defined </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="128" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="633" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1099a59a50689595a8bac822f9453a824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setnumber</definition>
+        <argsstring>(int newval)</argsstring>
+        <name>setnumber</name>
+        <param>
+          <type>int</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an integer JSON Number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the new data matches <computeroutput>newval</computeroutput> </para></simplesect>
+Previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="130" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="648" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_18a920c78c86a50e57503959d7e7a98ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setnumber</definition>
+        <argsstring>(long newval)</argsstring>
+        <name>setnumber</name>
+        <param>
+          <type>long</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an integer JSON Number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the new data matches <computeroutput>newval</computeroutput> </para></simplesect>
+Previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="131" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="664" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_10f501197f5aa7179e663a5db92bb0db5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setnumber</definition>
+        <argsstring>(double newval)</argsstring>
+        <name>setnumber</name>
+        <param>
+          <type>double</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an floating point JSON Number. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the new data matches <computeroutput>newval</computeroutput> </para></simplesect>
+Previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="132" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="680" bodyend="686"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_143a95f326cacfa97355aa6462c83ee45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setliteral</definition>
+        <argsstring>()</argsstring>
+        <name>setliteral</name>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Literal(literals::literals), and initialises it to <emphasis>null</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="134" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="697" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1461a22703d5df3684deb75af26143984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setliteral</definition>
+        <argsstring>(literals::literals newval)</argsstring>
+        <name>setliteral</name>
+        <param>
+          <type><ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">literals::literals</ref></type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Literal(literals::literals), and initialises it to newval [one of: true, false, or null]. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="135" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="712" bodyend="717"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_14a47a1343623d3b5bbb893abbc6f1fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setliteral</definition>
+        <argsstring>(bool newval)</argsstring>
+        <name>setliteral</name>
+        <param>
+          <type>bool</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Literal(literals::literals), and initialises it to newval [one of: true or false]. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="136" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="728" bodyend="733"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_15ec5f1419b16fff3709ad8dc5220fcbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setarray</definition>
+        <argsstring>()</argsstring>
+        <name>setarray</name>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an empty JSON Array. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="138" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="744" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1aa5caec4d0e491c27c8062761cbde3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setarray</definition>
+        <argsstring>(const raw_array_t &amp;newval)</argsstring>
+        <name>setarray</name>
+        <param>
+          <type>const <ref refid="stdcontainers_8h_14fe8a3fd31df9699d616664bad4be235" kindref="member">raw_array_t</ref> &amp;</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Array, and clones <computeroutput>newval</computeroutput> by recursively copying it&apos;s members. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="139" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="760" bodyend="765"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1014c45c629f0df1b5bb068438394de45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setarray</definition>
+        <argsstring>(raw_array_t *newval)</argsstring>
+        <name>setarray</name>
+        <param>
+          <type><ref refid="stdcontainers_8h_14fe8a3fd31df9699d616664bad4be235" kindref="member">raw_array_t</ref> *</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>THIS METHOD IS DANGEROUS. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+The <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is set directly to the raw JSON Array pointed to by <computeroutput>newval</computeroutput>. If <computeroutput>newval</computeroutput> is owned by another JSON <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>, then you will get double frees AND YOUR PROGRAM WILL CRASH. This <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> will delete <computeroutput>newval</computeroutput> when it finishes with it. This should only be used for optimisation purposes, and very carefully.</para><para>Any previous values are deleted This method is only available if JSON_UNSAFE_FUNS is defined at compile-time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="141" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="783" bodyend="788"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_137a67c4d6f86ca8882173cae8e7c0c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setobject</definition>
+        <argsstring>(raw_object_t *newval)</argsstring>
+        <name>setobject</name>
+        <param>
+          <type><ref refid="stdcontainers_8h_1ce1309c9afaba2cf388b9425b3d3ef1a" kindref="member">raw_object_t</ref> *</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>THIS METHOD IS DANGEROUS. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+The <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is set directly to the raw JSON Object pointed to by <computeroutput>newval</computeroutput>. If <computeroutput>newval</computeroutput> is owned by another <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>, then you will get double frees AND YOUR PROGRAM WILL CRASH. This <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> will delete <computeroutput>newval</computeroutput> when it finishes with it. This should only be used for optimisation purposes, and very carefully.</para><para>Any previous values are deleted This method is only available if JSON_UNSAFE_FUNS is defined at compile-time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="143" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="806" bodyend="811"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_15b8f5414f33acb66534cfcb7d6a0d6ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setobject</definition>
+        <argsstring>()</argsstring>
+        <name>setobject</name>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to an empty JSON Object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="145" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="823" bodyend="828"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1df88bb12a7cf0b636b6240bf262f9e23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setobject</definition>
+        <argsstring>(const raw_object_t &amp;newval)</argsstring>
+        <name>setobject</name>
+        <param>
+          <type>const <ref refid="stdcontainers_8h_1ce1309c9afaba2cf388b9425b3d3ef1a" kindref="member">raw_object_t</ref> &amp;</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Object, and clones <computeroutput>newval</computeroutput> by recursively copying it&apos;s members. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="146" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="839" bodyend="844"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_18d312e9a28a7a3f931f71bec837f1ad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::setdt</definition>
+        <argsstring>(datatype::dt nv)</argsstring>
+        <name>setdt</name>
+        <param>
+          <type><ref refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" kindref="member">datatype::dt</ref></type>
+          <declname>nv</declname>
+        </param>
+        <briefdescription>
+<para>Deletes the existing <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>, and sets the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a new type, as specified by <computeroutput>nv</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>the</computeroutput> result of calling: setarray, setnumber, setliteral, setobject, or setstring depeding on the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> of <computeroutput>nv</computeroutput> </para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="148" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="855" bodyend="876"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1d393ba086ec2302bb8123408da6c25bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(int)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>int</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_1099a59a50689595a8bac822f9453a824" kindref="member">value::setnumber(int)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="150" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="886" bodyend="889"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1f2a59315c2f819105c41de25d07c4929" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(long)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>long</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_18a920c78c86a50e57503959d7e7a98ba" kindref="member">value::setnumber(long)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="151" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="894" bodyend="897"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_11151dedcad9e636917020a6aad300ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(float)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>float</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_10f501197f5aa7179e663a5db92bb0db5" kindref="member">value::setnumber(double)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="153" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="902" bodyend="905"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1fac21995d597a111ee17833001cc8602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(double)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>double</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_10f501197f5aa7179e663a5db92bb0db5" kindref="member">value::setnumber(double)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="154" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="911" bodyend="914"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1138a2856690bf532cc46e6fa63368ca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const char *</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_1e8deed99bd9ac3fab920e66120f6ff89" kindref="member">value::setstring(const char *)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="156" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="920" bodyend="923"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1d4ad9121d85f2f776d6349d1a8bc5dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(const wchar_t *)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const wchar_t *</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_1640f0e2626ba280e61d2d642a8e9f41d" kindref="member">value::setstring(const wchar_t *)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="157" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="928" bodyend="931"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_190dbbd517409af9932bc05a0bb14d615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(const std::wstring &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_190d7846ba03921b0f37b981b8604d437" kindref="member">value::setstring(const std::wstring&amp;)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="158" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="937" bodyend="940"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_15df895dc23ca97fcf9b790f34aab3b4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_17e9e9f889f3d5cb40a5c4e07a3d5fb8c" kindref="member">value::setstring(const std::string &amp;)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="159" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="946" bodyend="949"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1627a27ce3bc784888ffc65438bb6c716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(bool)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>bool</type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_14a47a1343623d3b5bbb893abbc6f1fe8" kindref="member">value::setliteral(bool)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="161" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="955" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1e0c5a46ec9dd1fe3d678b5e11b1754fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator=</definition>
+        <argsstring>(literals::literals)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">literals::literals</ref></type>
+          <defname>v</defname>
+        </param>
+        <briefdescription>
+<para>Wrapper for <ref refid="class_j_s_o_n_1_1value_1461a22703d5df3684deb75af26143984" kindref="member">value::setliteral(literals::literals)</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="162" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="964" bodyend="967"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1cc4898d3cee6c1e81e491bd7aacc5c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::addvalue</definition>
+        <argsstring>(const value &amp;newval)</argsstring>
+        <name>addvalue</name>
+        <param>
+          <type>const <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>Adds a copy of <computeroutput>newval</computeroutput> to the end of the JSON array. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> was added. <bold>false</bold> if this is of the wrong <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref></para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="164" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="983" bodyend="987"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1823556b36d4e49f9c9bc82970bd3d42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::addvalue</definition>
+        <argsstring>(const wchar_t *newname, const value &amp;newval)</argsstring>
+        <name>addvalue</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>newname</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>sets the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> this[<computeroutput>newname</computeroutput>] to a copy of <computeroutput>newval</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> was added. <bold>false</bold> if this is not a JSON object <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref></para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="165" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1077" bodyend="1084"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1ac8f99cc58ff59ee0a75f001341c3b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::addvalue</definition>
+        <argsstring>(const char *newname, const value &amp;newval)</argsstring>
+        <name>addvalue</name>
+        <param>
+          <type>const char *</type>
+          <declname>newname</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>sets the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> this[<computeroutput>newname</computeroutput>] to a copy of <computeroutput>newval</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> was added. <bold>false</bold> if this is not a JSON object <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref></para></simplesect>
+Any previous values are deleted </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="166" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1096" bodyend="1103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1348c648d04f273e4767695f648b7b29f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::addvalue</definition>
+        <argsstring>(value *newval)</argsstring>
+        <name>addvalue</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>THIS METHOD IS DANGEROUS. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> was added successfully. <bold>false</bold> if this is not a JSON array.</para></simplesect>
+<computeroutput>newval</computeroutput> is appended directly onto this array. If <computeroutput>newval</computeroutput> is owned by another JSON <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>, then you will get double frees AND YOUR PROGRAM WILL CRASH. This <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> will delete <computeroutput>newval</computeroutput> when it finishes with it.</para><para>This should only be used for optimisation purposes, and very carefully.</para><para>Any previous values are deleted This method is only available if JSON_UNSAFE_FUNS is defined at compile-time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="168" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1008" bodyend="1012"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_129469a2dc6a3bf9aac78ae8fc7a634d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::addvalue</definition>
+        <argsstring>(const char *newname, value *newval)</argsstring>
+        <name>addvalue</name>
+        <param>
+          <type>const char *</type>
+          <declname>newname</declname>
+        </param>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>THIS METHOD IS DANGEROUS. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> was added successfully. <bold>false</bold> if this is not a JSON object.</para></simplesect>
+<computeroutput>newval</computeroutput> is added directly into this JSON object, using <computeroutput>newname</computeroutput> as a key. A copy of <computeroutput>newname</computeroutput> will be converted into the correct character encoding if neccessary If <computeroutput>newval</computeroutput> is owned by another JSON <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>, then you will get double frees AND YOUR PROGRAM WILL CRASH. This <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> will delete <computeroutput>newval</computeroutput> when it finishes with it.</para><para>This should only be used for optimisation purposes, and very carefully.</para><para>Any previous values are deleted This method is only available if JSON_UNSAFE_FUNS is defined at compile-time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="169" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1057" bodyend="1064"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1f76ae8e6e2809066ba71c5f59e0a7fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::addvalue</definition>
+        <argsstring>(const wchar_t *newname, value *newval)</argsstring>
+        <name>addvalue</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>newname</declname>
+        </param>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+          <declname>newval</declname>
+        </param>
+        <briefdescription>
+<para>THIS METHOD IS DANGEROUS. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> was added successfully. <bold>false</bold> if this is not a JSON object.</para></simplesect>
+<computeroutput>newval</computeroutput> is added directly into this JSON object, using <computeroutput>newname</computeroutput> as a key. A copy of <computeroutput>newname</computeroutput> will be converted into the correct character encoding if neccessary If <computeroutput>newval</computeroutput> is owned by another JSON <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>, then you will get double frees AND YOUR PROGRAM WILL CRASH. This <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> will delete <computeroutput>newval</computeroutput> when it finishes with it.</para><para>This should only be used for optimisation purposes, and very carefully.</para><para>Any previous values are deleted This method is only available if JSON_UNSAFE_FUNS is defined at compile-time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="170" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1033" bodyend="1037"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1ad8500f20d470799ec32d440bbe77256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::deletechild</definition>
+        <argsstring>(value *val)</argsstring>
+        <name>deletechild</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+          <declname>val</declname>
+          <defname>dval</defname>
+        </param>
+        <briefdescription>
+<para>Looks to see if this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> [must be array or object] contains the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> pointed to by <computeroutput>val</computeroutput>. If it does, then dval is removed from the list and deleted. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is found and deleted <bold>false</bold> if the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="175" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="336" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1bc670c19e6898c7fcfe990a60f9be3a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::deletechild</definition>
+        <argsstring>(const wchar_t *name)</argsstring>
+        <name>deletechild</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Searches this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> [must be a JSON object] for a child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> with name <computeroutput>name</computeroutput>. If found, the child is deleted and removed from the container. Automatic Utf-8 &lt;-&gt; Unicode conversion is done where neccessary. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is found and deleted <bold>false</bold> if the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="176" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="375" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_17184ffd187b52b97aba4aa533a8f02da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::deletechild</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>deletechild</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Searches this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> [must be a JSON object] for a child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> with name <computeroutput>name</computeroutput>. If found, the child is deleted and removed from the list. Automatic Utf-8 &lt;-&gt; Unicode conversion is done where neccessary. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is found and deleted <bold>false</bold> if the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="177" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="400" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_131ca1af8ecc1ebe01e23590ce7bf7b8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::getchild</definition>
+        <argsstring>(const wchar_t *name)</argsstring>
+        <name>getchild</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>shallow searches for a child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> whose name matches <computeroutput>name</computeroutput>. <computeroutput>this</computeroutput> must be a JSON object </para>        </briefdescription>
+        <detaileddescription>
+<para>If no such child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is found, a new <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is created with the specified <computeroutput>name</computeroutput>, and returned instead.</para><para><simplesect kind="return"><para>A reference to the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>. WARNING, if <computeroutput>this</computeroutput>, is deleted, or <computeroutput>this</computeroutput>[<computeroutput>name</computeroutput>] is deleted, then the reference will become invalid.</para></simplesect>
+We do not do reference counting here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="179" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1133" bodyend="1149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_141950e35843a8b0c8a286b6d7e32dec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::getchild</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>getchild</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>shallow searches for a child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> whose name matches <computeroutput>name</computeroutput>. <computeroutput>this</computeroutput> must be a JSON object </para>        </briefdescription>
+        <detaileddescription>
+<para>If no such child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is found, a new <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is created with the specified <computeroutput>name</computeroutput>, and returned instead.</para><para><simplesect kind="return"><para>A reference to the child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>. WARNING, if <computeroutput>this</computeroutput>, is deleted, or <computeroutput>this</computeroutput>[<computeroutput>name</computeroutput>] is deleted, then the reference will become invalid.</para></simplesect>
+We do not do reference counting here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="180" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1163" bodyend="1179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_183084f869fd06f99f5974135c0418f45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+        <definition>value * value::childexists</definition>
+        <argsstring>(value *val)</argsstring>
+        <name>childexists</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+          <declname>val</declname>
+          <defname>aval</defname>
+        </param>
+        <briefdescription>
+<para>shallow searches for a child that <computeroutput>aval</computeroutput> points to. <computeroutput>this</computeroutput> must be a JSON array. </para>        </briefdescription>
+        <detaileddescription>
+<para>TODO: add object searching as well!</para><para><simplesect kind="return"><para>NULL if the child cannot be found.</para></simplesect>
+A pointer to the child if it is found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="182" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1193" bodyend="1201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_10d193b6a96f34c7b29257bab508cbc13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+        <definition>value * value::childexists</definition>
+        <argsstring>(const wchar_t *name)</argsstring>
+        <name>childexists</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>shallow searches for a child with the name <computeroutput>name</computeroutput>. <computeroutput>this</computeroutput> must be a JSON object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>NULL if the child cannot be found.</para></simplesect>
+A pointer to the child if it is found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="183" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1234" bodyend="1244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1af7da9c303e52c1b2f79a3ae46b3c44e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+        <definition>value * value::childexists</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>childexists</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>shallow searches for a child with the name <computeroutput>name</computeroutput>. <computeroutput>this</computeroutput> must be a JSON object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>NULL if the child cannot be found.</para></simplesect>
+A pointer to the child if it is found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="184" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1214" bodyend="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1c552b3cf41b641d3f6f7eaa18b7562fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> *</type>
+        <definition>value * value::childexists</definition>
+        <argsstring>(size_t ofs)</argsstring>
+        <name>childexists</name>
+        <param>
+          <type>size_t</type>
+          <declname>ofs</declname>
+        </param>
+        <briefdescription>
+<para>tries to look up the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> at index <computeroutput>ofs</computeroutput> in a JSON array </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>NULL if the index is out of bounds.</para></simplesect>
+A pointer to the child if it is found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="185" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1256" bodyend="1260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1456130bc7bac52d3ec777d943a733475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::getbool</definition>
+        <argsstring>(bool _default=false)</argsstring>
+        <name>getbool</name>
+        <param>
+          <type>bool</type>
+          <declname>_default</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>returns a bool representing the current value of <computeroutput>this</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns a bool representing the current value of <computeroutput>this</computeroutput> </para></simplesect>
+Reasonable attempts will be made to cast the current value into a bool, using the following rules:</para><para>type is a literal : true if the value is true, otherwise false.</para><para>type is an array or object : true if the array contains members &gt; 0, otherwise false.</para><para>type is a Number : true if the number != 0, otherwise false.</para><para>type is a string: true if the length &gt; 0, otherwise false.</para><para>type is undefined : returns <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> of _default </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="187" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1282" bodyend="1313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_16a82866b5e34cf74d6e2a01e0d761eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">JSON::literals::literals</ref></type>
+        <definition>JSON::literals::literals value::getliteral</definition>
+        <argsstring>(JSON::literals::literals _default=literals::_null)</argsstring>
+        <name>getliteral</name>
+        <param>
+          <type><ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">JSON::literals::literals</ref></type>
+          <declname>_default</declname>
+          <defval>literals::_null</defval>
+        </param>
+        <briefdescription>
+<para>returns a <ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">literals::literals</ref> representing the current value of <computeroutput>this</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current value if the dataype is literal. Otherwise returns <computeroutput>_default</computeroutput> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="188" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1323" bodyend="1327"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1f512893b13b6391a749a328480546ae3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1af23a2fdba3012f0c512f0fc318512d9" kindref="member">aint</ref></type>
+        <definition>aint value::getinteger</definition>
+        <argsstring>(aint _default=0)</argsstring>
+        <name>getinteger</name>
+        <param>
+          <type><ref refid="types_8h_1af23a2fdba3012f0c512f0fc318512d9" kindref="member">aint</ref></type>
+          <declname>_default</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>returns an integer representing the current value of <computeroutput>this</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns an integer representing the current value of <computeroutput>this</computeroutput>.</para></simplesect>
+If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is fixed_number (integer), then the value is returned</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is number (float), then the return is cast to integer.</para><para>Otherwise, the <computeroutput>_default</computeroutput> <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="189" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1344" bodyend="1361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_102e43a565df0fb16a89d9042aa4d0a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1e762403f037733722b8e9808df502694" kindref="member">afloat</ref></type>
+        <definition>afloat value::getfloat</definition>
+        <argsstring>(afloat _default=0)</argsstring>
+        <name>getfloat</name>
+        <param>
+          <type><ref refid="types_8h_1e762403f037733722b8e9808df502694" kindref="member">afloat</ref></type>
+          <declname>_default</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>returns a float representing the current value of <computeroutput>this</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns a float representing the current value of <computeroutput>this</computeroutput>.</para></simplesect>
+If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is fixed_number (integer), then the value is returned</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is number (float), then the value is returned.</para><para>Otherwise, the <computeroutput>_default</computeroutput> <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="190" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1377" bodyend="1402"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1b06b41aaeea6bde872f6a78fd4656c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring &amp;</type>
+        <definition>std::wstring &amp; value::getstring</definition>
+        <argsstring>(std::wstring &amp;dest, bool enquote=false, bool newline=false)</argsstring>
+        <name>getstring</name>
+        <param>
+          <type>std::wstring &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enquote</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>fills <computeroutput>dest</computeroutput> with the string representation of the current value of <computeroutput>this</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is fixed_number (integer), or number (float), then <computeroutput>dst</computeroutput> will contain a string representation of the number, similar to itoa or gcvt.</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is string, then <computeroutput>dst</computeroutput> will contain the string.</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is literal, then <computeroutput>dst</computeroutput> will contain one of: L&quot;true&quot;,L&quot;false&quot; or L&quot;null&quot;</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is array or object, then <computeroutput>dst</computeroutput> will contain valid <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref>, while each child added recursively. [output is only valid <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref> if <computeroutput>enquote</computeroutput> is true]</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This will be filled with the return <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enquote</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If this is true, then strings and object names will be properly quoted and escaped. passing true here will guarantee valid <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If <computeroutput>this</computeroutput> is an object or array, then each child <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> will be output on a separate line.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a reference to dest. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="191" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1429" bodyend="1473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_12ee8f09809f8ab7ecf22bb715512a52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; value::getstring</definition>
+        <argsstring>(std::string &amp;dest, bool enquote=false, bool newline=false)</argsstring>
+        <name>getstring</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enquote</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="192" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1499" bodyend="1544"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_11ec3c8be169fe9e771cf2b0eca0512f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+        <definition>astr &amp; value::getrawstring</definition>
+        <argsstring>()</argsstring>
+        <name>getrawstring</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="194" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1555" bodyend="1558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1f844ddf21e7b3dfa3a76dc95d0d2e5f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stdcontainers_8h_14fe8a3fd31df9699d616664bad4be235" kindref="member">raw_array_t</ref> &amp;</type>
+        <definition>raw_array_t &amp; value::getrawarray</definition>
+        <argsstring>()</argsstring>
+        <name>getrawarray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="195" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1569" bodyend="1572"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1866c618d6fdf890b334b04dccc0f9ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="stdcontainers_8h_1ce1309c9afaba2cf388b9425b3d3ef1a" kindref="member">raw_object_t</ref> &amp;</type>
+        <definition>raw_object_t &amp; value::getrawobject</definition>
+        <argsstring>()</argsstring>
+        <name>getrawobject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="196" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1583" bodyend="1586"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1b5682c6c4c6d674784d477907db0f002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Removes and deletes all child values of this array or object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> has children that were deleted <bold>false</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is of the wrong <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="198" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="425" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_15d9d18b8fb3a99ca8b0428ee01dccf4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator[]</definition>
+        <argsstring>(aint index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="types_8h_1af23a2fdba3012f0c512f0fc318512d9" kindref="member">aint</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>returns a reference to the array child at index <computeroutput>index</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If <computeroutput>this</computeroutput>[<computeroutput>index</computeroutput>] doesn&apos;t exist, then a new <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is created and returned.</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is not array, then a reference to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">JSON::value::nullval</ref> is returned. To detect this, compare a pointer the returned reference to a pointer to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">value::nullval</ref></para><para><simplesect kind="return"><para>A reference to the <computeroutput>index</computeroutput> index of the JSON array. Or a reference to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">value::nullval</ref> if the dataype is wrong. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="200" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1607" bodyend="1621"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_134c85f8d6d8966d2180f6b7c17423f30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator[]</definition>
+        <argsstring>(const wchar_t *name)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>returns a reference to the object child with name <computeroutput>name</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para>If <computeroutput>this</computeroutput>[<computeroutput>name</computeroutput>] doesn&apos;t exist, then a new <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is created and returned.</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is not array, then a reference to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">JSON::value::nullval</ref> is returned. To detect this, compare a pointer the returned reference to a pointer to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">value::nullval</ref></para><para><simplesect kind="return"><para>A reference to the <computeroutput>name</computeroutput> index of the JSON object. Or a reference to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">value::nullval</ref> if the dataype is wrong. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="201" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1637" bodyend="1639"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1ae1eca980b6d982aee255225aa443961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator[]</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>returns a reference to the object child with name <computeroutput>name</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para>If <computeroutput>this</computeroutput>[<computeroutput>name</computeroutput>] doesn&apos;t exist, then a new <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> is created and returned.</para><para>If <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> is not array, then a reference to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">JSON::value::nullval</ref> is returned. To detect this, compare a pointer the returned reference to a pointer to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">value::nullval</ref></para><para><simplesect kind="return"><para>A reference to the <computeroutput>name</computeroutput> index of the JSON object. Or a reference to <ref refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kindref="member">value::nullval</ref> if the dataype is wrong. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="202" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1655" bodyend="1657"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_146df606bec08917c4e21877430241f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+        <definition>value &amp; value::operator+=</definition>
+        <argsstring>(const value &amp;nval)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>wrapper function for value::addvalue(const value) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="203" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="1663" bodyend="1668"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_19a47f0d7f25e91d85a909348d4af3b3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::deletevalue</definition>
+        <argsstring>()</argsstring>
+        <name>deletevalue</name>
+        <briefdescription>
+<para>Deletes the data held in this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>,(same as setting the <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> to undefined). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><bold>true</bold> if the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> was set to undefined. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="206" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="453" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_12d179b8969c45786200dae9d5d67a382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool value::clone</definition>
+        <argsstring>(const value &amp;oldval)</argsstring>
+        <name>clone</name>
+        <param>
+          <type>const <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+          <declname>oldval</declname>
+        </param>
+        <briefdescription>
+<para>Sets this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to be an exact copy of the data in another <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>. Recursively copying arrays and objects. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the copy succeeds, false if an unknown error occurred (i.e. data corruption) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="208" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="287" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_19b3a141b79ff268afa6cd30e677e28f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>()</argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>Basic constructor. Initialises a JSON <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to the &apos;undefined&apos; <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="210" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1e4e47985649c40444141e87a89b230ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(const value &amp;nv)</argsstring>
+        <name>value</name>
+        <param>
+          <type>const <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> &amp;</type>
+          <declname>nv</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor, will clone the contents of <computeroutput>nv</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="211" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1310d33e2d916341640189e6388264e9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(int nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>int</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Number. Internally, uses an Integer for storage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="213" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1ff8d2d773938d101ae4519ba694b8a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(float nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>float</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Number. Internally uses a float/double for storage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="214" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_13250ce6a98230879c957d4affc537ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(double nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>double</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Number. Internally uses a float/double for storage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="215" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="181" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_11756fb7b9666a09605c7840d5f4c4dd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(long nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>long</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Number. Internally uses an integer for storage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="216" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="190" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1e138edf6d8a52bfa539b4552e521aa21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(int64_t nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>int64_t</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a JSON Number. Internally uses an integer for storage. This function is not available if the compile-time switch JSON_NO_int64 is defined. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="218" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="200" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_13612bdc0c0a7a369af3b55860a570e24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(const char *nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>const char *</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a String containing a copy of <computeroutput>nval</computeroutput>. Depending on the compile options, this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> may be converted from UTF-8 into Unicode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="221" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="209" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_10071240328661d15154470bb21bdd4a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(const wchar_t *nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a String containing a copy of <computeroutput>nval</computeroutput>. Depending on the compile options, this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> may be converted from Unicode into UTF-8. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="222" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1bd25e2c9380cb855e882e06f58807df6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(literals::literals nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type><ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">literals::literals</ref></type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a &apos;literal&apos;(<ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">literals::literals</ref>) (i.e. true, false or null). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="224" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="227" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_12f58470f236e595c3c41e37fa451a380" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(bool nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>bool</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to the &apos;literal&apos;(<ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">literals::literals</ref>) true, or false. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="225" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="235" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1f6d4c873b057e57ee7de7150f731c05b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(std::string nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>std::string</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a String containing a copy of <computeroutput>nval</computeroutput>. Depending on the compile options, this string may be converted from UTF-8 into Unicode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="227" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="254" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_13751528c9d3d7ae36eb5bb454016724c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(std::wstring nval)</argsstring>
+        <name>value</name>
+        <param>
+          <type>std::wstring</type>
+          <declname>nval</declname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to a String containing a copy of <computeroutput>nval</computeroutput>. Depending on the compile options, this string may be converted from Unicode into UTF-8. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="228" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="263" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_168e9728f78d6c2a4277d7ca9fc27b212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::value</definition>
+        <argsstring>(datatype::dt)</argsstring>
+        <name>value</name>
+        <param>
+          <type><ref refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" kindref="member">datatype::dt</ref></type>
+          <defname>ndt</defname>
+        </param>
+        <briefdescription>
+<para>Initialises this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> to the <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> specified in <computeroutput>ndt</computeroutput>. Default data values will be used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="230" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1value_1f7fe992dab5a79da320b60c7768238fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>value::~value</definition>
+        <argsstring>(void)</argsstring>
+        <name>~value</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor, will handle freeing all memory associated with this <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="232" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp" bodystart="272" bodyend="274"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents any JSON <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>. A <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> can have any of the basic JSON datatypes, as defined in <ref refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" kindref="member">datatype::dt</ref>. internal data management is handled automatically, along with character encoding conversion between UTF-8 and Unicode. </para>    </briefdescription>
+    <detaileddescription>
+<para>Because of the nature of the JSON specification, only one class is needed to represent all datatypes. For example, a valid JSON file can be expressed as a single JSON &apos;object&apos;. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>JSON::dataptr</label>
+        <link refid="union_j_s_o_n_1_1dataptr"/>
+      </node>
+      <node id="15">
+        <label>JSON::value</label>
+        <link refid="class_j_s_o_n_1_1value"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>val</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>nullval</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="101" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="100" bodyend="233"/>
+    <listofallmembers>
+      <member refid="class_j_s_o_n_1_1value_1cc4898d3cee6c1e81e491bd7aacc5c3e" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>addvalue</name></member>
+      <member refid="class_j_s_o_n_1_1value_1823556b36d4e49f9c9bc82970bd3d42e" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>addvalue</name></member>
+      <member refid="class_j_s_o_n_1_1value_1ac8f99cc58ff59ee0a75f001341c3b10" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>addvalue</name></member>
+      <member refid="class_j_s_o_n_1_1value_1348c648d04f273e4767695f648b7b29f" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>addvalue</name></member>
+      <member refid="class_j_s_o_n_1_1value_129469a2dc6a3bf9aac78ae8fc7a634d0" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>addvalue</name></member>
+      <member refid="class_j_s_o_n_1_1value_1f76ae8e6e2809066ba71c5f59e0a7fe1" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>addvalue</name></member>
+      <member refid="class_j_s_o_n_1_1value_183084f869fd06f99f5974135c0418f45" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>childexists</name></member>
+      <member refid="class_j_s_o_n_1_1value_10d193b6a96f34c7b29257bab508cbc13" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>childexists</name></member>
+      <member refid="class_j_s_o_n_1_1value_1af7da9c303e52c1b2f79a3ae46b3c44e" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>childexists</name></member>
+      <member refid="class_j_s_o_n_1_1value_1c552b3cf41b641d3f6f7eaa18b7562fc" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>childexists</name></member>
+      <member refid="class_j_s_o_n_1_1value_1b5682c6c4c6d674784d477907db0f002" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>clear</name></member>
+      <member refid="class_j_s_o_n_1_1value_12d179b8969c45786200dae9d5d67a382" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>clone</name></member>
+      <member refid="class_j_s_o_n_1_1value_1ad8500f20d470799ec32d440bbe77256" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>deletechild</name></member>
+      <member refid="class_j_s_o_n_1_1value_1bc670c19e6898c7fcfe990a60f9be3a9" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>deletechild</name></member>
+      <member refid="class_j_s_o_n_1_1value_17184ffd187b52b97aba4aa533a8f02da" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>deletechild</name></member>
+      <member refid="class_j_s_o_n_1_1value_19a47f0d7f25e91d85a909348d4af3b3d" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>deletevalue</name></member>
+      <member refid="class_j_s_o_n_1_1value_127497b62d6da4f7824d6ab2cf4381c1e" prot="private" virt="non-virtual"><scope>JSON::value</scope><name>dt</name></member>
+      <member refid="class_j_s_o_n_1_1value_1456130bc7bac52d3ec777d943a733475" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getbool</name></member>
+      <member refid="class_j_s_o_n_1_1value_131ca1af8ecc1ebe01e23590ce7bf7b8c" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getchild</name></member>
+      <member refid="class_j_s_o_n_1_1value_141950e35843a8b0c8a286b6d7e32dec5" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getchild</name></member>
+      <member refid="class_j_s_o_n_1_1value_1d08b4c900efc427c06b41a981939393c" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getdatatype</name></member>
+      <member refid="class_j_s_o_n_1_1value_102e43a565df0fb16a89d9042aa4d0a06" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getfloat</name></member>
+      <member refid="class_j_s_o_n_1_1value_1f512893b13b6391a749a328480546ae3" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getinteger</name></member>
+      <member refid="class_j_s_o_n_1_1value_16a82866b5e34cf74d6e2a01e0d761eb6" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getliteral</name></member>
+      <member refid="class_j_s_o_n_1_1value_1f844ddf21e7b3dfa3a76dc95d0d2e5f0" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getrawarray</name></member>
+      <member refid="class_j_s_o_n_1_1value_1866c618d6fdf890b334b04dccc0f9ca4" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getrawobject</name></member>
+      <member refid="class_j_s_o_n_1_1value_11ec3c8be169fe9e771cf2b0eca0512f3" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getrawstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_1b06b41aaeea6bde872f6a78fd4656c1f" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_12ee8f09809f8ab7ecf22bb715512a52f" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>getstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>nullval</name></member>
+      <member refid="class_j_s_o_n_1_1value_146df606bec08917c4e21877430241f70" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator+=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1233ef2435ad31fb89146463907910cbd" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1d393ba086ec2302bb8123408da6c25bc" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1f2a59315c2f819105c41de25d07c4929" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_11151dedcad9e636917020a6aad300ae4" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1fac21995d597a111ee17833001cc8602" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1138a2856690bf532cc46e6fa63368ca7" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1d4ad9121d85f2f776d6349d1a8bc5dd4" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_190dbbd517409af9932bc05a0bb14d615" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_15df895dc23ca97fcf9b790f34aab3b4b" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1627a27ce3bc784888ffc65438bb6c716" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_1e0c5a46ec9dd1fe3d678b5e11b1754fa" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator=</name></member>
+      <member refid="class_j_s_o_n_1_1value_15d9d18b8fb3a99ca8b0428ee01dccf4a" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator[]</name></member>
+      <member refid="class_j_s_o_n_1_1value_134c85f8d6d8966d2180f6b7c17423f30" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator[]</name></member>
+      <member refid="class_j_s_o_n_1_1value_1ae1eca980b6d982aee255225aa443961" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>operator[]</name></member>
+      <member refid="class_j_s_o_n_1_1value_15ec5f1419b16fff3709ad8dc5220fcbf" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setarray</name></member>
+      <member refid="class_j_s_o_n_1_1value_1aa5caec4d0e491c27c8062761cbde3d4" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setarray</name></member>
+      <member refid="class_j_s_o_n_1_1value_1014c45c629f0df1b5bb068438394de45" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setarray</name></member>
+      <member refid="class_j_s_o_n_1_1value_18d312e9a28a7a3f931f71bec837f1ad7" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setdt</name></member>
+      <member refid="class_j_s_o_n_1_1value_1befee3582d3174f28a7f1862a7bf9686" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setfloat</name></member>
+      <member refid="class_j_s_o_n_1_1value_163b5aaae241ca9ca1631b02bd2c127e1" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setint</name></member>
+      <member refid="class_j_s_o_n_1_1value_143a95f326cacfa97355aa6462c83ee45" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setliteral</name></member>
+      <member refid="class_j_s_o_n_1_1value_1461a22703d5df3684deb75af26143984" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setliteral</name></member>
+      <member refid="class_j_s_o_n_1_1value_14a47a1343623d3b5bbb893abbc6f1fe8" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setliteral</name></member>
+      <member refid="class_j_s_o_n_1_1value_16074f585985cf33e6d4f3e5163d33a4d" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setnumber</name></member>
+      <member refid="class_j_s_o_n_1_1value_1099a59a50689595a8bac822f9453a824" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setnumber</name></member>
+      <member refid="class_j_s_o_n_1_1value_18a920c78c86a50e57503959d7e7a98ba" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setnumber</name></member>
+      <member refid="class_j_s_o_n_1_1value_10f501197f5aa7179e663a5db92bb0db5" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setnumber</name></member>
+      <member refid="class_j_s_o_n_1_1value_137a67c4d6f86ca8882173cae8e7c0c9c" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setobject</name></member>
+      <member refid="class_j_s_o_n_1_1value_15b8f5414f33acb66534cfcb7d6a0d6ac" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setobject</name></member>
+      <member refid="class_j_s_o_n_1_1value_1df88bb12a7cf0b636b6240bf262f9e23" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setobject</name></member>
+      <member refid="class_j_s_o_n_1_1value_13a9e44d9a1b41d63e77cdf961a4dc664" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_1640f0e2626ba280e61d2d642a8e9f41d" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_190d7846ba03921b0f37b981b8604d437" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_1e8deed99bd9ac3fab920e66120f6ff89" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_17e9e9f889f3d5cb40a5c4e07a3d5fb8c" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>setstring</name></member>
+      <member refid="class_j_s_o_n_1_1value_135c0319d8ab716876096ce8e1a0ec71d" prot="private" virt="non-virtual"><scope>JSON::value</scope><name>val</name></member>
+      <member refid="class_j_s_o_n_1_1value_19b3a141b79ff268afa6cd30e677e28f1" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_1e4e47985649c40444141e87a89b230ea" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_1310d33e2d916341640189e6388264e9f" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_1ff8d2d773938d101ae4519ba694b8a15" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_13250ce6a98230879c957d4affc537ac8" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_11756fb7b9666a09605c7840d5f4c4dd7" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_1e138edf6d8a52bfa539b4552e521aa21" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_13612bdc0c0a7a369af3b55860a570e24" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_10071240328661d15154470bb21bdd4a7" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_1bd25e2c9380cb855e882e06f58807df6" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_12f58470f236e595c3c41e37fa451a380" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_1f6d4c873b057e57ee7de7150f731c05b" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_13751528c9d3d7ae36eb5bb454016724c" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_168e9728f78d6c2a4277d7ca9fc27b212" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>value</name></member>
+      <member refid="class_j_s_o_n_1_1value_1f7fe992dab5a79da320b60c7768238fe" prot="public" virt="non-virtual"><scope>JSON::value</scope><name>~value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

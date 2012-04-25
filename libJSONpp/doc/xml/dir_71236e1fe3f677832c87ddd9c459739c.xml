@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="dir_71236e1fe3f677832c87ddd9c459739c" kind="dir">
+    <compoundname>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/</compoundname>
+    <innerfile refid="config_8h">config.h</innerfile>
+    <innerfile refid="convert_8cpp">convert.cpp</innerfile>
+    <innerfile refid="convert_8h">convert.h</innerfile>
+    <innerfile refid="parser__errors_8cpp">parser_errors.cpp</innerfile>
+    <innerfile refid="parser__errors_8h">parser_errors.h</innerfile>
+    <innerfile refid="parser___u_n_i_8cpp">parser_UNI.cpp</innerfile>
+    <innerfile refid="parser___u_n_i_8h">parser_UNI.h</innerfile>
+    <innerfile refid="parser___u_t_f8_8cpp">parser_UTF8.cpp</innerfile>
+    <innerfile refid="parser___u_t_f8_8h">parser_UTF8.h</innerfile>
+    <innerfile refid="stdcontainers_8h">stdcontainers.h</innerfile>
+    <innerfile refid="types_8cpp">types.cpp</innerfile>
+    <innerfile refid="types_8h">types.h</innerfile>
+    <innerfile refid="value_8cpp">value.cpp</innerfile>
+    <innerfile refid="value_8h">value.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/"/>
+  </compounddef>
+</doxygen>

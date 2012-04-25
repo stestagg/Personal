@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="dir_4eec7e2f57480f8f02444e8b379873c9" kind="dir">
+    <compoundname>k:/</compoundname>
+    <innerdir refid="dir_1c44e9c5afb5c0226010ebd332cd0593">k:/Visual Studio 2008/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/"/>
+  </compounddef>
+</doxygen>

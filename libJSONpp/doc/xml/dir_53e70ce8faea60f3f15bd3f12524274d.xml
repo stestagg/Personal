@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="dir_53e70ce8faea60f3f15bd3f12524274d" kind="dir">
+    <compoundname>k:/Visual Studio 2008/Projects/</compoundname>
+    <innerdir refid="dir_3bb2f77f20a173dc862fac7d8e963db4">k:/Visual Studio 2008/Projects/libJSONpp/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/"/>
+  </compounddef>
+</doxygen>

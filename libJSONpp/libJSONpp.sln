@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libJSONpp", "libJSONpp\libJSONpp.vcproj", "{7A1FFA41-9997-4AB7-B655-E2D131A30717}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tests", "tests\tests.vcproj", "{A3F819B1-432C-4CE9-952A-AF32733511A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717} = {7A1FFA41-9997-4AB7-B655-E2D131A30717}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Shared Debug|Win32 = Shared Debug|Win32
+		Shared Release|Win32 = Shared Release|Win32
+		Static Debug|Win32 = Static Debug|Win32
+		Static Release|Win32 = Static Release|Win32
+		Tests|Win32 = Tests|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Shared Debug|Win32.ActiveCfg = Shared Debug|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Shared Debug|Win32.Build.0 = Shared Debug|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Shared Release|Win32.ActiveCfg = Shared Release|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Shared Release|Win32.Build.0 = Shared Release|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Static Debug|Win32.ActiveCfg = Debug|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Static Debug|Win32.Build.0 = Debug|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Static Release|Win32.ActiveCfg = Release|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Static Release|Win32.Build.0 = Release|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Tests|Win32.ActiveCfg = Tests|Win32
+		{7A1FFA41-9997-4AB7-B655-E2D131A30717}.Tests|Win32.Build.0 = Tests|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Shared Debug|Win32.ActiveCfg = Shared Debug|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Shared Debug|Win32.Build.0 = Shared Debug|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Shared Release|Win32.ActiveCfg = Shared Release|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Shared Release|Win32.Build.0 = Shared Release|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Static Debug|Win32.ActiveCfg = Debug|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Static Debug|Win32.Build.0 = Debug|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Static Release|Win32.ActiveCfg = Release|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Static Release|Win32.Build.0 = Release|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Tests|Win32.ActiveCfg = Tests|Win32
+		{A3F819B1-432C-4CE9-952A-AF32733511A7}.Tests|Win32.Build.0 = Tests|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

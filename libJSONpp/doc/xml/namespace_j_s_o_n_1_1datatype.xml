@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="namespace_j_s_o_n_1_1datatype" kind="namespace">
+    <compoundname>JSON::datatype</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" prot="public" static="no">
+        <name>dt</name>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf33017e4e430d6ac1697395a14f6d3551" prot="public">
+          <name>_undefined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf486d038f97faf5dcf61fc01919818e45" prot="public">
+          <name>_string</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbff93b52b78e8af4425d60c2854c6faadc" prot="public">
+          <name>_unquoted_string</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>An unquoted-string occurs when an object member name is not quoted properly, this is surprisingly common: e.g. { a : &quot;b&quot; } is strictly invalid, and should be: {&apos;a&apos; : &quot;b&quot;} </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbfd0cd9eeb3409b23a86a4462df6064477" prot="public">
+          <name>_literal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf225c9dd9186f1078a3c8fca477da14eb" prot="public">
+          <name>_number</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf60deb81efdaedc097cee89b101c23525" prot="public">
+          <name>_fixed_number</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbfce52c7708b9f1aac09bc908806aa4ad7" prot="public">
+          <name>_array</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf8af99a824ec4ebbed96b327634aa09f6" prot="public">
+          <name>_object</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>the different datatypes that a <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> can hold. </para>        </briefdescription>
+        <detaileddescription>
+<para>While the specification only defines one numeric type, we try to be clever and leverage the advantages of stronger numeric types by defining _number and _fixed_number. _fixed_number is an integer type, while _number is a double. conversion between the two is fairly free-and-easy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="55" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="55" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A wrapper namespace to stop the <ref refid="namespace_j_s_o_n_1_1datatype" kindref="compound">datatype</ref> enum from polluting the <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref> namespace. This also helps with IDE Auto-completion somewhat. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="44"/>
+  </compounddef>
+</doxygen>

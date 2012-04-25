@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="namespace_j_s_o_n_1_1mapping__techniques" kind="namespace">
+    <compoundname>JSON::mapping_techniques</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7" prot="public" static="no">
+        <name>mapping_techniques</name>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" prot="public">
+          <name>unmapped</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" prot="public">
+          <name>direct</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" prot="public">
+          <name>mmap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" prot="public">
+          <name>unmapped</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" prot="public">
+          <name>direct</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" prot="public">
+          <name>mmap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="28" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7" prot="public" static="no">
+        <name>mapping_techniques</name>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" prot="public">
+          <name>unmapped</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" prot="public">
+          <name>direct</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" prot="public">
+          <name>mmap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" prot="public">
+          <name>unmapped</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" prot="public">
+          <name>direct</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" prot="public">
+          <name>mmap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="27" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="27" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A wrapper-namespace around the <ref refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7" kindref="member">mapping_techniques::mapping_techniques</ref> enum. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="27"/>
+  </compounddef>
+</doxygen>

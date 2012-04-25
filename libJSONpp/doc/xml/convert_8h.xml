@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="convert_8h" kind="file">
+    <compoundname>convert.h</compoundname>
+    <includes refid="config_8h" local="yes">config.h</includes>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="convert_8cpp" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp</includedby>
+    <includedby refid="parser___u_n_i_8cpp" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp</includedby>
+    <includedby refid="parser___u_t_f8_8cpp" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp</includedby>
+    <includedby refid="value_8cpp" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp</includedby>
+    <incdepgraph>
+      <node id="28">
+        <label>string</label>
+      </node>
+      <node id="31">
+        <label>map</label>
+      </node>
+      <node id="26">
+        <label>config.h</label>
+        <link refid="config_8h"/>
+      </node>
+      <node id="30">
+        <label>stdcontainers.h</label>
+        <link refid="stdcontainers_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.h</label>
+        <link refid="convert.h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>string.h</label>
+      </node>
+      <node id="27">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="37">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp</label>
+        <link refid="value_8cpp"/>
+      </node>
+      <node id="34">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp</label>
+        <link refid="convert_8cpp"/>
+      </node>
+      <node id="33">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.h</label>
+        <link refid="convert.h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp</label>
+        <link refid="parser___u_n_i_8cpp"/>
+      </node>
+      <node id="36">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp</label>
+        <link refid="parser___u_t_f8_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_j_s_o_n">JSON</innernamespace>
+    <innernamespace refid="namespace_j_s_o_n_1_1convert">JSON::convert</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>JSON_convert_h_INCLUDED</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>JSON_convert_h_INCLUDED</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="config_8h" kindref="compound">config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JSON{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">convert{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;<ref refid="namespace_j_s_o_n_1_1convert_122d0fc1d7af9a20a40fb6eb077f2f571" kindref="member">toastr</ref>(<ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;dst,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;<ref refid="namespace_j_s_o_n_1_1convert_122d0fc1d7af9a20a40fb6eb077f2f571" kindref="member">toastr</ref>(<ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;dst,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;<ref refid="namespace_j_s_o_n_1_1convert_122d0fc1d7af9a20a40fb6eb077f2f571" kindref="member">toastr</ref>(<ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;dst,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;src);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;<ref refid="namespace_j_s_o_n_1_1convert_122d0fc1d7af9a20a40fb6eb077f2f571" kindref="member">toastr</ref>(<ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref><sp/>&amp;dst,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::wstring<sp/>&amp;src);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kindref="member">achar</ref><sp/>*<ref refid="namespace_j_s_o_n_1_1convert_15fd6b40908c71f6d7bf3478f2658c406" kindref="member">toachar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;olen);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kindref="member">achar</ref><sp/>*<ref refid="namespace_j_s_o_n_1_1convert_15fd6b40908c71f6d7bf3478f2658c406" kindref="member">toachar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;olen);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespace_j_s_o_n_1_1convert_114983dc945fea468d49a1c6ebcd12396" kindref="member">tochar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;olen);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespace_j_s_o_n_1_1convert_114983dc945fea468d49a1c6ebcd12396" kindref="member">tochar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;olen);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*<ref refid="namespace_j_s_o_n_1_1convert_11781b82a33ee56818f6319308935a9bd" kindref="member">towchar_t</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;olen);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*<ref refid="namespace_j_s_o_n_1_1convert_11781b82a33ee56818f6319308935a9bd" kindref="member">towchar_t</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;olen);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::wstring<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_19e3bc754979a4d48e80a90fea1b5e2fc" kindref="member">towstr</ref>(std::wstring<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::wstring<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_19e3bc754979a4d48e80a90fea1b5e2fc" kindref="member">towstr</ref>(std::wstring<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::wstring<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_19e3bc754979a4d48e80a90fea1b5e2fc" kindref="member">towstr</ref>(std::wstring<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::wstring<sp/>&amp;src);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::wstring<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_19e3bc754979a4d48e80a90fea1b5e2fc" kindref="member">towstr</ref>(std::wstring<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;src);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_196554ca21345714d39b4b19cf32d450b" kindref="member">tostr</ref>(std::string<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_196554ca21345714d39b4b19cf32d450b" kindref="member">tostr</ref>(std::string<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">wchar_t</highlight><highlight class="normal"><sp/>*src,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_196554ca21345714d39b4b19cf32d450b" kindref="member">tostr</ref>(std::string<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::wstring<sp/>&amp;src);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>&amp;<sp/><ref refid="namespace_j_s_o_n_1_1convert_196554ca21345714d39b4b19cf32d450b" kindref="member">tostr</ref>(std::string<sp/>&amp;dst,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;src);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.h"/>
+  </compounddef>
+</doxygen>

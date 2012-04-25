@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="namespace_j_s_o_n_1_1errors" kind="namespace">
+    <compoundname>JSON::errors</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_j_s_o_n_1_1errors_1ce729d1647e5a3467dde445656ee5616" prot="public" static="no" mutable="no">
+        <type>const <ref refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kindref="member">achar</ref> *</type>
+        <definition>const achar * JSON::errors::errors</definition>
+        <argsstring>[]</argsstring>
+        <name>errors</name>
+        <initializer>{
+		A(&quot;&quot;),
+		A(&quot;End of input was reached while parsing a string.&quot;),
+		A(&quot;Invalid \\x escape sequence&quot;),
+		A(&quot;Invalid \\u escape sequence&quot;),
+		A(&quot;Unterminated /* comment&quot;),
+		A(&quot;End of file found in middle of object/array&quot;),
+		A(&quot;Value name not found in object (premature &apos;:&apos; found)&quot;),
+		A(&quot;Object <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> with no name.&quot;),
+		A(&quot;missing , in object/array&quot;),
+		A(&quot;Could not open file&quot;),
+		A(&quot;Could not map string!&quot;),
+
+		}</initializer>
+        <briefdescription>
+<para>an array of error descriptions <ref refid="namespace_j_s_o_n_1_1errors_1ce729d1647e5a3467dde445656ee5616" kindref="member">JSON::errors::errors</ref>[10] is the description for error 10. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_errors.cpp" line="19" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_errors.cpp" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_errors.cpp" line="5"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.5.5">
+  <compound refid="structastr_cmp" kind="struct"><name>astrCmp</name>
+    <member refid="structastr_cmp_1d9350469bb4abc36fe2ac184eaf6d752" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="union_j_s_o_n_1_1dataptr" kind="union"><name>JSON::dataptr</name>
+    <member refid="union_j_s_o_n_1_1dataptr_1a2f9bc4454512a18dc9f17e2de93d867" kind="variable"><name>_v</name></member>
+    <member refid="union_j_s_o_n_1_1dataptr_1cacaa3fe53dbf36861a767d925650618" kind="variable"><name>_string</name></member>
+    <member refid="union_j_s_o_n_1_1dataptr_17013e85478e2cc8c69bfe9c9b852f878" kind="variable"><name>_literal</name></member>
+    <member refid="union_j_s_o_n_1_1dataptr_1ef75d36b3acaa5b9b293d16995932535" kind="variable"><name>_number</name></member>
+    <member refid="union_j_s_o_n_1_1dataptr_18363f42d49bb85d8dae5efe264f0b71d" kind="variable"><name>_fixed_number</name></member>
+    <member refid="union_j_s_o_n_1_1dataptr_1df3254209607b02a757c597b07555247" kind="variable"><name>_object</name></member>
+    <member refid="union_j_s_o_n_1_1dataptr_115fcf41e27f4bdd1b8ee7d1c38d9256f" kind="variable"><name>_array</name></member>
+  </compound>
+  <compound refid="class_j_s_o_n_1_1parser___u_n_i" kind="class"><name>JSON::parser_UNI</name>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1db2ee48be3d78c142d073e74f7d1189f" kind="friend"><name>JSON::test</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_184c787e75307e90d55ddae5e7a8c9aa7" kind="friend"><name>JSON::UNI_test</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1073e0e7f748439ba6bd62fc98736cd96" kind="variable"><name>errs</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1cc42f08ce1c5b4e3185349cdc778134e" kind="variable"><name>bfr</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1734cafa3f57a9b2b5617492a5ecfd5b0" kind="function"><name>readhexcode</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_190c849530f4b3c6e796aa2ac66badad4" kind="function"><name>readhexquad</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1ac9856a13e9bf66171ace6a78ca1176f" kind="function"><name>charisNumeric</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1229e1f151cb41b52663ba09797dd7796" kind="function"><name>hextoint</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1fbe40b4d504928a35c0da29935146358" kind="function"><name>charisWS</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_17738cb2170132c3347b6a6f35dd813c6" kind="function"><name>charisEOL</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_17648ff1721b67cefba03e7a39146894e" kind="function"><name>parseEscapes</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1a4bc1ab3be0a52e4a1ce421ef9b4b64d" kind="function"><name>adderror</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_106c82dd60f17027a8b1357e386c51ab9" kind="function"><name>readstring</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1d432706e9f222f4185f783859e0ee244" kind="function"><name>readunquotedstring</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1477027ff93c367afc59a5cbef9ca8c68" kind="function"><name>readlit</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1b16bddbb20b38ddcb05ba25319fb5b58" kind="function"><name>readnum</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1382a6fa4c4a09b857c5084b81616d2ff" kind="function"><name>readarray</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1272aa1c9731600ba1ea3190279672d92" kind="function"><name>readobject</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_15eaefcadf77f97237ecc654f41c0215f" kind="function"><name>skipWS</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_186c74ac752c6d06010f8131e845ad90e" kind="function"><name>getvalue</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1dfcdd086bb3bd4e33cc47cecf81a0b5d" kind="function"><name>fail</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1d80b5f844a39f9f5089eef22016864e5" kind="function"><name>errorcount</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_11ddd51557187d28ff80368ea73af0629" kind="function"><name>geterrors</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1f2a44400f44058711d0248cbcb4ce65e" kind="function"><name>haveerror</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1bb7790d76cf4b22aec2d82084938887f" kind="function"><name>geterrorstring</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1a61dbf526f97309fa64a24768ebda12e" kind="function"><name>reseterrors</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_153ba841592da214c45020de0d2630e1e" kind="function"><name>parser_UNI</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_18ed369b4220efb0e2054ddc4358a6f65" kind="function"><name>parser_UNI</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1a4c0c5e303cbbf6d6ed4b3e1f4906130" kind="function"><name>parser_UNI</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1cd497daed5916d2b562aa6db152ef886" kind="function"><name>~parser_UNI</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_185b3985e2f5886c5cecfc0c025f63ffd" kind="function"><name>unmap</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_14f83edd1a064162513dcafd7d535020c" kind="function"><name>parse</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_190162b12d037eaa3128112340a5103f5" kind="function"><name>parse</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_10268ab85791b6bd481cc68b1f44a44ca" kind="function"><name>parse</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1e2bf2247e12a122f5c747999bb554678" kind="function"><name>parsefile</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_n_i_1f404a5410ff5b68e269f7135c96506ca" kind="function"><name>parsefile</name></member>
+  </compound>
+  <compound refid="class_j_s_o_n_1_1parser___u_t_f8" kind="class"><name>JSON::parser_UTF8</name>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1db2ee48be3d78c142d073e74f7d1189f" kind="friend"><name>JSON::test</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1096e54223fc96719019b00ce30327d1a" kind="friend"><name>JSON::UTF_test</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_12f6a518bd6ecd49ed7e675b5f78fc877" kind="variable"><name>errs</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1b55fb139082b5de4bc93398e752b3cbd" kind="variable"><name>bfr</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_119d72d4a8ec0b18ed26a728c46310852" kind="function"><name>isEOL</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_13d7c3afa269d5a0d5ce7850834456ee2" kind="function"><name>readhexcode</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1d6b4bbfea526863b47b6bddc7f78a31c" kind="function"><name>readhexquad</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_14b6b6df8920ae1eb798d2fb3ee58bfd8" kind="function"><name>charisNumeric</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_19ec1e0f0c9040ae2d73d2051d94546e6" kind="function"><name>charskipWS</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_15f6e6c4ecce0d9c741265cab0335c2b0" kind="function"><name>charskipEOL</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_15daf7deff5ac8c6643c6a948c2557941" kind="function"><name>hextoint</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_127d9c721c94772dbc41abf6adb0b97c0" kind="function"><name>parseEscapes</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1d1d46b64bbe46ccd4a91cb9b4daa98cf" kind="function"><name>adderror</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_18f26f14d15b59838efb1c75380006513" kind="function"><name>readstring</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1111fd36185edc9a552acb41b5e82daee" kind="function"><name>readunquotedstring</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_147c6ac30926aa72be75be6f60e9757f3" kind="function"><name>readlit</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_116d5e391f6d4bb04fd4812ebe9a280fe" kind="function"><name>readnum</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_17f390bac9b1df96640acfb3ced3f608f" kind="function"><name>readarray</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1327b5ededdd7095bc7bfb05d6d99bdf1" kind="function"><name>readobject</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1b6bf72aed403690c9db7eb159268ad21" kind="function"><name>skipWS</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1d46ff8757c23da4275dce8db69a135b7" kind="function"><name>getvalue</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1a7fe13e71520efe7478188af6f836d1f" kind="function"><name>fail</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_18c6baca6a0f18163fa3d36e9b39c8003" kind="function"><name>errorcount</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_14e04b3d9a01020fbb6f65d50fe076763" kind="function"><name>geterrors</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1f56b637e6feed65915e10e8e9a9aaf3d" kind="function"><name>geterrorstring</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_15de60ef31696acaa8128341b0a1a21f4" kind="function"><name>reseterrors</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1e0d86c88983afae5bdfa4558cc0d02af" kind="function"><name>haveerror</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1524ae6d6fb2b696893e487796a6c0f1d" kind="function"><name>parser_UTF8</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_120d458ae937d09c55948b095d3e228bc" kind="function"><name>parser_UTF8</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_17818ee16111f69bbd0e5176e92472898" kind="function"><name>parser_UTF8</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_18fb6b4521e944c35c1fb231b3da3dd5a" kind="function"><name>~parser_UTF8</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_113441f81fcddc3331a99a2c4e8574710" kind="function"><name>unmap</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1f26ebd86e49b9e8c5b3d4fba16001679" kind="function"><name>parse</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_1078e9097f481a6e2920bdda053b3f618" kind="function"><name>parse</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_10bf741954ff7e7e5f8dcd4fd27241682" kind="function"><name>parse</name></member>
+    <member refid="class_j_s_o_n_1_1parser___u_t_f8_15aac5bfafdcd0796bb9f2e6e859ca4b7" kind="function"><name>parsefile</name></member>
+  </compound>
+  <compound refid="class_j_s_o_n_1_1unibuffer" kind="class"><name>JSON::unibuffer</name>
+    <member refid="class_j_s_o_n_1_1unibuffer_168b47b83d65aeb140bba4c72b8a286e0" kind="variable"><name>bfr</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_112de8175802ff6ab33a280e92ae140d1" kind="variable"><name>ptr</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_1dc3994e4962185e40389d6edbc6ffd85" kind="variable"><name>end</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_1aceb59938e5dc065595f93aa5bde6896" kind="variable"><name>len</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_15490e3a55ee690d87ea1d5ea3918966e" kind="variable"><name>mapping</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_1714327ff23595af4691dfdae7f8b0e5a" kind="function"><name>unibuffer</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_12b8f20b2132937bbfd5822c83374dda0" kind="function"><name>~unibuffer</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_1464bdebb497c2d58a6bb47dd3966c946" kind="function"><name>mapfile</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_192afcc660951153947700509510c2f52" kind="function"><name>mapfile</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_1d150acca96a2b595d3cb4c406a1f13ba" kind="function"><name>mapstring</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_19e4ebc43a8b5764122274ce51df3aa0a" kind="function"><name>mapchararray</name></member>
+    <member refid="class_j_s_o_n_1_1unibuffer_10593b2ebc6f303477240d030458e20a9" kind="function"><name>unmap</name></member>
+  </compound>
+  <compound refid="class_j_s_o_n_1_1utf8buffer" kind="class"><name>JSON::utf8buffer</name>
+    <member refid="class_j_s_o_n_1_1utf8buffer_11f4fb8cba4bae4a01e46350525856b09" kind="variable"><name>bfr</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_1f8cd98a412d71d3dffe5bb7f13307da4" kind="variable"><name>ptr</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_11dbc03e51e1b50b4da50d71b8432128c" kind="variable"><name>end</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_1dc814f68e9bb1e2ed10135496cf61ba4" kind="variable"><name>len</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_1e8d9d68f19d45293254ba9675000374c" kind="variable"><name>mapping</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_1d54e5e3deadfde317d3f09f37809da22" kind="function"><name>utf8buffer</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_18014bdb74f799eff6e20720a15b7403a" kind="function"><name>~utf8buffer</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_14b24e4a3768de21c47f9195f135d089e" kind="function"><name>mapfile</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_17b5596cc7f3d804f334ece48fb0a2afc" kind="function"><name>mapfile</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_104f86b32071c7ee2ef4174d3d3228307" kind="function"><name>mapstring</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_113c5863c01fdd1b9e6fd66820e9e778b" kind="function"><name>mapchararray</name></member>
+    <member refid="class_j_s_o_n_1_1utf8buffer_1d0baae239062e2d4a8160dff01f234fe" kind="function"><name>unmap</name></member>
+  </compound>
+  <compound refid="class_j_s_o_n_1_1value" kind="class"><name>JSON::value</name>
+    <member refid="class_j_s_o_n_1_1value_127497b62d6da4f7824d6ab2cf4381c1e" kind="variable"><name>dt</name></member>
+    <member refid="class_j_s_o_n_1_1value_135c0319d8ab716876096ce8e1a0ec71d" kind="variable"><name>val</name></member>
+    <member refid="class_j_s_o_n_1_1value_170c9d6308c56af1ac1924db85810c4d9" kind="variable"><name>nullval</name></member>
+    <member refid="class_j_s_o_n_1_1value_1d08b4c900efc427c06b41a981939393c" kind="function"><name>getdatatype</name></member>
+    <member refid="class_j_s_o_n_1_1value_13a9e44d9a1b41d63e77cdf961a4dc664" kind="function"><name>setstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_1640f0e2626ba280e61d2d642a8e9f41d" kind="function"><name>setstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_190d7846ba03921b0f37b981b8604d437" kind="function"><name>setstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_1e8deed99bd9ac3fab920e66120f6ff89" kind="function"><name>setstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_17e9e9f889f3d5cb40a5c4e07a3d5fb8c" kind="function"><name>setstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_163b5aaae241ca9ca1631b02bd2c127e1" kind="function"><name>setint</name></member>
+    <member refid="class_j_s_o_n_1_1value_1befee3582d3174f28a7f1862a7bf9686" kind="function"><name>setfloat</name></member>
+    <member refid="class_j_s_o_n_1_1value_16074f585985cf33e6d4f3e5163d33a4d" kind="function"><name>setnumber</name></member>
+    <member refid="class_j_s_o_n_1_1value_1233ef2435ad31fb89146463907910cbd" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1099a59a50689595a8bac822f9453a824" kind="function"><name>setnumber</name></member>
+    <member refid="class_j_s_o_n_1_1value_18a920c78c86a50e57503959d7e7a98ba" kind="function"><name>setnumber</name></member>
+    <member refid="class_j_s_o_n_1_1value_10f501197f5aa7179e663a5db92bb0db5" kind="function"><name>setnumber</name></member>
+    <member refid="class_j_s_o_n_1_1value_143a95f326cacfa97355aa6462c83ee45" kind="function"><name>setliteral</name></member>
+    <member refid="class_j_s_o_n_1_1value_1461a22703d5df3684deb75af26143984" kind="function"><name>setliteral</name></member>
+    <member refid="class_j_s_o_n_1_1value_14a47a1343623d3b5bbb893abbc6f1fe8" kind="function"><name>setliteral</name></member>
+    <member refid="class_j_s_o_n_1_1value_15ec5f1419b16fff3709ad8dc5220fcbf" kind="function"><name>setarray</name></member>
+    <member refid="class_j_s_o_n_1_1value_1aa5caec4d0e491c27c8062761cbde3d4" kind="function"><name>setarray</name></member>
+    <member refid="class_j_s_o_n_1_1value_1014c45c629f0df1b5bb068438394de45" kind="function"><name>setarray</name></member>
+    <member refid="class_j_s_o_n_1_1value_137a67c4d6f86ca8882173cae8e7c0c9c" kind="function"><name>setobject</name></member>
+    <member refid="class_j_s_o_n_1_1value_15b8f5414f33acb66534cfcb7d6a0d6ac" kind="function"><name>setobject</name></member>
+    <member refid="class_j_s_o_n_1_1value_1df88bb12a7cf0b636b6240bf262f9e23" kind="function"><name>setobject</name></member>
+    <member refid="class_j_s_o_n_1_1value_18d312e9a28a7a3f931f71bec837f1ad7" kind="function"><name>setdt</name></member>
+    <member refid="class_j_s_o_n_1_1value_1d393ba086ec2302bb8123408da6c25bc" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1f2a59315c2f819105c41de25d07c4929" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_11151dedcad9e636917020a6aad300ae4" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1fac21995d597a111ee17833001cc8602" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1138a2856690bf532cc46e6fa63368ca7" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1d4ad9121d85f2f776d6349d1a8bc5dd4" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_190dbbd517409af9932bc05a0bb14d615" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_15df895dc23ca97fcf9b790f34aab3b4b" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1627a27ce3bc784888ffc65438bb6c716" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1e0c5a46ec9dd1fe3d678b5e11b1754fa" kind="function"><name>operator=</name></member>
+    <member refid="class_j_s_o_n_1_1value_1cc4898d3cee6c1e81e491bd7aacc5c3e" kind="function"><name>addvalue</name></member>
+    <member refid="class_j_s_o_n_1_1value_1823556b36d4e49f9c9bc82970bd3d42e" kind="function"><name>addvalue</name></member>
+    <member refid="class_j_s_o_n_1_1value_1ac8f99cc58ff59ee0a75f001341c3b10" kind="function"><name>addvalue</name></member>
+    <member refid="class_j_s_o_n_1_1value_1348c648d04f273e4767695f648b7b29f" kind="function"><name>addvalue</name></member>
+    <member refid="class_j_s_o_n_1_1value_129469a2dc6a3bf9aac78ae8fc7a634d0" kind="function"><name>addvalue</name></member>
+    <member refid="class_j_s_o_n_1_1value_1f76ae8e6e2809066ba71c5f59e0a7fe1" kind="function"><name>addvalue</name></member>
+    <member refid="class_j_s_o_n_1_1value_1ad8500f20d470799ec32d440bbe77256" kind="function"><name>deletechild</name></member>
+    <member refid="class_j_s_o_n_1_1value_1bc670c19e6898c7fcfe990a60f9be3a9" kind="function"><name>deletechild</name></member>
+    <member refid="class_j_s_o_n_1_1value_17184ffd187b52b97aba4aa533a8f02da" kind="function"><name>deletechild</name></member>
+    <member refid="class_j_s_o_n_1_1value_131ca1af8ecc1ebe01e23590ce7bf7b8c" kind="function"><name>getchild</name></member>
+    <member refid="class_j_s_o_n_1_1value_141950e35843a8b0c8a286b6d7e32dec5" kind="function"><name>getchild</name></member>
+    <member refid="class_j_s_o_n_1_1value_183084f869fd06f99f5974135c0418f45" kind="function"><name>childexists</name></member>
+    <member refid="class_j_s_o_n_1_1value_10d193b6a96f34c7b29257bab508cbc13" kind="function"><name>childexists</name></member>
+    <member refid="class_j_s_o_n_1_1value_1af7da9c303e52c1b2f79a3ae46b3c44e" kind="function"><name>childexists</name></member>
+    <member refid="class_j_s_o_n_1_1value_1c552b3cf41b641d3f6f7eaa18b7562fc" kind="function"><name>childexists</name></member>
+    <member refid="class_j_s_o_n_1_1value_1456130bc7bac52d3ec777d943a733475" kind="function"><name>getbool</name></member>
+    <member refid="class_j_s_o_n_1_1value_16a82866b5e34cf74d6e2a01e0d761eb6" kind="function"><name>getliteral</name></member>
+    <member refid="class_j_s_o_n_1_1value_1f512893b13b6391a749a328480546ae3" kind="function"><name>getinteger</name></member>
+    <member refid="class_j_s_o_n_1_1value_102e43a565df0fb16a89d9042aa4d0a06" kind="function"><name>getfloat</name></member>
+    <member refid="class_j_s_o_n_1_1value_1b06b41aaeea6bde872f6a78fd4656c1f" kind="function"><name>getstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_12ee8f09809f8ab7ecf22bb715512a52f" kind="function"><name>getstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_11ec3c8be169fe9e771cf2b0eca0512f3" kind="function"><name>getrawstring</name></member>
+    <member refid="class_j_s_o_n_1_1value_1f844ddf21e7b3dfa3a76dc95d0d2e5f0" kind="function"><name>getrawarray</name></member>
+    <member refid="class_j_s_o_n_1_1value_1866c618d6fdf890b334b04dccc0f9ca4" kind="function"><name>getrawobject</name></member>
+    <member refid="class_j_s_o_n_1_1value_1b5682c6c4c6d674784d477907db0f002" kind="function"><name>clear</name></member>
+    <member refid="class_j_s_o_n_1_1value_15d9d18b8fb3a99ca8b0428ee01dccf4a" kind="function"><name>operator[]</name></member>
+    <member refid="class_j_s_o_n_1_1value_134c85f8d6d8966d2180f6b7c17423f30" kind="function"><name>operator[]</name></member>
+    <member refid="class_j_s_o_n_1_1value_1ae1eca980b6d982aee255225aa443961" kind="function"><name>operator[]</name></member>
+    <member refid="class_j_s_o_n_1_1value_146df606bec08917c4e21877430241f70" kind="function"><name>operator+=</name></member>
+    <member refid="class_j_s_o_n_1_1value_19a47f0d7f25e91d85a909348d4af3b3d" kind="function"><name>deletevalue</name></member>
+    <member refid="class_j_s_o_n_1_1value_12d179b8969c45786200dae9d5d67a382" kind="function"><name>clone</name></member>
+    <member refid="class_j_s_o_n_1_1value_19b3a141b79ff268afa6cd30e677e28f1" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_1e4e47985649c40444141e87a89b230ea" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_1310d33e2d916341640189e6388264e9f" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_1ff8d2d773938d101ae4519ba694b8a15" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_13250ce6a98230879c957d4affc537ac8" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_11756fb7b9666a09605c7840d5f4c4dd7" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_1e138edf6d8a52bfa539b4552e521aa21" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_13612bdc0c0a7a369af3b55860a570e24" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_10071240328661d15154470bb21bdd4a7" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_1bd25e2c9380cb855e882e06f58807df6" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_12f58470f236e595c3c41e37fa451a380" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_1f6d4c873b057e57ee7de7150f731c05b" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_13751528c9d3d7ae36eb5bb454016724c" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_168e9728f78d6c2a4277d7ca9fc27b212" kind="function"><name>value</name></member>
+    <member refid="class_j_s_o_n_1_1value_1f7fe992dab5a79da320b60c7768238fe" kind="function"><name>~value</name></member>
+  </compound>
+  <compound refid="namespace_j_s_o_n" kind="namespace"><name>JSON</name>
+  </compound>
+  <compound refid="namespace_j_s_o_n_1_1convert" kind="namespace"><name>JSON::convert</name>
+    <member refid="namespace_j_s_o_n_1_1convert_122d0fc1d7af9a20a40fb6eb077f2f571" kind="function"><name>toastr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_1e93ee53899c51adaad07570b8b01ec8d" kind="function"><name>toastr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_178a772bcd2c06a8150d28fe6ab2914f8" kind="function"><name>toastr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_133538051b74c13bee55515c7c0529068" kind="function"><name>toastr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_15fd6b40908c71f6d7bf3478f2658c406" kind="function"><name>toachar</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_17e6cdc76c8276a2cd9d42519f5da5688" kind="function"><name>toachar</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_114983dc945fea468d49a1c6ebcd12396" kind="function"><name>tochar</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_17b80069ac76d617a2c7933cfa9df2833" kind="function"><name>tochar</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_11781b82a33ee56818f6319308935a9bd" kind="function"><name>towchar_t</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_12912c32a078878f06b7011fbba325545" kind="function"><name>towchar_t</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_19e3bc754979a4d48e80a90fea1b5e2fc" kind="function"><name>towstr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_1b85174d5d1b29ea705f60c0cd9812d94" kind="function"><name>towstr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_14be23e94307097453e075a068c556010" kind="function"><name>towstr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_10ac37d233f23db273e60c12e63023aa3" kind="function"><name>towstr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_196554ca21345714d39b4b19cf32d450b" kind="function"><name>tostr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_18eed936cda344ff916a7cc23359e7d95" kind="function"><name>tostr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_1bffeddd02e7d10d1cec8fa751bc7c1ca" kind="function"><name>tostr</name></member>
+    <member refid="namespace_j_s_o_n_1_1convert_1f9cafbeaa3dd761ce5e43c3a5773c5a1" kind="function"><name>tostr</name></member>
+  </compound>
+  <compound refid="namespace_j_s_o_n_1_1datatype" kind="namespace"><name>JSON::datatype</name>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf" kind="enum"><name>dt</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf33017e4e430d6ac1697395a14f6d3551" kind="enumvalue"><name>_undefined</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf486d038f97faf5dcf61fc01919818e45" kind="enumvalue"><name>_string</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbff93b52b78e8af4425d60c2854c6faadc" kind="enumvalue"><name>_unquoted_string</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbfd0cd9eeb3409b23a86a4462df6064477" kind="enumvalue"><name>_literal</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf225c9dd9186f1078a3c8fca477da14eb" kind="enumvalue"><name>_number</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf60deb81efdaedc097cee89b101c23525" kind="enumvalue"><name>_fixed_number</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbfce52c7708b9f1aac09bc908806aa4ad7" kind="enumvalue"><name>_array</name></member>
+    <member refid="namespace_j_s_o_n_1_1datatype_1a838cd3fc48fd79e1a9d2a4a6c8dbcbf8af99a824ec4ebbed96b327634aa09f6" kind="enumvalue"><name>_object</name></member>
+  </compound>
+  <compound refid="namespace_j_s_o_n_1_1errors" kind="namespace"><name>JSON::errors</name>
+    <member refid="namespace_j_s_o_n_1_1errors_1ce729d1647e5a3467dde445656ee5616" kind="variable"><name>errors</name></member>
+  </compound>
+  <compound refid="namespace_j_s_o_n_1_1literals" kind="namespace"><name>JSON::literals</name>
+    <member refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kind="enum"><name>literals</name></member>
+    <member refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe3662edfe302cacabb01be98caf3efbde" kind="enumvalue"><name>_true</name></member>
+    <member refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe2ea46da5e9fc44900ef40db35d50db76" kind="enumvalue"><name>_false</name></member>
+    <member refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffed8ad8e6e8093104a13330a2e8ea5bbd8" kind="enumvalue"><name>_null</name></member>
+  </compound>
+  <compound refid="namespace_j_s_o_n_1_1mapping__techniques" kind="namespace"><name>JSON::mapping_techniques</name>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7" kind="enum"><name>mapping_techniques</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" kind="enumvalue"><name>unmapped</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" kind="enumvalue"><name>direct</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" kind="enumvalue"><name>mmap</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" kind="enumvalue"><name>unmapped</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" kind="enumvalue"><name>direct</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" kind="enumvalue"><name>mmap</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7" kind="enum"><name>mapping_techniques</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" kind="enumvalue"><name>unmapped</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" kind="enumvalue"><name>direct</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" kind="enumvalue"><name>mmap</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e79c164ca133fa3cd68352cb26b927f885" kind="enumvalue"><name>unmapped</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7799422a07b76eff818c857d1212b0d9b" kind="enumvalue"><name>direct</name></member>
+    <member refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7ab917a74e08d4452ea955d525f92a4f5" kind="enumvalue"><name>mmap</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="config_8h" kind="file"><name>config.h</name>
+    <member refid="config_8h_131f0cb294e7bca54fe5fbaed75c19c8c" kind="define"><name>JSON_USE_WCHAR</name></member>
+    <member refid="config_8h_1abe1508595ded880a12a7109c860332c" kind="define"><name>JSON_NUMBER_i64</name></member>
+    <member refid="config_8h_1957e13a82f808a1436cfd03489db1252" kind="define"><name>JSON_NUMBER_DOUBLE</name></member>
+    <member refid="config_8h_16cd8c078553244a0e143bccb4c51fc1c" kind="define"><name>JSON_USE_STDCONTS</name></member>
+    <member refid="config_8h_182cdcc5c13c75bb8ef49c89998863545" kind="define"><name>JSON_UNSAFE_FUNS</name></member>
+  </compound>
+  <compound refid="convert_8cpp" kind="file"><name>convert.cpp</name>
+  </compound>
+  <compound refid="convert_8h" kind="file"><name>convert.h</name>
+  </compound>
+  <compound refid="parser__errors_8cpp" kind="file"><name>parser_errors.cpp</name>
+  </compound>
+  <compound refid="parser__errors_8h" kind="file"><name>parser_errors.h</name>
+  </compound>
+  <compound refid="parser___u_n_i_8cpp" kind="file"><name>parser_UNI.cpp</name>
+    <member refid="parser___u_n_i_8cpp_1932a8223df97b0a70a82aeb1a96ca46c" kind="function"><name>createrandomname</name></member>
+  </compound>
+  <compound refid="parser___u_n_i_8h" kind="file"><name>parser_UNI.h</name>
+  </compound>
+  <compound refid="parser___u_t_f8_8cpp" kind="file"><name>parser_UTF8.cpp</name>
+    <member refid="parser___u_t_f8_8cpp_166b93420f5be52facf9bd3342e8b8bca" kind="define"><name>US</name></member>
+    <member refid="parser___u_t_f8_8cpp_1932a8223df97b0a70a82aeb1a96ca46c" kind="function"><name>createrandomname</name></member>
+  </compound>
+  <compound refid="parser___u_t_f8_8h" kind="file"><name>parser_UTF8.h</name>
+  </compound>
+  <compound refid="stdcontainers_8h" kind="file"><name>stdcontainers.h</name>
+    <member refid="stdcontainers_8h_1ce1309c9afaba2cf388b9425b3d3ef1a" kind="typedef"><name>raw_object_t</name></member>
+    <member refid="stdcontainers_8h_14fe8a3fd31df9699d616664bad4be235" kind="typedef"><name>raw_array_t</name></member>
+  </compound>
+  <compound refid="types_8cpp" kind="file"><name>types.cpp</name>
+  </compound>
+  <compound refid="types_8h" kind="file"><name>types.h</name>
+    <member refid="types_8h_1364f6ab3ccc51f240b299f6e9d84016c" kind="define"><name>astrlen</name></member>
+    <member refid="types_8h_13d7d1b6b25e26030cf09f680a1aa0e81" kind="define"><name>A</name></member>
+    <member refid="types_8h_184ddd45a57947dd14837d5c127fcc226" kind="define"><name>pfINT</name></member>
+    <member refid="types_8h_19c13b19569640ebf39ca3b9a136d3d7f" kind="define"><name>aint_max</name></member>
+    <member refid="types_8h_1888ed67715379064f3e9f72242fefff0" kind="define"><name>strtoaint</name></member>
+    <member refid="types_8h_1e8e63e517ee873e5297708ef2e9d5052" kind="define"><name>wcstoaint</name></member>
+    <member refid="types_8h_1a154555311b23a2632d91f0531cac2c4" kind="define"><name>pfFLOAT</name></member>
+    <member refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kind="typedef"><name>achar</name></member>
+    <member refid="types_8h_11009581ac1ad90256bcfd618275becaf" kind="typedef"><name>astr</name></member>
+    <member refid="types_8h_1af23a2fdba3012f0c512f0fc318512d9" kind="typedef"><name>aint</name></member>
+    <member refid="types_8h_1e762403f037733722b8e9808df502694" kind="typedef"><name>afloat</name></member>
+  </compound>
+  <compound refid="value_8cpp" kind="file"><name>value.cpp</name>
+    <member refid="value_8cpp_1ea9c6bfd76e30dca8043d3aca32af73c" kind="function"><name>replace_all</name></member>
+    <member refid="value_8cpp_1e3d202062f43e891db15706b6bdf5b78" kind="function"><name>quotestring</name></member>
+    <member refid="value_8cpp_17cabca3f524cd580b70324035ad17860" kind="function"><name>arraygetstring</name></member>
+    <member refid="value_8cpp_1f2b61253061b87f15801266ac22f0d14" kind="function"><name>objectgetstring</name></member>
+  </compound>
+  <compound refid="value_8h" kind="file"><name>value.h</name>
+  </compound>
+  <compound refid="dir_4eec7e2f57480f8f02444e8b379873c9" kind="dir"><name>k:/</name>
+  </compound>
+  <compound refid="dir_71236e1fe3f677832c87ddd9c459739c" kind="dir"><name>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/</name>
+  </compound>
+  <compound refid="dir_3bb2f77f20a173dc862fac7d8e963db4" kind="dir"><name>k:/Visual Studio 2008/Projects/libJSONpp/</name>
+  </compound>
+  <compound refid="dir_53e70ce8faea60f3f15bd3f12524274d" kind="dir"><name>k:/Visual Studio 2008/Projects/</name>
+  </compound>
+  <compound refid="dir_1c44e9c5afb5c0226010ebd332cd0593" kind="dir"><name>k:/Visual Studio 2008/</name>
+  </compound>
+</doxygenindex>

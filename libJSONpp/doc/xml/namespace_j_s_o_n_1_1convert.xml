@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="namespace_j_s_o_n_1_1convert" kind="namespace">
+    <compoundname>JSON::convert</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_122d0fc1d7af9a20a40fb6eb077f2f571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+        <definition>astr &amp; JSON::convert::toastr</definition>
+        <argsstring>(astr &amp;dst, const char *src, size_t len)</argsstring>
+        <name>toastr</name>
+        <param>
+          <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="19" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_1e93ee53899c51adaad07570b8b01ec8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+        <definition>astr &amp; JSON::convert::toastr</definition>
+        <argsstring>(astr &amp;dst, const wchar_t *src, size_t len)</argsstring>
+        <name>toastr</name>
+        <param>
+          <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="27" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_178a772bcd2c06a8150d28fe6ab2914f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+        <definition>astr &amp; JSON::convert::toastr</definition>
+        <argsstring>(astr &amp;dst, const std::string &amp;src)</argsstring>
+        <name>toastr</name>
+        <param>
+          <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="33" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_133538051b74c13bee55515c7c0529068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+        <definition>astr &amp; JSON::convert::toastr</definition>
+        <argsstring>(astr &amp;dst, const std::wstring &amp;src)</argsstring>
+        <name>toastr</name>
+        <param>
+          <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="38" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_15fd6b40908c71f6d7bf3478f2658c406" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kindref="member">achar</ref> *</type>
+        <definition>achar * JSON::convert::toachar</definition>
+        <argsstring>(const char *src, size_t len, size_t &amp;olen)</argsstring>
+        <name>toachar</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="44" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_17e6cdc76c8276a2cd9d42519f5da5688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kindref="member">achar</ref> *</type>
+        <definition>achar * JSON::convert::toachar</definition>
+        <argsstring>(const wchar_t *src, size_t len, size_t &amp;olen)</argsstring>
+        <name>toachar</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="48" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="48" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_114983dc945fea468d49a1c6ebcd12396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * JSON::convert::tochar</definition>
+        <argsstring>(const char *src, size_t len, size_t &amp;olen)</argsstring>
+        <name>tochar</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="101" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="101" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_17b80069ac76d617a2c7933cfa9df2833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * JSON::convert::tochar</definition>
+        <argsstring>(const wchar_t *src, size_t len, size_t &amp;olen)</argsstring>
+        <name>tochar</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="114" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="114" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_11781b82a33ee56818f6319308935a9bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t * JSON::convert::towchar_t</definition>
+        <argsstring>(const char *src, size_t slen, size_t &amp;olen)</argsstring>
+        <name>towchar_t</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>slen</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="191" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="191" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_12912c32a078878f06b7011fbba325545" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>wchar_t *</type>
+        <definition>wchar_t * JSON::convert::towchar_t</definition>
+        <argsstring>(const wchar_t *src, size_t len, size_t &amp;olen)</argsstring>
+        <name>towchar_t</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="286" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="286" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_19e3bc754979a4d48e80a90fea1b5e2fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring &amp;</type>
+        <definition>std::wstring &amp; JSON::convert::towstr</definition>
+        <argsstring>(std::wstring &amp;dst, const char *src, size_t len)</argsstring>
+        <name>towstr</name>
+        <param>
+          <type>std::wstring &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="294" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="294" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_1b85174d5d1b29ea705f60c0cd9812d94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring &amp;</type>
+        <definition>std::wstring &amp; JSON::convert::towstr</definition>
+        <argsstring>(std::wstring &amp;dst, const wchar_t *src, size_t len)</argsstring>
+        <name>towstr</name>
+        <param>
+          <type>std::wstring &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="302" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_14be23e94307097453e075a068c556010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring &amp;</type>
+        <definition>std::wstring &amp; JSON::convert::towstr</definition>
+        <argsstring>(std::wstring &amp;dst, const std::wstring &amp;src)</argsstring>
+        <name>towstr</name>
+        <param>
+          <type>std::wstring &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="307" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_10ac37d233f23db273e60c12e63023aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring &amp;</type>
+        <definition>std::wstring &amp; JSON::convert::towstr</definition>
+        <argsstring>(std::wstring &amp;dst, const std::string &amp;src)</argsstring>
+        <name>towstr</name>
+        <param>
+          <type>std::wstring &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="312" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="312" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_196554ca21345714d39b4b19cf32d450b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; JSON::convert::tostr</definition>
+        <argsstring>(std::string &amp;dst, const char *src, size_t len)</argsstring>
+        <name>tostr</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="317" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="317" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_18eed936cda344ff916a7cc23359e7d95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; JSON::convert::tostr</definition>
+        <argsstring>(std::string &amp;dst, const wchar_t *src, size_t len)</argsstring>
+        <name>tostr</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="322" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="322" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_1bffeddd02e7d10d1cec8fa751bc7c1ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; JSON::convert::tostr</definition>
+        <argsstring>(std::string &amp;dst, const std::wstring &amp;src)</argsstring>
+        <name>tostr</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="330" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="330" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_j_s_o_n_1_1convert_1f9cafbeaa3dd761ce5e43c3a5773c5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; JSON::convert::tostr</definition>
+        <argsstring>(std::string &amp;dst, const std::string &amp;src)</argsstring>
+        <name>tostr</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="338" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" bodystart="338" bodyend="341"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Character-set conversion functions. </para>    </briefdescription>
+    <detaileddescription>
+<para>I&apos;m sure some (many?) people are wondering why this isn&apos;t a template class Well, at some point it probably will be, But not yet.</para><para>On windows, these functions use the builting API string conversions. On other operating systems, custom conversion routines are used, on the basis that the conversion is not all that difficult.</para><para>I&apos;m going to claim that the definitions are pretty self-explanatory, so it should be possible to work out what is going on pretty easily.</para><para>The achar and astr types are used to allow us to change the internal character type at compile time, again, templates would also allow this. </para>    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="16"/>
+  </compounddef>
+</doxygen>

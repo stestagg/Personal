@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="namespace_j_s_o_n" kind="namespace">
+    <compoundname>JSON</compoundname>
+    <innerclass refid="class_j_s_o_n_1_1unibuffer" prot="public">JSON::unibuffer</innerclass>
+    <innerclass refid="class_j_s_o_n_1_1parser___u_n_i" prot="public">JSON::parser_UNI</innerclass>
+    <innerclass refid="class_j_s_o_n_1_1utf8buffer" prot="public">JSON::utf8buffer</innerclass>
+    <innerclass refid="class_j_s_o_n_1_1parser___u_t_f8" prot="public">JSON::parser_UTF8</innerclass>
+    <innerclass refid="union_j_s_o_n_1_1dataptr" prot="public">JSON::dataptr</innerclass>
+    <innerclass refid="class_j_s_o_n_1_1value" prot="public">JSON::value</innerclass>
+    <innernamespace refid="namespace_j_s_o_n_1_1convert">JSON::convert</innernamespace>
+    <innernamespace refid="namespace_j_s_o_n_1_1datatype">JSON::datatype</innernamespace>
+    <innernamespace refid="namespace_j_s_o_n_1_1errors">JSON::errors</innernamespace>
+    <innernamespace refid="namespace_j_s_o_n_1_1literals">JSON::literals</innernamespace>
+    <innernamespace refid="namespace_j_s_o_n_1_1mapping__techniques">JSON::mapping_techniques</innernamespace>
+    <briefdescription>
+<para>The <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref> namespace should hold all public classes/functions/enums/structs of the libJSONpp library. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp" line="15"/>
+  </compounddef>
+</doxygen>

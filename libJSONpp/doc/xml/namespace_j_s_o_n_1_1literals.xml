@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="namespace_j_s_o_n_1_1literals" kind="namespace">
+    <compoundname>JSON::literals</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" prot="public" static="no">
+        <name>literals</name>
+        <enumvalue id="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe3662edfe302cacabb01be98caf3efbde" prot="public">
+          <name>_true</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe2ea46da5e9fc44900ef40db35d50db76" prot="public">
+          <name>_false</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffed8ad8e6e8093104a13330a2e8ea5bbd8" prot="public">
+          <name>_null</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>the JSON spec names a number of <ref refid="namespace_j_s_o_n_1_1literals" kindref="compound">literals</ref> that should be recognised. This enum lists them. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="33" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A wrapper namespace to stop the <ref refid="namespace_j_s_o_n_1_1literals" kindref="compound">literals</ref> enum from polluting the <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref> namespace. This also helps with IDE Auto-completion somewhat. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="28"/>
+  </compounddef>
+</doxygen>

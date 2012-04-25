@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="class_j_s_o_n_1_1utf8buffer" kind="class" prot="public">
+    <compoundname>JSON::utf8buffer</compoundname>
+    <includes local="no">parser_UTF8.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_j_s_o_n_1_1utf8buffer_11f4fb8cba4bae4a01e46350525856b09" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* JSON::utf8buffer::bfr</definition>
+        <argsstring></argsstring>
+        <name>bfr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="38" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1utf8buffer_1f8cd98a412d71d3dffe5bb7f13307da4" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* JSON::utf8buffer::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="39" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1utf8buffer_11dbc03e51e1b50b4da50d71b8432128c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* JSON::utf8buffer::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="40" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1utf8buffer_1dc814f68e9bb1e2ed10135496cf61ba4" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t JSON::utf8buffer::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="41" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1utf8buffer_1e8d9d68f19d45293254ba9675000374c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7" kindref="member">mapping_techniques::mapping_techniques</ref></type>
+        <definition>mapping_techniques::mapping_techniques JSON::utf8buffer::mapping</definition>
+        <argsstring></argsstring>
+        <name>mapping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="42" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_s_o_n_1_1utf8buffer_1d54e5e3deadfde317d3f09f37809da22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>JSON::utf8buffer::utf8buffer</definition>
+        <argsstring>()</argsstring>
+        <name>utf8buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="57" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1utf8buffer_18014bdb74f799eff6e20720a15b7403a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>utf8buffer::~utf8buffer</definition>
+        <argsstring>()</argsstring>
+        <name>~utf8buffer</name>
+        <briefdescription>
+<para>The destructor will try to unmap the buffer if it can. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="58" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1utf8buffer_14b24e4a3768de21c47f9195f135d089e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JSON::utf8buffer::mapfile</definition>
+        <argsstring>(const wchar_t *fn)</argsstring>
+        <name>mapfile</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1utf8buffer_17b5596cc7f3d804f334ece48fb0a2afc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JSON::utf8buffer::mapfile</definition>
+        <argsstring>(const char *fn)</argsstring>
+        <name>mapfile</name>
+        <param>
+          <type>const char *</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1utf8buffer_104f86b32071c7ee2ef4174d3d3228307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool utf8buffer::mapstring</definition>
+        <argsstring>(const char *fn)</argsstring>
+        <name>mapstring</name>
+        <param>
+          <type>const char *</type>
+          <declname>fn</declname>
+          <defname>buf</defname>
+        </param>
+        <briefdescription>
+<para>sets up the buffer to read from the string <computeroutput>buf</computeroutput>. The buffer reads <computeroutput>buf</computeroutput> directly, so do not prematurely delete <computeroutput>buf</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unicode string to map. <computeroutput>buf</computeroutput> is not copied, for performance reasons. So if the string that <computeroutput>buf</computeroutput> points to is freed, then the <ref refid="class_j_s_o_n_1_1unibuffer" kindref="compound">unibuffer</ref> will be unreadable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="62" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1utf8buffer_113c5863c01fdd1b9e6fd66820e9e778b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool utf8buffer::mapchararray</definition>
+        <argsstring>(const char *buf, int len)</argsstring>
+        <name>mapchararray</name>
+        <param>
+          <type>const char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>maps a binary or un-zero-terminated string. See mapstring for more info </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unicode string to read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the unicode string, in characters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="63" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp" bodystart="149" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1utf8buffer_1d0baae239062e2d4a8160dff01f234fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool utf8buffer::unmap</definition>
+        <argsstring>()</argsstring>
+        <name>unmap</name>
+        <briefdescription>
+<para>unmaps and forgets about buffer </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true, unless something unforseen has happened </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="66" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp" bodystart="19" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tracks access either to a UTF-8 string, or a file mapping to a UTF-8 file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" line="35" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h" bodystart="35" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_j_s_o_n_1_1utf8buffer_11f4fb8cba4bae4a01e46350525856b09" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>bfr</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_11dbc03e51e1b50b4da50d71b8432128c" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>end</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_1dc814f68e9bb1e2ed10135496cf61ba4" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>len</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_113c5863c01fdd1b9e6fd66820e9e778b" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>mapchararray</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_14b24e4a3768de21c47f9195f135d089e" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>mapfile</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_17b5596cc7f3d804f334ece48fb0a2afc" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>mapfile</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_1e8d9d68f19d45293254ba9675000374c" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>mapping</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_104f86b32071c7ee2ef4174d3d3228307" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>mapstring</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_1f8cd98a412d71d3dffe5bb7f13307da4" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>ptr</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_1d0baae239062e2d4a8160dff01f234fe" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>unmap</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_1d54e5e3deadfde317d3f09f37809da22" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>utf8buffer</name></member>
+      <member refid="class_j_s_o_n_1_1utf8buffer_18014bdb74f799eff6e20720a15b7403a" prot="public" virt="non-virtual"><scope>JSON::utf8buffer</scope><name>~utf8buffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,728 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="class_j_s_o_n_1_1parser___u_n_i" kind="class" prot="public">
+    <compoundname>JSON::parser_UNI</compoundname>
+    <includes local="no">parser_UNI.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_j_s_o_n_1_1parser___u_n_i_1db2ee48be3d78c142d073e74f7d1189f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class JSON::test</definition>
+        <argsstring></argsstring>
+        <name>JSON::test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="74" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_j_s_o_n_1_1parser___u_n_i_184c787e75307e90d55ddae5e7a8c9aa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class JSON::UNI_test</definition>
+        <argsstring></argsstring>
+        <name>JSON::UNI_test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="75" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_j_s_o_n_1_1parser___u_n_i_1073e0e7f748439ba6bd62fc98736cd96" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; JSON::parser_UNI::errs</definition>
+        <argsstring></argsstring>
+        <name>errs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="87" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1parser___u_n_i_1cc42f08ce1c5b4e3185349cdc778134e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_j_s_o_n_1_1unibuffer" kindref="compound">unibuffer</ref></type>
+        <definition>unibuffer JSON::parser_UNI::bfr</definition>
+        <argsstring></argsstring>
+        <name>bfr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="99" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1734cafa3f57a9b2b5617492a5ecfd5b0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readhexcode</definition>
+        <argsstring>(const wchar_t *str, std::wstring &amp;dst)</argsstring>
+        <name>readhexcode</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>std::wstring &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Tries to decode an escaped hex code of the form \xFF. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the decoding fails, eg: \xFG, then the character &apos;?&apos; is appended instead</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the string that contains the \xFF.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to a wstring to which the decoded character will be appended. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="78" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="233" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_190c849530f4b3c6e796aa2ac66badad4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readhexquad</definition>
+        <argsstring>(const wchar_t *str, std::wstring &amp;dst)</argsstring>
+        <name>readhexquad</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>std::wstring &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Tries to decode an escaped hex code of the form \uFFFF. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the decoding fails, eg: \uFGHI, then the character &apos;?&apos; is appended instead</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the string that contains the \uFFFF.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference to a wstring to which the decoded character will be appended. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="79" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="257" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1ac9856a13e9bf66171ace6a78ca1176f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::charisNumeric</definition>
+        <argsstring>(wchar_t test)</argsstring>
+        <name>charisNumeric</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+<para>Could the <computeroutput>test</computeroutput> char be part of a number? </para>        </briefdescription>
+        <detaileddescription>
+<para>Note: This function checks to see if <computeroutput>test</computeroutput> is one of: 0123456789-+.eE</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>test</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="80" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="212" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1229e1f151cb41b52663ba09797dd7796" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int parser_UNI::hextoint</definition>
+        <argsstring>(wchar_t hexchar)</argsstring>
+        <name>hextoint</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>hexchar</declname>
+        </param>
+        <briefdescription>
+<para>converts a hex character into a binary number. Takes a wchar_t in the range: 0-9, a-f, A-F and returns the numberic <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> that it represents. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>-1 if the caracter is outside these ranges </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="85" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="281" bodyend="292"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1fbe40b4d504928a35c0da29935146358" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::charisWS</definition>
+        <argsstring>(wchar_t test)</argsstring>
+        <name>charisWS</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+<para>Is a wchar_t an ECMAScript whitespace? </para>        </briefdescription>
+        <detaileddescription>
+<para><ulink url="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf</ulink> (7.2)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>test</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="81" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="178" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_17738cb2170132c3347b6a6f35dd813c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::charisEOL</definition>
+        <argsstring>(wchar_t test)</argsstring>
+        <name>charisEOL</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+<para>Is a wchar_t an ECMAScript end-of-line? </para>        </briefdescription>
+        <detaileddescription>
+<para><ulink url="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf</ulink> (7.3)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>test</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to test </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="82" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="195" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_17648ff1721b67cefba03e7a39146894e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void parser_UNI::parseEscapes</definition>
+        <argsstring>(const wchar_t *strstart, const wchar_t *strend, astr &amp;rv)</argsstring>
+        <name>parseEscapes</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>strstart</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>strend</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>copy a string, decoding escaped chars. The string <computeroutput>*strstart</computeroutput> ... <computeroutput>*strend</computeroutput>, will be copied into the std::[w]string <computeroutput>rv</computeroutput>. Escaped chars are decoded as specified in: <ulink url="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf">http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf</ulink> (7.8.4) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>-1 if the caracter is outside these ranges </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="83" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="304" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1a4bc1ab3be0a52e4a1ce421ef9b4b64d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parser_UNI::adderror</definition>
+        <argsstring>(int num)</argsstring>
+        <name>adderror</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Simple wrapper function for adding error information. this may include line/col information at some date? </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="88" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="726" bodyend="728"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_106c82dd60f17027a8b1357e386c51ab9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readstring</definition>
+        <argsstring>(astr &amp;rv)</argsstring>
+        <name>readstring</name>
+        <param>
+          <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>Reads a string from the input buffer and parses the esape chars. rv is set to the result. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="90" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="381" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1d432706e9f222f4185f783859e0ee244" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readunquotedstring</definition>
+        <argsstring>(astr &amp;rv)</argsstring>
+        <name>readunquotedstring</name>
+        <param>
+          <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tries to guess what the user meant, because unquoted strings are strictly invalid syntax, this is a best-guess scenario.</para><para>Embedded escape chars are decoded, see <ref refid="class_j_s_o_n_1_1parser___u_n_i_17648ff1721b67cefba03e7a39146894e" kindref="member">parser_UNI::parseEscapes</ref></para><para>will read all input untill a Whitespace or &apos;:&apos; is encoutered. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="91" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="358" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1477027ff93c367afc59a5cbef9ca8c68" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readlit</definition>
+        <argsstring>(JSON::value &amp;rv)</argsstring>
+        <name>readlit</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>Reads a <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref> Literal from the input buffer and sets <computeroutput>rv</computeroutput> to it&apos;s <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="92" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="410" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1b16bddbb20b38ddcb05ba25319fb5b58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readnum</definition>
+        <argsstring>(JSON::value &amp;rv)</argsstring>
+        <name>readnum</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>Reads an ECMAScript conformant number from the input buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="93" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="466" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1382a6fa4c4a09b857c5084b81616d2ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readarray</definition>
+        <argsstring>(JSON::value &amp;rv)</argsstring>
+        <name>readarray</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>Reads an array from the input stream into <computeroutput>rv</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="94" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="552" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1272aa1c9731600ba1ea3190279672d92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::readobject</definition>
+        <argsstring>(JSON::value &amp;rv)</argsstring>
+        <name>readobject</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>Reads an object from the input stream into <computeroutput>rv</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="95" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="605" bodyend="681"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_15eaefcadf77f97237ecc654f41c0215f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parser_UNI::skipWS</definition>
+        <argsstring>()</argsstring>
+        <name>skipWS</name>
+        <briefdescription>
+<para>This function looks for, and skips over any whitespace or comments under the input pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para>After calling this, the input pointer will be on a non-whitespace char OR the end of stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="96" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="500" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_186c74ac752c6d06010f8131e845ad90e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+        <definition>JSON::value &amp; parser_UNI::getvalue</definition>
+        <argsstring>(JSON::value &amp;rv)</argsstring>
+        <name>getvalue</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>Works out the type of, and then reads a <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> from the input stream into <computeroutput>rv</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="97" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="686" bodyend="721"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1dfcdd086bb3bd4e33cc47cecf81a0b5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::fail</definition>
+        <argsstring>()</argsstring>
+        <name>fail</name>
+        <briefdescription>
+<para>Did parsing generate any <ref refid="namespace_j_s_o_n_1_1errors" kindref="compound">errors</ref>? Unfortunately, there is no way to gague the severity of the <ref refid="namespace_j_s_o_n_1_1errors" kindref="compound">errors</ref> yet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="103" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="751" bodyend="753"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1d80b5f844a39f9f5089eef22016864e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int parser_UNI::errorcount</definition>
+        <argsstring>()</argsstring>
+        <name>errorcount</name>
+        <briefdescription>
+<para>Property getter for the errorcount. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="104" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="733" bodyend="735"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_11ddd51557187d28ff80368ea73af0629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; int &gt;</type>
+        <definition>const std::vector&lt; int &gt; parser_UNI::geterrors</definition>
+        <argsstring>()</argsstring>
+        <name>geterrors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="105" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="762" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1f2a44400f44058711d0248cbcb4ce65e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool parser_UNI::haveerror</definition>
+        <argsstring>(int)</argsstring>
+        <name>haveerror</name>
+        <param>
+          <type>int</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+<para>Has error <computeroutput>e</computeroutput> been raised yet? for the list of <ref refid="namespace_j_s_o_n_1_1errors" kindref="compound">errors</ref>, see: <ref refid="parser__errors_8cpp" kindref="compound">parser_errors.cpp</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="106" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="740" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1bb7790d76cf4b22aec2d82084938887f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kindref="member">achar</ref> *</type>
+        <definition>const achar * parser_UNI::geterrorstring</definition>
+        <argsstring>(int)</argsstring>
+        <name>geterrorstring</name>
+        <param>
+          <type>int</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+<para>translates an error number into its description </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="107" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="769" bodyend="771"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1a61dbf526f97309fa64a24768ebda12e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parser_UNI::reseterrors</definition>
+        <argsstring>()</argsstring>
+        <name>reseterrors</name>
+        <briefdescription>
+<para>clear the error list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="108" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="758" bodyend="760"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_153ba841592da214c45020de0d2630e1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parser_UNI::parser_UNI</definition>
+        <argsstring>()</argsstring>
+        <name>parser_UNI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="110" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="853" bodyend="855"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_18ed369b4220efb0e2054ddc4358a6f65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parser_UNI::parser_UNI</definition>
+        <argsstring>(const std::wstring s)</argsstring>
+        <name>parser_UNI</name>
+        <param>
+          <type>const std::wstring</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>maps the NULL TERMINATED string <computeroutput>s</computeroutput> ready for calling <ref refid="class_j_s_o_n_1_1parser___u_n_i_14f83edd1a064162513dcafd7d535020c" kindref="member">parse(JSON::value &amp;)</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="111" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="842" bodyend="844"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1a4c0c5e303cbbf6d6ed4b3e1f4906130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parser_UNI::parser_UNI</definition>
+        <argsstring>(const wchar_t *s)</argsstring>
+        <name>parser_UNI</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>maps the NULL TERMINATED string <computeroutput>s</computeroutput> ready for calling <ref refid="class_j_s_o_n_1_1parser___u_n_i_14f83edd1a064162513dcafd7d535020c" kindref="member">parse(JSON::value &amp;)</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="112" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="849" bodyend="851"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1cd497daed5916d2b562aa6db152ef886" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>parser_UNI::~parser_UNI</definition>
+        <argsstring>(void)</argsstring>
+        <name>~parser_UNI</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="113" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="857" bodyend="859"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_185b3985e2f5886c5cecfc0c025f63ffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void JSON::parser_UNI::unmap</definition>
+        <argsstring>()</argsstring>
+        <name>unmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_14f83edd1a064162513dcafd7d535020c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+        <definition>JSON::value &amp; parser_UNI::parse</definition>
+        <argsstring>(JSON::value &amp;rv)</argsstring>
+        <name>parse</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>parses a <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> from the input stream into <computeroutput>rv</computeroutput>. the input buffer must already have been mapped. </para>        </briefdescription>
+        <detaileddescription>
+<para>Remember, a valid <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref> object only has one top-level <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="117" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="781" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_190162b12d037eaa3128112340a5103f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+        <definition>JSON::value &amp; parser_UNI::parse</definition>
+        <argsstring>(JSON::value &amp;rv, std::wstring s)</argsstring>
+        <name>parse</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <param>
+          <type>std::wstring</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>parses the <ref refid="namespace_j_s_o_n" kindref="compound">JSON</ref> string <computeroutput>s</computeroutput> into the <ref refid="class_j_s_o_n_1_1value" kindref="compound">value</ref> <computeroutput>rv</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the initial string mapping failed, rv is unchanged, but error 10 is added to the parser </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="118" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="790" bodyend="796"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_10268ab85791b6bd481cc68b1f44a44ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+        <definition>JSON::value &amp; parser_UNI::parse</definition>
+        <argsstring>(JSON::value &amp;rv, const wchar_t *)</argsstring>
+        <name>parse</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>see <ref refid="class_j_s_o_n_1_1parser___u_n_i_190162b12d037eaa3128112340a5103f5" kindref="member">parser_UNI::parse(JSON::value&amp;, std::wstring)</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="119" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="801" bodyend="807"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1e2bf2247e12a122f5c747999bb554678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+        <definition>JSON::value &amp; parser_UNI::parsefile</definition>
+        <argsstring>(JSON::value &amp;rv, const wchar_t *)</argsstring>
+        <name>parsefile</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <defname>s</defname>
+        </param>
+        <briefdescription>
+<para>maps the file <computeroutput>s</computeroutput> into memory, then parses it into <computeroutput>rv</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="120" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="812" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1parser___u_n_i_1f404a5410ff5b68e269f7135c96506ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+        <definition>JSON::value &amp; parser_UNI::parsefile</definition>
+        <argsstring>(JSON::value &amp;rv, const char *s)</argsstring>
+        <name>parsefile</name>
+        <param>
+          <type><ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> &amp;</type>
+          <declname>rv</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>maps the file <computeroutput>s</computeroutput> into memory, then parses it into <computeroutput>rv</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="121" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="823" bodyend="833"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A builder class for parsing UNICODE files. </para>    </briefdescription>
+    <detaileddescription>
+<para>The in-memory character encoding for strings is determined at compile time. All conversions are handled automatically </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>JSON::parser_UNI</label>
+        <link refid="class_j_s_o_n_1_1parser___u_n_i"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>bfr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>JSON::unibuffer</label>
+        <link refid="class_j_s_o_n_1_1unibuffer"/>
+      </node>
+    </collaborationgraph>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="73" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="72" bodyend="122"/>
+    <listofallmembers>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1a4bc1ab3be0a52e4a1ce421ef9b4b64d" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>adderror</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1cc42f08ce1c5b4e3185349cdc778134e" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>bfr</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_17738cb2170132c3347b6a6f35dd813c6" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>charisEOL</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1ac9856a13e9bf66171ace6a78ca1176f" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>charisNumeric</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1fbe40b4d504928a35c0da29935146358" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>charisWS</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1d80b5f844a39f9f5089eef22016864e5" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>errorcount</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1073e0e7f748439ba6bd62fc98736cd96" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>errs</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1dfcdd086bb3bd4e33cc47cecf81a0b5d" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>fail</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_11ddd51557187d28ff80368ea73af0629" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>geterrors</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1bb7790d76cf4b22aec2d82084938887f" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>geterrorstring</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_186c74ac752c6d06010f8131e845ad90e" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>getvalue</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1f2a44400f44058711d0248cbcb4ce65e" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>haveerror</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1229e1f151cb41b52663ba09797dd7796" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>hextoint</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1db2ee48be3d78c142d073e74f7d1189f" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>JSON::test</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_184c787e75307e90d55ddae5e7a8c9aa7" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>JSON::UNI_test</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_14f83edd1a064162513dcafd7d535020c" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parse</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_190162b12d037eaa3128112340a5103f5" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parse</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_10268ab85791b6bd481cc68b1f44a44ca" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parse</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_17648ff1721b67cefba03e7a39146894e" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parseEscapes</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1e2bf2247e12a122f5c747999bb554678" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parsefile</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1f404a5410ff5b68e269f7135c96506ca" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parsefile</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_153ba841592da214c45020de0d2630e1e" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parser_UNI</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_18ed369b4220efb0e2054ddc4358a6f65" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parser_UNI</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1a4c0c5e303cbbf6d6ed4b3e1f4906130" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>parser_UNI</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1382a6fa4c4a09b857c5084b81616d2ff" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readarray</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1734cafa3f57a9b2b5617492a5ecfd5b0" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readhexcode</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_190c849530f4b3c6e796aa2ac66badad4" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readhexquad</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1477027ff93c367afc59a5cbef9ca8c68" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readlit</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1b16bddbb20b38ddcb05ba25319fb5b58" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readnum</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1272aa1c9731600ba1ea3190279672d92" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readobject</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_106c82dd60f17027a8b1357e386c51ab9" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readstring</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1d432706e9f222f4185f783859e0ee244" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>readunquotedstring</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1a61dbf526f97309fa64a24768ebda12e" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>reseterrors</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_15eaefcadf77f97237ecc654f41c0215f" prot="private" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>skipWS</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_185b3985e2f5886c5cecfc0c025f63ffd" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>unmap</name></member>
+      <member refid="class_j_s_o_n_1_1parser___u_n_i_1cd497daed5916d2b562aa6db152ef886" prot="public" virt="non-virtual"><scope>JSON::parser_UNI</scope><name>~parser_UNI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="stdcontainers_8h" kind="file">
+    <compoundname>stdcontainers.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="types_8h" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/types.h</includedby>
+    <incdepgraph>
+      <node id="107">
+        <label>map</label>
+      </node>
+      <node id="106">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/stdcontainers.h</label>
+        <link refid="stdcontainers.h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="117">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_errors.h</label>
+        <link refid="parser__errors_8h"/>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp</label>
+        <link refid="value_8cpp"/>
+      </node>
+      <node id="118">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h</label>
+        <link refid="value_8h"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp</label>
+        <link refid="convert_8cpp"/>
+      </node>
+      <node id="119">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h</label>
+        <link refid="parser___u_n_i_8h"/>
+        <childnode refid="113" relation="include">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/stdcontainers.h</label>
+        <link refid="stdcontainers.h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.h</label>
+        <link refid="convert_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp</label>
+        <link refid="parser___u_n_i_8cpp"/>
+      </node>
+      <node id="120">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h</label>
+        <link refid="parser___u_t_f8_8h"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/types.cpp</label>
+        <link refid="types_8cpp"/>
+      </node>
+      <node id="114">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp</label>
+        <link refid="parser___u_t_f8_8cpp"/>
+      </node>
+      <node id="116">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_errors.cpp</label>
+        <link refid="parser__errors_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_j_s_o_n">JSON</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="stdcontainers_8h_1ce1309c9afaba2cf388b9425b3d3ef1a" prot="public" static="no">
+        <type>std::map&lt; <ref refid="types_8h_1bc73ed3eebb94ad6e4b3a4f84fc6f882" kindref="member">achar</ref> *, <ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> *, <ref refid="structastr_cmp" kindref="compound">astrCmp</ref> &gt;</type>
+        <definition>typedef std::map&lt;achar *,JSON::value *,astrCmp&gt; raw_object_t</definition>
+        <argsstring></argsstring>
+        <name>raw_object_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/stdcontainers.h" line="11" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/stdcontainers.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="stdcontainers_8h_14fe8a3fd31df9699d616664bad4be235" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="class_j_s_o_n_1_1value" kindref="compound">JSON::value</ref> * &gt;</type>
+        <definition>typedef std::vector&lt;JSON::value*&gt; raw_array_t</definition>
+        <argsstring></argsstring>
+        <name>raw_array_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/stdcontainers.h" line="12" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/stdcontainers.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>JSON_stdmapob_h_INCLUDED</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>JSON_stdmapob_h_INCLUDED</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">JSON{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">value;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;achar<sp/>*,JSON::value<sp/>*,astrCmp&gt;<sp/><ref refid="stdcontainers_8h_1ce1309c9afaba2cf388b9425b3d3ef1a" kindref="member">raw_object_t</ref><sp/>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;JSON::value*&gt;<sp/><ref refid="stdcontainers_8h_14fe8a3fd31df9699d616664bad4be235" kindref="member">raw_array_t</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/stdcontainers.h"/>
+  </compounddef>
+</doxygen>

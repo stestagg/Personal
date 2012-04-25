@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="union_j_s_o_n_1_1dataptr" kind="union" prot="public">
+    <compoundname>JSON::dataptr</compoundname>
+    <includes local="no">value.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="union_j_s_o_n_1_1dataptr_1a2f9bc4454512a18dc9f17e2de93d867" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* JSON::dataptr::_v</definition>
+        <argsstring></argsstring>
+        <name>_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="82" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_j_s_o_n_1_1dataptr_1cacaa3fe53dbf36861a767d925650618" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_11009581ac1ad90256bcfd618275becaf" kindref="member">astr</ref> *</type>
+        <definition>astr* JSON::dataptr::_string</definition>
+        <argsstring></argsstring>
+        <name>_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="83" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_j_s_o_n_1_1dataptr_17013e85478e2cc8c69bfe9c9b852f878" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_j_s_o_n_1_1literals_1890bab9f08fdadf93949c1d18191cffe" kindref="member">literals::literals</ref></type>
+        <definition>literals::literals JSON::dataptr::_literal</definition>
+        <argsstring></argsstring>
+        <name>_literal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="84" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_j_s_o_n_1_1dataptr_1ef75d36b3acaa5b9b293d16995932535" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1e762403f037733722b8e9808df502694" kindref="member">afloat</ref> *</type>
+        <definition>afloat* JSON::dataptr::_number</definition>
+        <argsstring></argsstring>
+        <name>_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="85" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_j_s_o_n_1_1dataptr_18363f42d49bb85d8dae5efe264f0b71d" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1af23a2fdba3012f0c512f0fc318512d9" kindref="member">aint</ref></type>
+        <definition>aint JSON::dataptr::_fixed_number</definition>
+        <argsstring></argsstring>
+        <name>_fixed_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="86" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_j_s_o_n_1_1dataptr_1df3254209607b02a757c597b07555247" prot="public" static="no" mutable="no">
+        <type><ref refid="stdcontainers_8h_1ce1309c9afaba2cf388b9425b3d3ef1a" kindref="member">raw_object_t</ref> *</type>
+        <definition>raw_object_t* JSON::dataptr::_object</definition>
+        <argsstring></argsstring>
+        <name>_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="87" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="union_j_s_o_n_1_1dataptr_115fcf41e27f4bdd1b8ee7d1c38d9256f" prot="public" static="no" mutable="no">
+        <type><ref refid="stdcontainers_8h_14fe8a3fd31df9699d616664bad4be235" kindref="member">raw_array_t</ref> *</type>
+        <definition>raw_array_t* JSON::dataptr::_array</definition>
+        <argsstring></argsstring>
+        <name>_array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="88" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Used internally to manage pointers to data. You can safely ignore this. </para>    </briefdescription>
+    <detaileddescription>
+<para>Its main purpose is to keep the code tidier, more readable, and more type-safe [sic.] by reducing typecasting. It doesn&apos;t actually prevent any <ref refid="namespace_j_s_o_n_1_1errors" kindref="compound">errors</ref> from happening tho. </para>    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" line="81" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h" bodystart="81" bodyend="89"/>
+    <listofallmembers>
+      <member refid="union_j_s_o_n_1_1dataptr_115fcf41e27f4bdd1b8ee7d1c38d9256f" prot="public" virt="non-virtual"><scope>JSON::dataptr</scope><name>_array</name></member>
+      <member refid="union_j_s_o_n_1_1dataptr_18363f42d49bb85d8dae5efe264f0b71d" prot="public" virt="non-virtual"><scope>JSON::dataptr</scope><name>_fixed_number</name></member>
+      <member refid="union_j_s_o_n_1_1dataptr_17013e85478e2cc8c69bfe9c9b852f878" prot="public" virt="non-virtual"><scope>JSON::dataptr</scope><name>_literal</name></member>
+      <member refid="union_j_s_o_n_1_1dataptr_1ef75d36b3acaa5b9b293d16995932535" prot="public" virt="non-virtual"><scope>JSON::dataptr</scope><name>_number</name></member>
+      <member refid="union_j_s_o_n_1_1dataptr_1df3254209607b02a757c597b07555247" prot="public" virt="non-virtual"><scope>JSON::dataptr</scope><name>_object</name></member>
+      <member refid="union_j_s_o_n_1_1dataptr_1cacaa3fe53dbf36861a767d925650618" prot="public" virt="non-virtual"><scope>JSON::dataptr</scope><name>_string</name></member>
+      <member refid="union_j_s_o_n_1_1dataptr_1a2f9bc4454512a18dc9f17e2de93d867" prot="public" virt="non-virtual"><scope>JSON::dataptr</scope><name>_v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

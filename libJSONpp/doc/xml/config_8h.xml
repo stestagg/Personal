@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="config_8h" kind="file">
+    <compoundname>config.h</compoundname>
+    <includedby refid="convert_8h" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.h</includedby>
+    <includedby refid="types_8h" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/types.h</includedby>
+    <includedby refid="parser___u_n_i_8h" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h</includedby>
+    <includedby refid="value_8h" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h</includedby>
+    <includedby refid="parser___u_t_f8_8h" local="yes">k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h</includedby>
+    <invincdepgraph>
+      <node id="9">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_errors.h</label>
+        <link refid="parser__errors_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.cpp</label>
+        <link refid="value_8cpp"/>
+      </node>
+      <node id="10">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/value.h</label>
+        <link refid="value_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.cpp</label>
+        <link refid="convert_8cpp"/>
+      </node>
+      <node id="1">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h</label>
+        <link refid="config.h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h</label>
+        <link refid="parser___u_n_i_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/convert.h</label>
+        <link refid="convert_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp</label>
+        <link refid="parser___u_n_i_8cpp"/>
+      </node>
+      <node id="12">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.h</label>
+        <link refid="parser___u_t_f8_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/types.cpp</label>
+        <link refid="types_8cpp"/>
+      </node>
+      <node id="5">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UTF8.cpp</label>
+        <link refid="parser___u_t_f8_8cpp"/>
+      </node>
+      <node id="8">
+        <label>k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_errors.cpp</label>
+        <link refid="parser__errors_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="config_8h_131f0cb294e7bca54fe5fbaed75c19c8c" prot="public" static="no">
+        <name>JSON_USE_WCHAR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" line="13" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1abe1508595ded880a12a7109c860332c" prot="public" static="no">
+        <name>JSON_NUMBER_i64</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" line="20" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_1957e13a82f808a1436cfd03489db1252" prot="public" static="no">
+        <name>JSON_NUMBER_DOUBLE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" line="24" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_16cd8c078553244a0e143bccb4c51fc1c" prot="public" static="no">
+        <name>JSON_USE_STDCONTS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" line="26" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="config_8h_182cdcc5c13c75bb8ef49c89998863545" prot="public" static="no">
+        <name>JSON_UNSAFE_FUNS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" line="33" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JSON_WINDOWS</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>JSON_POSIX</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//--These<sp/>can<sp/>be<sp/>defined<sp/>by<sp/>the<sp/>buildtool--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>JSON_WINDOWS<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>JSON_POSIX<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//\---------------------/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSON_USE_WCHAR<sp/>1</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="comment">//#define<sp/>JSON_USE_CHAR<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>JSON_NO_int64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>JSON_NUMBER_INT<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>JSON_NUMBER_LONG<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSON_NUMBER_i64<sp/>1</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>JSON_NUMBER_FLOAT<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSON_NUMBER_DOUBLE<sp/>1</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSON_USE_STDCONTS<sp/>1</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Several<sp/>functions<sp/>can<sp/>be<sp/>used<sp/>for<sp/>optimisation<sp/>but<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>do<sp/>not<sp/>play<sp/>well<sp/>with<sp/>the<sp/>automatic<sp/>object<sp/>deletion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ALL<sp/>children<sp/>of<sp/>a<sp/>JSON<sp/>object<sp/>are<sp/>always<sp/>deleted<sp/>when<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>JSON<sp/>object<sp/>is<sp/>deleted.<sp/><sp/>Undefine<sp/>this<sp/>to<sp/>prevent<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>them<sp/>from<sp/>being<sp/>compiled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JSON_UNSAFE_FUNS<sp/>1</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/config.h"/>
+  </compounddef>
+</doxygen>

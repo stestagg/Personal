@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.5.5">
+  <compounddef id="class_j_s_o_n_1_1unibuffer" kind="class" prot="public">
+    <compoundname>JSON::unibuffer</compoundname>
+    <includes local="no">parser_UNI.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_j_s_o_n_1_1unibuffer_168b47b83d65aeb140bba4c72b8a286e0" prot="public" static="no" mutable="no">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* JSON::unibuffer::bfr</definition>
+        <argsstring></argsstring>
+        <name>bfr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="39" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1unibuffer_112de8175802ff6ab33a280e92ae140d1" prot="public" static="no" mutable="no">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* JSON::unibuffer::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="40" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1unibuffer_1dc3994e4962185e40389d6edbc6ffd85" prot="public" static="no" mutable="no">
+        <type>const wchar_t *</type>
+        <definition>const wchar_t* JSON::unibuffer::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="41" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1unibuffer_1aceb59938e5dc065595f93aa5bde6896" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t JSON::unibuffer::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="42" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_j_s_o_n_1_1unibuffer_15490e3a55ee690d87ea1d5ea3918966e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_j_s_o_n_1_1mapping__techniques_194855cb07b9956e515b1612e2a1fc0e7" kindref="member">mapping_techniques::mapping_techniques</ref></type>
+        <definition>mapping_techniques::mapping_techniques JSON::unibuffer::mapping</definition>
+        <argsstring></argsstring>
+        <name>mapping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="43" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_j_s_o_n_1_1unibuffer_1714327ff23595af4691dfdae7f8b0e5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>JSON::unibuffer::unibuffer</definition>
+        <argsstring>()</argsstring>
+        <name>unibuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="58" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1unibuffer_12b8f20b2132937bbfd5822c83374dda0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>unibuffer::~unibuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~unibuffer</name>
+        <briefdescription>
+<para>The destructor will try to unmap the buffer if it can. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="59" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1unibuffer_1464bdebb497c2d58a6bb47dd3966c946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JSON::unibuffer::mapfile</definition>
+        <argsstring>(const wchar_t *fn)</argsstring>
+        <name>mapfile</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1unibuffer_192afcc660951153947700509510c2f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool JSON::unibuffer::mapfile</definition>
+        <argsstring>(const char *fn)</argsstring>
+        <name>mapfile</name>
+        <param>
+          <type>const char *</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1unibuffer_1d150acca96a2b595d3cb4c406a1f13ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool unibuffer::mapstring</definition>
+        <argsstring>(const wchar_t *fn)</argsstring>
+        <name>mapstring</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>fn</declname>
+          <defname>buf</defname>
+        </param>
+        <briefdescription>
+<para>sets up the buffer to read from the string <computeroutput>buf</computeroutput>. The buffer reads <computeroutput>buf</computeroutput> directly, so do not prematurely delete <computeroutput>buf</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unicode string to map. <computeroutput>buf</computeroutput> is not copied, for performance reasons. So if the string that <computeroutput>buf</computeroutput> points to is freed, then the <ref refid="class_j_s_o_n_1_1unibuffer" kindref="compound">unibuffer</ref> will be unreadable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="63" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1unibuffer_19e4ebc43a8b5764122274ce51df3aa0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool unibuffer::mapchararray</definition>
+        <argsstring>(const wchar_t *buf, int len)</argsstring>
+        <name>mapchararray</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>maps a binary or un-zero-terminated string. See mapstring for more info </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unicode string to read </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the unicode string, in characters. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="64" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="159" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_j_s_o_n_1_1unibuffer_10593b2ebc6f303477240d030458e20a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool unibuffer::unmap</definition>
+        <argsstring>()</argsstring>
+        <name>unmap</name>
+        <briefdescription>
+<para>unmaps and forgets about buffer </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true, unless something unforseen has happened </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="66" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.cpp" bodystart="19" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tracks access either to a unicode string, or a file mapping to a unicode file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" line="36" bodyfile="k:/Visual Studio 2008/Projects/libJSONpp/libJSONpp/parser_UNI.h" bodystart="36" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_j_s_o_n_1_1unibuffer_168b47b83d65aeb140bba4c72b8a286e0" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>bfr</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_1dc3994e4962185e40389d6edbc6ffd85" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>end</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_1aceb59938e5dc065595f93aa5bde6896" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>len</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_19e4ebc43a8b5764122274ce51df3aa0a" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>mapchararray</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_1464bdebb497c2d58a6bb47dd3966c946" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>mapfile</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_192afcc660951153947700509510c2f52" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>mapfile</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_15490e3a55ee690d87ea1d5ea3918966e" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>mapping</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_1d150acca96a2b595d3cb4c406a1f13ba" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>mapstring</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_112de8175802ff6ab33a280e92ae140d1" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>ptr</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_1714327ff23595af4691dfdae7f8b0e5a" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>unibuffer</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_10593b2ebc6f303477240d030458e20a9" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>unmap</name></member>
+      <member refid="class_j_s_o_n_1_1unibuffer_12b8f20b2132937bbfd5822c83374dda0" prot="public" virt="non-virtual"><scope>JSON::unibuffer</scope><name>~unibuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
