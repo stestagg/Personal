@@ -1,7 +1,7 @@
 ## libJSONpp makefile.
 
 
-CXXFLAGS = -O2 -DJSON_POSIX -I./libJSONpp/maps
+CXXFLAGS = -O2 -fPIC -DJSON_POSIX -I./libJSONpp/maps
 CXX = g++ $(CXXFLAGS)
 LD = ld
 #-Wall

@@ -1,5 +1,6 @@
 #include "value.h"
 
+#include <cmath>
 #include <limits>
 #include "convert.h"
 
@@ -942,7 +943,7 @@ bool value::operator==(value &v){
 		case datatype::_literal:
 			return this->val._literal == v.val._literal;
 		case datatype::_number:
-			return abs(*this->val._number - *v.val._number) <= std::numeric_limits<afloat>::epsilon() ;
+			return abs((afloat)(*this->val._number - *v.val._number)) <= std::numeric_limits<afloat>::epsilon() ;
 		case datatype::_object:
 			if (val._object->size() != v.val._object->size()) return false;
 			for (oi = val._object->begin(); oi != val._object->end(); ++oi){

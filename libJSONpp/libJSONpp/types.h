@@ -9,7 +9,7 @@
 #endif
 #endif
 	#include <string>
-
+#include <climits>
 
 //CHAR definition, WCHAR implies unicode, CHAR implies UTF8 or ANSII
 #ifdef JSON_USE_WCHAR
