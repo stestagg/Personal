@@ -2,4 +2,4 @@
 
 pushd bin
 ./test
-popd
+popd > /dev/null

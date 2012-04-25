@@ -274,7 +274,9 @@ bool test::object1(){
 	std::string compval;
 	nval.getstring(compval,true,false );
 
-	if (compval == " { \"Val 1\" : 5 , \"Val 2\" : 10 } ") return true;
+	if (compval == " { \"Val 1\" : 5 , \"Val 2\" : 10 } " ||
+		compval == " { \"Val 2\" : 10 , \"Val 1\" : 5 } ") return true;
+	std::cout << compval;
 	return false;
 }
 
@@ -295,7 +297,9 @@ bool test::object2(){
 		(compval == " { \"Val 1\" : 5 , \"Val 3\" :  [ 15 , 314 ]  , \"Val 2\" : 10 } ")
 	||	(compval == " { \"Val 1\" : 5 , \"Val 2\" : 10 , \"Val 3\" :  [ 15 , 314 ]  } ")
 	||	(compval == " { \"Val 3\" :  [ 15 , 314 ]  , \"Val 1\" : 5 , \"Val 2\" : 10 } ")
+	||  (compval == " { \"Val 3\" :  [ 15 , 314 ]  , \"Val 2\" : 10 , \"Val 1\" : 5 } ")
 	)return true;
+	std::cout << compval;
 	return false;
 }
 
@@ -333,7 +337,7 @@ bool test::object3(){
 #pragma region group 4
 
 bool test::encoding1(){
-	wchar_t *t1 = L"\u2085\u2075";
+	const wchar_t *t1 = L"\u2085\u2075";
 	JSON::value nval(JSON::datatype::_object);
 
 	nval.addvalue(L"νăľ…₁",t1);
@@ -384,7 +388,7 @@ bool test::example1(){
 	}
 
 	aval.getstring(str,true,true);
-	std::cout << str << std::endl;
+	//std::cout << str << std::endl;
 
 	// deep, element-wise compare of the two 
 	return nval == aval;

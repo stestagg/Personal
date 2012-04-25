@@ -13,7 +13,7 @@ using namespace JSON;
 
 bool UNI_test::buffer1(){
 	JSON::unibuffer bfr;
-	wchar_t *teststr = L"Hello World";
+	const wchar_t *teststr = L"Hello World";
 	if (!bfr.mapstring(teststr)) return false;
 
 	if (bfr.len != 11)	return false;
@@ -26,7 +26,7 @@ bool UNI_test::buffer1(){
 
 bool UNI_test::buffer2(){
 	JSON::unibuffer bfr;
-	wchar_t *teststr = L"Hello World";
+	const wchar_t *teststr = L"Hello World";
 	if (!bfr.mapchararray(teststr,5)) return false;
 
 	if (bfr.len != 5)	return false;

@@ -13,7 +13,7 @@ using namespace JSON;
 
 bool UTF_test::buffer1(){
 	JSON::utf8buffer bfr;
-	char *teststr = "Hello World";
+	const char *teststr = "Hello World";
 	if (!bfr.mapstring(teststr)) return false;
 
 	if (bfr.len != 11)	return false;
@@ -26,7 +26,7 @@ bool UTF_test::buffer1(){
 
 bool UTF_test::buffer2(){
 	JSON::utf8buffer bfr;
-	char *teststr = "Hello World";
+	const char *teststr = "Hello World";
 	if (!bfr.mapchararray(teststr,5)) return false;
 
 	if (bfr.len != 5)	return false;

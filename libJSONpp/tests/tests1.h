@@ -97,8 +97,8 @@ typedef bool (testfn)();
 
 
 struct tst{
-	char *name;
-	char *desc;
+	const char *name;
+	const char *desc;
 	testfn *fn;
 	bool eog;
 	bool fatal;

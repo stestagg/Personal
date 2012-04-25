@@ -3,7 +3,7 @@
 
 unsigned long SuperFastHash (const char * data, int len) ;
 
-#include "types.h"
+#include "../types.h"
 
 struct sf_hash{
 	const unsigned long operator()(const achar *data) const{

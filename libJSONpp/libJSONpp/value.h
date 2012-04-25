@@ -195,7 +195,7 @@ namespace JSON {
 		JSON::literals::literals getliteral(JSON::literals::literals _default=literals::_null);
 		aint getinteger(aint _default=0);
 		afloat getfloat(afloat _default=0);
-		astr &value::getstring(astr &dest,achar *_default);
+		astr &getstring(astr &dest,achar *_default);
 		std::wstring &getstring(std::wstring &dest,bool enquote=false,bool newline=false);
 		std::string &getstring(std::string &dest,bool enquote=false,bool newline=false);
 

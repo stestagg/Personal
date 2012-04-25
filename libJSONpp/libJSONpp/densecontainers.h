@@ -1,7 +1,7 @@
 #ifndef JSON_densemapob_h_INCLUDED
 #define JSON_densemapob_h_INCLUDED
 
-#include "maps/dense_hash_map"
+#include "maps/sparsehash/dense_hash_map"
 #include <vector>
 #include "maps/sfh.h"
 
