@@ -1,0 +1,32 @@
+def options(opt):
+        opt.load('compiler_cxx')
+
+def configure(conf):
+        conf.load('compiler_cxx') 
+
+def build(bld):
+    bld.stlib(source="Render.cpp", target="render")
+    bld.stlib(source="gradient.cpp", target="gradient")
+    bld.stlib(source="mandel.cpp", target="mandellib")
+    bld.program(
+                source       = 'main.cpp', 
+                target       = 'mandel', 
+                #features     = ['more', 'features'], 
+                use = ["render", "mandellib", "gradient"]
+
+                #includes     = ['.'], 
+                #defines      = ['LINUX=1', 'BIDULE'],
+
+                #lib          = ['m'], 
+                #libpath      = ['/usr/lib'],
+                #stlib        = ['dl'], 
+                #stlibpath    = ['/usr/local/lib'],
+                #linkflags    = ['-g'], 
+                #rpath        = ['/opt/kde/lib'] 
+                #vnum         = '1.2.3',
+
+                #install_path = '${SOME_PATH}/bin', 
+                #cflags       = ['-O2', '-Wall'], 
+                #cxxflags     = ['-O3'],
+                #dflags       = ['-g'],
+        )
