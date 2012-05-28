@@ -86,9 +86,9 @@ const char *subdiv(const char* c, const char *w, double pcnt, double ar){
   mp_exp_t z;
   mpf_get_str(tmpstr,&z,10,200,out);
   if (tmpstr[0] == '-'){
-    sprintf(outstr,"-0.%s@%i",tmpstr+1,z);
+    sprintf(outstr,"-0.%s@%li",tmpstr+1,z);
   }else{
-    sprintf(outstr,"0.%s@%i",tmpstr,z);
+    sprintf(outstr,"0.%s@%li",tmpstr,z);
   }
 
   mpq_clear(diq);
