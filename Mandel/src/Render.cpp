@@ -1,4 +1,5 @@
 #include "png.h"
+#include <cstdlib>
 #include "mandel.h"
 
 #define ERROR 1
