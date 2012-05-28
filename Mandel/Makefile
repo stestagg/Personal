@@ -2,7 +2,7 @@
 SRC_FILES = $(notdir $(wildcard src/*.cpp))
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
-CXX = g++ -g -O2
+CXX = g++ -g -O2 -Iobj/gmp/include/
 LINK = $(CXX) -Wl,-no_pie
 
 # Final target
