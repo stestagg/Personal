@@ -221,27 +221,17 @@ void normalize2(grd &gd,hirez_Viewport &vp){
   // c = pixel count in the grid
   int c = gd.w*gd.h;
   gd.l = c;
-  // 
+  // Construct a histogram of intensity values
   int hista[USHRT_MAX];
   memset(hista,0,sizeof(int)*USHRT_MAX);
-
-  /*FILE * fp = fopen("g:/mand.txt","wb");
-
-    int y = gd.h / 3;
-    for (int x=0; x < gd.w; ++x){
-    fprintf(fp,"%u,%f\n",vp.grid[x + (y*gd.w)],vp.extra[x + (y*gd.w)]/(double)USHRT_MAX);
-    }
-
-    fclose(fp);*/
-
-
-
   for (int z=0;z<c;++z){	
     ++hista[vp.grid[z]];	
   }
+
+  // We're ignoring the top/bottom 1% of values	
+  int margin = (c*1)/100;
 	
-  int margin = (c*2)/100;
-	
+  //Calculate the low cutoff value
   int acc=0;
   int i=0;
   while (acc < margin){
@@ -250,6 +240,7 @@ void normalize2(grd &gd,hirez_Viewport &vp){
   }
   int lowco=i;
 
+  //...And the high cutoff
   acc=0; 
   i=USHRT_MAX-1;
   while (acc < margin){
@@ -258,8 +249,11 @@ void normalize2(grd &gd,hirez_Viewport &vp){
   }
   int hico=i;
 
+  // Scaling factor for dynamic range
   double xm=255/((double)(hico-lowco));
+  // Adjustment value
   double xc=0-(xm * lowco);
+
   for (int z=0; z<USHRT_MAX; ++z){
     if (z < lowco){
       hista[z]=0;
@@ -270,17 +264,19 @@ void normalize2(grd &gd,hirez_Viewport &vp){
     }
   }
 
-	
-
-  for (int z=0;z<c;++z){	
+  // iterate over the grid
+  for (int z=0;z<c;++z){
+    // use the 'extra' value for smoothing
     double chng = cubes[vp.extra[z]];
     unsigned short gv = vp.grid[z];
     unsigned char a = hista[gv];
     if (gv < (USHRT_MAX-1)) ++gv;
-    unsigned char b = hista[gv];
-
-    gd.data[z] = (unsigned char)( (b-a)*chng + a);
-    int p = 0;
+    if (gv == USHRT_MAX){
+      gd.data[z] = 0;
+    }else{
+      unsigned char b = hista[gv];
+      gd.data[z] = (unsigned char)( (b-a)*chng + a);
+    }
   }
 }
 
