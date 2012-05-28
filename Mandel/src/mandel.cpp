@@ -6,7 +6,9 @@
 //#include <omp.h>
 #include <stdint.h>
 
+#ifndef USHRT_MAX
 #define USHRT_MAX 0xffff
+#endif
 
 //#include <fstream>
 
@@ -46,9 +48,9 @@ const char *zoom(const char* w, double pcnt){
   mp_exp_t z;
   mpf_get_str(tmpstr,&z,10,200,val);
   if (tmpstr[0] == '-'){
-    sprintf(outstr,"-0.%s@%i",tmpstr+1,z);
+    sprintf(outstr,"-0.%s@%li",tmpstr+1,z);
   }else{
-    sprintf(outstr,"0.%s@%i",tmpstr,z);
+    sprintf(outstr,"0.%s@%li",tmpstr,z);
   }
 
   mpf_clear(val);
