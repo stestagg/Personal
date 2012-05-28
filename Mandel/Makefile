@@ -2,7 +2,7 @@
 SRC_FILES = $(notdir $(wildcard src/*.cpp))
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
-CXX = g++ -g -O2 -Iobj/gmp/include/ -Iobj/png/include/ -pg
+CXX = g++ -O3 -Iobj/gmp/include/ -Iobj/png/include/ -pg
 LINK = $(CXX) 
 
 # Final target
@@ -63,12 +63,12 @@ check_gmp:
 
 # Cleanup rules
 clean:
-	rm mandel
-	rm -rf bin
-	rm -rf obj
+	- rm mandel
+	- rm obj/*.o
 
 distclean: clean
-	rm -rf libs
+	- rm -rf obj
+	- rm -rf libs
 
 
 
