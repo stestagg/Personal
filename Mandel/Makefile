@@ -9,7 +9,6 @@ LINK = $(CXX)
 mandel: obj/libgmp.a obj/libpng.a ${OBJ_FILES}
 	$(LINK) ${OBJ_FILES} obj/libgmp.a obj/libpng.a -lz -o mandel
 
-
 # 1. Make dirs
 libs obj bin:
 	mkdir $@
@@ -63,12 +62,10 @@ check_gmp:
 
 # Cleanup rules
 clean:
-	rm mandel
-	rm -rf obj/*.o
+	- rm mandel
+	- rm obj/*.o
 
 distclean: clean
-	rm -rf libs
+	- rm -rf obj
+	- rm -rf libs
 
-
-
-#
