@@ -2,13 +2,12 @@
 SRC_FILES = $(notdir $(wildcard src/*.cpp))
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
-CXX = g++ -O3 -Iobj/gmp/include/ -Iobj/png/include/ -pg
+CXX = g++ -g -O3 -Iobj/gmp/include/ -Iobj/png/include/
 LINK = $(CXX) 
 
 # Final target
 mandel: obj/libgmp.a obj/libpng.a ${OBJ_FILES}
 	$(LINK) ${OBJ_FILES} obj/libgmp.a obj/libpng.a -lz -o mandel
-
 
 # 1. Make dirs
 libs obj bin:
@@ -70,6 +69,3 @@ distclean: clean
 	- rm -rf obj
 	- rm -rf libs
 
-
-
-#
