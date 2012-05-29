@@ -24,7 +24,7 @@ int main(int argc, const char **argv){
   int iter = atoi(argv[4]);
   
   grd foo = rendersect2(argv[1], argv[2], argv[3], iter, image_width, 
-			image_height, PP::Normal2);
+			image_height, PP::Null);
   
   char cmdline[16384];
   sprintf(cmdline, "%s, %s, %s, %s", argv[1], argv[2], argv[3], argv[4]);
