@@ -1,8 +1,10 @@
 #!/usr/bin/python
 
+import os
 import sys
 import subprocess
 import urllib2
+import tempfile
 
 
 def main(server):
@@ -16,10 +18,13 @@ def main(server):
         print "%s " % task,
         sys.stdout.flush()
         args = data.split(" ")
-        cmdline = ["./mandel"] + args + ["temp.png", "200", "200"]
+        fh, myfile = tempfile.mkstemp()
+        os.close(fh)
+        cmdline = ["./mandel"] + args + [myfile, "200", "200"]
         subprocess.check_call(cmdline)
         subprocess.check_call(["curl", base+"put/"+task, 
-                               "-F", "data=@temp.png", "-k"])
+                               "-F", "data=@%s" % myfile, "-k"])
+        os.unlink(myfile)
         print
 
 if __name__ == "__main__":
