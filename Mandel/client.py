@@ -20,7 +20,7 @@ def main(server):
         args = data.split(" ")
         fh, myfile = tempfile.mkstemp()
         os.close(fh)
-        cmdline = ["./mandel"] + args + [myfile, "200", "200"]
+        cmdline = ["./mandel"] + args + [myfile]
         subprocess.check_call(cmdline)
         subprocess.check_call(["curl", base+"put/"+task, 
                                "-F", "data=@%s" % myfile, "-k"])
