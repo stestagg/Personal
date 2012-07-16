@@ -50,12 +50,11 @@ int main(int argc, const char **argv){
         }
     }
 
-    grayalpha<out_type> max_item = final.max();
     grid<grayalpha<out_type> > output(image_width, image_height);
     size_t target=image_width * image_height;
     for (size_t i=0; i<target; ++i){
-        output[i].g = (final[i].g * UIMAX(out_type)) / max_item.g;
-        output[i].a=UIMAX(out_type);// - final[i].a;
+        output[i].g = final[i].g 
+        output[i].a=UIMAX(out_type) - final[i].a;
     }
 
     png::write(output, file_name);
