@@ -94,6 +94,6 @@ public:
 			position.y = ytemp + candidate.y;
 			position.x = xtemp;
 		}
-		return grayalpha<U>(UIMAX(U), 0); //UIMAX(U));
+		return grayalpha<U>(UIMAX(U), UIMAX(U));
 	}
 };
