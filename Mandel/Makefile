@@ -1,5 +1,6 @@
 
 SRC_FILES = $(notdir $(wildcard src/*.cpp))
+HPP_FILES =  $(wildcard src/*.hpp)
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
 CXX = g++ -g -O3 -Iobj/gmp/include/ -Iobj/png/include/
@@ -48,6 +49,8 @@ obj/libgmp.a: libs/gmp/Makefile
 obj/libpng.a: libs/png/Makefile
 	cd libs/png && make install
 	cp obj/png/lib/libpng.a obj/libpng.a
+
+${OBJ_FILES} : ${HPP_FILES}
 
 # 6. Compile source
 ${OBJ_FILES} : obj/%.o : src/%.cpp

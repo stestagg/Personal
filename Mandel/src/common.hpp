@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <cstring>
 #include <math.h>
-#import <gmpxx.h>
+#include <gmpxx.h>
 
 
 template<class T>T MIN(T x, T y){return (((x)<(y)) ? (x) : (y));}
@@ -162,16 +162,12 @@ class Point{
 
 	};
 
-template<class inT, class outT> outT to_integer(inT in){
-	return (outT)in;
+template<class inT> double to_double(inT in){
+	return (double)in;
 };
 
-template<class outT> outT to_integer(mpf_class in){
-	return in.get_ui();
-}
-
-template<class outT> outT to_integer(mpq_class in){
-	return outT(in.get_d());
+double to_double(mpf_class in){
+	return in.get_d();
 }
 
 #endif

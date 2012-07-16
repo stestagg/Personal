@@ -53,7 +53,7 @@ int main(int argc, const char **argv){
     grid<grayalpha<out_type> > output(image_width, image_height);
     size_t target=image_width * image_height;
     for (size_t i=0; i<target; ++i){
-        output[i].g = final[i].g 
+        output[i].g = final[i].g;
         output[i].a=UIMAX(out_type) - final[i].a;
     }
 

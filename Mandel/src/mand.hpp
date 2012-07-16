@@ -1,4 +1,4 @@
-#import <gmpxx.h>
+#include <gmpxx.h>
 
 template <class T> class ViewportIter;
 
@@ -86,7 +86,7 @@ public:
 			x2 = position.x * position.x;
 			y2 = position.y * position.y;
 			dist = x2 + y2;
-			if (dist >= 4) return grayalpha<U>(count, to_integer<U>(dist) - 4);
+			if (dist >= 4) return grayalpha<U>(count, (U)((to_double(dist) - 4) * 40));
 			x2 -= y2;
 			xtemp = x2 + candidate.x;
 			ytemp = position.x * position.y;
@@ -94,6 +94,6 @@ public:
 			position.y = ytemp + candidate.y;
 			position.x = xtemp;
 		}
-		return grayalpha<U>(0, 0); // UIMAX(U), 0
+		return grayalpha<U>(UIMAX(U), 0); //UIMAX(U));
 	}
 };
