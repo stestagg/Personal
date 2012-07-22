@@ -33,7 +33,7 @@ int main(int argc, const char **argv){
 
     mpf_set_default_prec(255);
 
-    grid<grayalpha<itertype> > final(image_width, image_height);
+    grid<grayalpha<itertype, double> > final(image_width, image_height);
 
     Viewport<VPTY> vp = Viewport<VPTY>::fromCenter(VPTY(real_center), VPTY(imag_center), VPTY(width), aspect_ratio);
     ViewportIter<VPTY> it = vp.iter(image_width, image_height); 
@@ -49,12 +49,15 @@ int main(int argc, const char **argv){
             it.next();
         }
     }
+    
+    grayalpha<itertype, double> grid_max = final.max();
 
     grid<grayalpha<out_type> > output(image_width, image_height);
     size_t target=image_width * image_height;
     for (size_t i=0; i<target; ++i){
         output[i].g = final[i].g;
-        output[i].a=UIMAX(out_type) - final[i].a;
+        output[i].a = (out_type)((final[i].a / grid_max.a) * UIMAX(out_type));
+        //output[i].a=UIMAX(out_type) - final[i].a;
     }
 
     png::write(output, file_name);

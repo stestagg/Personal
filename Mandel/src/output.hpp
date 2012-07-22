@@ -4,6 +4,7 @@
 #include "common.hpp"
 #include <stdint.h> 
 #include <png.h>
+#include <iostream>
 
 namespace png{
 	static const int PENDING = -1;
@@ -103,6 +104,58 @@ namespace png{
 		WritePng<T>(file_name, grd);
 	}
 
+
+	template <class T>
+	class PngReader{
+	public:
+
+		grid<T> *read(const char *fn){
+			png_byte header[8];
+			FILE *fp = fopen(fn, "rb");
+			fread(header, 1, 8, fp);
+			if (png_sig_cmp(header, 0, 8)){
+				std::cout << "Invalid Signature" << std::endl;
+				 return NULL;
+			}
+
+			png_structp png_ptr = png_create_read_struct
+        		(PNG_LIBPNG_VER_STRING, (png_voidp)NULL, NULL, NULL);
+
+    		if (!png_ptr){
+    			std::cout << "Could not create read struct" << std::endl; 
+       			return NULL;
+       		}
+
+    		png_infop info_ptr = png_create_info_struct(png_ptr);
+
+    		if (!info_ptr){
+       			png_destroy_read_struct(&png_ptr, (png_infopp)NULL, (png_infopp)NULL);
+       			std::cout << "Could not create info struct" << std::endl; 
+       			return NULL;
+    		}
+
+    		png_init_io(png_ptr, fp);
+    		png_set_sig_bytes(png_ptr, 8);
+
+    		png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_SWAP_ENDIAN, NULL);
+
+    		png_byte **row_pointers = png_get_rows(png_ptr, info_ptr);
+    		if (!row_pointers){
+    			std::cout << "Could not get rows" << std::endl;
+    			return NULL;
+    		}
+
+    		size_t width = png_get_image_width(png_ptr, info_ptr);
+    		size_t height = png_get_image_height(png_ptr, info_ptr);
+
+    		grid<T> *grd = new grid<T>(width, height);
+    		for (size_t row=0; row<height; ++row){
+    			memcpy(grd->row_ptr(row), row_pointers[row], grd->element_size() * width);
+    		}
+    		return grd;
+    		png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+		};
+	};
 }
 
 #endif

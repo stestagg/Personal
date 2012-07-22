@@ -45,15 +45,15 @@ public:
 	};
 };
 
-template<class T = uint8_t>
+template<class T = uint8_t, class U = T>
 class grayalpha{
 public:
 	T g;
-	T a;
+	U a;
 
 	grayalpha() : g(0), a(UIMAX(T)) {};
 	grayalpha(T g) : g(g), a(UIMAX(T)) {};
-	grayalpha(T g, T a) : g(g), a(a) {};
+	grayalpha(T g, U a) : g(g), a(a) {};
 };
 
 template <class T> class grid{
@@ -105,14 +105,22 @@ public:
 		return this->data[x + (y * width)];
 	}
 
+	T *row_ptr(size_t row){
+		return &this->data[row * width];
+	}
+
+	size_t element_size(){
+		return sizeof(T);
+	}
+
 };
 
-template<class T> grayalpha<T> MAX(grayalpha<T> a, grayalpha<T> b){
-	return grayalpha<T>(MAX(a.g, b.g), MAX(a.a, b.a));
+template<class T, class U> grayalpha<T, U> MAX(grayalpha<T, U> a, grayalpha<T, U> b){
+	return grayalpha<T, U>(MAX(a.g, b.g), MAX(a.a, b.a));
 };
 
-template<class T> grayalpha<T> MIN(grayalpha<T> a, grayalpha<T> b){
-	return grayalpha<T>(MIN(a.g, b.g), MIN(a.a, b.a));
+template<class T, class U> grayalpha<T, U> MIN(grayalpha<T, U> a, grayalpha<T, U> b){
+	return grayalpha<T, U>(MIN(a.g, b.g), MIN(a.a, b.a));
 };
 
 

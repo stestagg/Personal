@@ -4,11 +4,14 @@ HPP_FILES =  $(wildcard src/*.hpp)
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
 CXX = g++ -g -O3 -Iobj/gmp/include/ -Iobj/png/include/
-LINK = $(CXX) 
+LINK = $(CXX) -Wl,-no_pie
 
 # Final target
-mandel: obj/libgmp.a obj/libpng.a ${OBJ_FILES}
-	$(LINK) ${OBJ_FILES} obj/libgmp.a obj/libpng.a -lz -o mandel
+mandel: obj/libgmp.a obj/libpng.a obj/main.o
+	$(LINK) ${HPP_OBJ_FILES} obj/main.o obj/libgmp.a obj/libpng.a -lz -o mandel
+
+pp: obj/libgmp.a obj/libpng.a obj/postprocess.o
+	$(LINK) ${HPP_OBJ_FILES} obj/postprocess.o obj/libgmp.a obj/libpng.a -lz -o pp
 
 # 1. Make dirs
 libs obj bin:

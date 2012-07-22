@@ -75,18 +75,18 @@ public:
 
 	Calculator(U iters) : iters(iters), escape_val(4.0) {}
 
-	inline grayalpha<U> operator()(const Point<T> candidate){
+	inline grayalpha<U, double> operator()(const Point<T> candidate){
 		return calculate(candidate);
 	}
 
-	grayalpha<U> calculate(const Point<T> candidate){
+	grayalpha<U, double> calculate(const Point<T> candidate){
 		position.x = 0;
 		position.y = 0;
 		for (U count=0; count < iters; ++count){
 			x2 = position.x * position.x;
 			y2 = position.y * position.y;
 			dist = x2 + y2;
-			if (dist >= 4) return grayalpha<U>(count, (U)((to_double(dist) - 4) * 40));
+			if (dist >= 4) return grayalpha<U, double>(count, to_double(dist) - 4.0);
 			x2 -= y2;
 			xtemp = x2 + candidate.x;
 			ytemp = position.x * position.y;
@@ -94,6 +94,6 @@ public:
 			position.y = ytemp + candidate.y;
 			position.x = xtemp;
 		}
-		return grayalpha<U>(UIMAX(U), UIMAX(U));
+		return grayalpha<U, double>(UIMAX(U), 0.0);
 	}
 };
