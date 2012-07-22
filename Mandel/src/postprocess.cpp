@@ -29,6 +29,8 @@ int main(int argc, const char **argv){
 
     grid<grayalpha<uint8_t, uint8_t> > output(grd->width, grd->height);
 
+    in_type min_val = grd->min();
+
     size_t target=grd->width * grd->height;
     for (size_t i=0; i<target; ++i){
         if ((*grd)[i].g == UIMAX(in_T)){
@@ -40,13 +42,16 @@ int main(int argc, const char **argv){
     }
 
     in_type max_val = grd->max();
-    double scaling = 255/(double)max_val.g;
+    //in_type min_val = grd->min();
+    double scaling = 255/(double)(max_val.g - min_val.g);
     
     for (size_t i=0; i<target; ++i){
         double val = (*grd)[i].g;
         //double offset = (((*grd)[i].a)/((double)UIMAX(in_T)));
         double offset = cubes[(*grd)[i].a];
-        output[i].g = (uint8_t)((val + (offset)) * scaling);
+        double combined = MIN(MAX((val + offset) - min_val.g, 0.0), 255.0);
+
+        output[i].g = (uint8_t)(combined * scaling);
     }
 
     png::write(output, out_file);
