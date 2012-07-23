@@ -4,11 +4,13 @@ HPP_FILES =  $(wildcard src/*.hpp)
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
 CXX = g++ -g  -O3 -Iobj/gmp/include/ -Iobj/png/include/
-LINK = $(CXX) -Wl,-no_pie -lpthread
+LINK = $(CXX) -Wl,-no_pie -lpthread -static -shared-libgcc
+LINK_AFTER = -lpthread
+
 
 # Final target
 mandel: obj/libgmp.a obj/libpng.a obj/main.o
-	$(LINK) ${HPP_OBJ_FILES} obj/main.o obj/libgmp.a obj/libpng.a -lz -o mandel
+	$(LINK) ${HPP_OBJ_FILES} obj/main.o obj/libgmp.a obj/libpng.a -lz -o mandel $(LINK_AFTER)
 
 pp: obj/libgmp.a obj/libpng.a obj/postprocess.o
 	$(LINK) ${HPP_OBJ_FILES} obj/postprocess.o obj/libgmp.a obj/libpng.a -lz -o pp
