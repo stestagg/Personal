@@ -3,6 +3,7 @@
 #include "output.hpp"
 #include "mand.hpp"
 #include "color.hpp"
+#include <pthread.h>
 #include <iostream>
 
 #include <gmpxx.h>
@@ -10,6 +11,41 @@
 typedef mpf_class VPTY;
 typedef uint16_t itertype;
 typedef uint16_t out_type;
+
+struct ProcessArgs{
+    grid<grayalpha<itertype, double> > *final;
+    Viewport<VPTY> * vp;
+    size_t width;
+    size_t height;
+    size_t start_y;
+    size_t end_y;
+    size_t iter;
+};
+
+pthread_mutex_t init_lock = PTHREAD_MUTEX_INITIALIZER;
+
+void process(ProcessArgs *pa){
+    pthread_mutex_lock( &init_lock );
+    ViewportIter<VPTY> iter = pa->vp->iter(pa->width, pa->height);
+    
+    std::cout << "Starting: " << pa->start_y << " - " << pa->end_y << std::endl;
+    iter.skip_y(pa->start_y);
+    iter.limit_y(pa->end_y);
+
+    Calculator<VPTY, itertype> calc(pa->iter);
+    pthread_mutex_unlock( &init_lock );
+
+    for (size_t y=pa->start_y; y < pa->end_y; ++y){
+        for (size_t x=0; x<pa->width; ++x){
+            if (!iter.more){
+                printf("Reached the end prematurely\n");
+            }
+            pa->final->get_point(x, y) = calc(iter.position);
+            iter.next();
+        }
+    }
+
+};
 
 int main(int argc, const char **argv){
 
@@ -36,18 +72,23 @@ int main(int argc, const char **argv){
     grid<grayalpha<itertype, double> > final(image_width, image_height);
 
     Viewport<VPTY> vp = Viewport<VPTY>::fromCenter(VPTY(real_center), VPTY(imag_center), VPTY(width), aspect_ratio);
-    ViewportIter<VPTY> it = vp.iter(image_width, image_height); 
-    size_t y;
-
-    Calculator<VPTY, itertype> calc(iter);
-    for (y=0; y< image_height; ++y){
-        for (size_t x=0; x<image_width; ++x){
-            if (!it.more){
-                printf("Reached the end prematurely\n");
-            }
-            final.get_point(x, y) = calc(it.position);
-            it.next();
-        }
+    
+    long nproc = sysconf(_SC_NPROCESSORS_ONLN);
+    pthread_t *threads = new pthread_t[nproc];
+    ProcessArgs *pas = new ProcessArgs[nproc];
+    size_t num_per_thread = image_height / nproc;
+    for (int i=0; i<nproc; ++i){
+        pas[i].final = &final;
+        pas[i].vp = &vp;
+        pas[i].width = image_width;
+        pas[i].height = image_height;
+        pas[i].iter = iter;
+        pas[i].start_y = (num_per_thread * i);
+        pas[i].end_y = MIN((int)image_height, (int)(num_per_thread * (i+1)));
+        pthread_create(&threads[i], NULL, (void* (*)(void*))process, (void *)&(pas[i]));
+    }
+    for (int i=0; i<nproc; ++i){
+        pthread_join(threads[i], NULL);
     }
     
     grayalpha<itertype, double> grid_max = final.max();

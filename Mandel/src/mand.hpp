@@ -32,7 +32,7 @@ class ViewportIter{
 public:
 	Viewport<T> &vp;
 	Point<T> position;
-	Point<T> step_position;
+	Point<size_t> step_position;
 	Point<T> step;
 	Point<size_t> steps;
 	bool more;
@@ -42,6 +42,17 @@ public:
 		Size<T> size = vp.calcSize();
 		step.x = size.width / (T)(stepsx);
 		step.y = size.height / (T)(stepsy );
+	}
+
+	void skip_y(size_t num_y){
+		for (size_t i=0; i < num_y; ++i){
+			step_position.y += 1;
+			position.y += step.y;
+		}
+	}
+
+	void limit_y(size_t new_limit){
+		steps.y = new_limit;
 	}
 
 	void next(){

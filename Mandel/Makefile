@@ -3,8 +3,8 @@ SRC_FILES = $(notdir $(wildcard src/*.cpp))
 HPP_FILES =  $(wildcard src/*.hpp)
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
-CXX = g++ -g -O3 -Iobj/gmp/include/ -Iobj/png/include/
-LINK = $(CXX) -Wl,-no_pie
+CXX = g++ -g  -O3 -Iobj/gmp/include/ -Iobj/png/include/
+LINK = $(CXX) -Wl,-no_pie -lpthread
 
 # Final target
 mandel: obj/libgmp.a obj/libpng.a obj/main.o
