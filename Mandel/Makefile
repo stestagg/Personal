@@ -3,17 +3,33 @@ SRC_FILES = $(notdir $(wildcard src/*.cpp))
 HPP_FILES =  $(wildcard src/*.hpp)
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
-CXX = g++ -g  -O3 -Iobj/gmp/include/ -Iobj/png/include/
-LINK = $(CXX) -Wl,-no_pie -lpthread -static -shared-libgcc
+UNAME = uname
+CXX = g++ -g  -O3 -Iobj/gmp/include/ -Iobj/png/include/ -Ilibs/json/
+LINK = $(CXX) -Wl,-no_pie -lpthread
 LINK_AFTER = -lpthread
 
+ifeq ($(UNAME), Linux)
+LINK = $(LINK) -static -shared-libgcc
+endif
 
 # Final target
 mandel: obj/libgmp.a obj/libpng.a obj/main.o
 	$(LINK) ${HPP_OBJ_FILES} obj/main.o obj/libgmp.a obj/libpng.a -lz -o mandel $(LINK_AFTER)
 
-pp: obj/libgmp.a obj/libpng.a obj/postprocess.o
-	$(LINK) ${HPP_OBJ_FILES} obj/postprocess.o obj/libgmp.a obj/libpng.a -lz -o pp
+reduce: obj/libgmp.a obj/libpng.a obj/reduce.o
+	$(LINK) ${HPP_OBJ_FILES} obj/reduce.o obj/libgmp.a obj/libpng.a -lz -o reduce 
+
+2bw: obj/libgmp.a obj/libpng.a obj/blackwhite.o
+	$(LINK) ${HPP_OBJ_FILES} obj/blackwhite.o obj/libgmp.a obj/libpng.a -lz -o 2bw 
+
+mapper/pp: obj/libgmp.a obj/libpng.a obj/postprocess.o obj/libjson.la 
+	$(LINK) ${HPP_OBJ_FILES} obj/postprocess.o obj/libgmp.a obj/libpng.a obj/libjson.la -lz -o mapper/pp
+
+mapper/info: obj/libgmp.a obj/libpng.a obj/info.o 
+	$(LINK) ${HPP_OBJ_FILES} obj/info.o obj/libgmp.a obj/libpng.a -lz -o mapper/info
+
+
+pp: mapper/pp
 
 # 1. Make dirs
 libs obj bin:
@@ -38,6 +54,7 @@ libs/png/configure: obj/png.tgz
 
 
 # 4. Configure libs
+
 LIBGMP_BUILDDIR = $(abspath obj/gmp)
 libs/gmp/Makefile: libs/gmp/configure
 	cd libs/gmp && ./configure --enable-static=YES --enable-shared=NO --enable-cxx --prefix=$(LIBGMP_BUILDDIR)
@@ -54,6 +71,10 @@ obj/libgmp.a: libs/gmp/Makefile
 obj/libpng.a: libs/png/Makefile
 	cd libs/png && make install
 	cp obj/png/lib/libpng.a obj/libpng.a
+
+obj/libjson.la: libs/json/Makefile
+	cd libs/json && make
+	cp libs/json/bin/libJSONpp.la obj/libjson.la
 
 ${OBJ_FILES} : ${HPP_FILES}
 
