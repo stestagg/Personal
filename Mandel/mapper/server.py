@@ -28,7 +28,7 @@ def index():
 
 
 def get_range(num):
-    img = "../out/stage2/%s.png" % num
+    img = "../out2/reduced/%s.png" % num
     return subprocess.check_output(["./info", img])
 
 
@@ -39,7 +39,7 @@ def edit(num):
 
 @app.route("/image/<int:num>/")
 def image(num):
-    img = "../out/stage2/%s.png" % num
+    img = "../out2/reduced/%s.png" % num
     out = subprocess.check_output(["./pp", "map.json", img, "/dev/stdout"])
     return out, 200, {"Content-type": "image/png"}
 

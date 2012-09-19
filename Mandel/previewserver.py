@@ -33,6 +33,7 @@ def hello_world():
         <dt>Iters</dt><dd>%(iters)s <a href="?iters=%(i2)s&x=%(x)s&y=%(y)s&wid=%(wid)s">%(i2)s</a></dd>
     </dl>
     <img src="/m?iters=%(iters)s&x=%(x)s&y=%(y)s&wid=%(wid)s" id="i"/>
+    <a href="/out/0.98/?iters=%(iters)s&x=%(x)s&y=%(y)s&wid=%(wid)s">out</a>
     </body>
     </html>""" % args
 
@@ -61,6 +62,21 @@ def subdivide(dx, dy):
     gwid/=5
     return redirect("/?iters=%s&x=%s&y=%s&wid=%s" % (iters, str(gx), str(gy), str(gwid)))
 
+@app.route("/out/<ratio>/")
+def out(ratio):
+    iters = int(request.args.get("iters", "10"))
+    x = request.args.get("x", "0")
+    y = request.args.get("y", "0")
+    wid = request.args.get("wid", "2")
+
+    target_wid = gmpy.mpf(wid)
+    gx = gmpy.mpf(x)
+    gy = gmpy.mpf(y)
+    wid=gmpy.mpf(6)
+
+    
+
+    return "%s, %s, %s, %i" % (x, y, wid, iters)
 
 if __name__ == '__main__':
     app.run(debug=True)
