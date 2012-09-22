@@ -4,7 +4,7 @@ HPP_FILES =  $(wildcard src/*.hpp)
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
 UNAME = $(shell uname)
-CXX = g++ -03 -g  -Iobj/gmp/include/ -Iobj/png/include/ -Ijson/
+CXX = g++ -O3 -g  -Iobj/gmp/include/ -Iobj/png/include/ -Ijson/
 LINK = $(CXX)
 LINK_AFTER = -lpthread
 
