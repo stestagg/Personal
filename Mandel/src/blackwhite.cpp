@@ -2,7 +2,7 @@
 #include "common.hpp"
 #include "output.hpp"
 #include "mand.hpp"
-#import "cubes.h"
+#include "cubes.h"
 #include "color.hpp"
 #include <iostream>
 

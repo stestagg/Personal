@@ -5,7 +5,7 @@ FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
 UNAME = $(shell uname)
 CXX = g++ -03 -g  -Iobj/gmp/include/ -Iobj/png/include/ -Ijson/
-LINK = $(CXX) -Wl,-no_pie -lpthread
+LINK = $(CXX)
 LINK_AFTER = -lpthread
 
 ifeq ($(UNAME), Linux)
@@ -104,5 +104,5 @@ clean:
 distclean: clean
 	- rm -rf obj
 	- rm -rf libs
-        - rm -rf bin
+	- rm -rf bin
 
