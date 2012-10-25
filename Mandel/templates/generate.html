@@ -1,0 +1,19 @@
+{% set sec = "generate" %}
+{% extends "base.html" %}
+{% block head %}
+<script src="/static/js/genrate.js"></script>
+{% endblock %}
+{% block body %}
+<div class="block">
+<div class="block">
+	<div>Real: <input type="text" name="real" value="{{ real }}"/></div>
+	<div>Imaginary: <input type="text" name="imag" value="{{ imag }}"/></div>
+	<div>View Width: <input type="text" name="wid" value="{{ wid }}"/></div>
+	<div>Iters: <input name="iters" value="{{ iters }}"/></div>
+	<hr/>
+	<div>Image Width: <input type="text" name="imwid" value="800"/> px</div>
+	<div>Image Height: <input type="text" name="imwid" value="800"/> px</div>
+	<div><button type="submit">Generate</button></div>
+</div>
+</div>
+{% endblock %}
