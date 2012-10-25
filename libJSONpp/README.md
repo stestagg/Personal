@@ -32,7 +32,7 @@ There is some scope for improvements in the code performance.
 
 ## Example
 
-```
+```c++
 #include <iostream>
 #include <string>
 #include "json/parser.h"
@@ -55,4 +55,6 @@ return 0;
 ```
 Should output:
 
-Output: ```{ "Boolean" : true , "hello" : "World" , "number" : 1 }```
+```js
+{ "Boolean" : true , "hello" : "World" , "number" : 1 }
+```
