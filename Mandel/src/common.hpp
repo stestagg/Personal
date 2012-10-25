@@ -22,7 +22,7 @@ template<class T>T MIN(T x, T y){return (((x)<(y)) ? (x) : (y));}
 template<class T>T MAX(T x, T y){return (((x)>(y)) ? (x) : (y));}
 
 
-#define UIMAX(x) (x)(((1ull << ((sizeof(x) * 8)-1)) - 1) | ((0xffull << ((sizeof(x) * 8) - 1))))
+#define UIMAX(size) (size)(((1ull << ((sizeof(size) * 8)-1)) - 1) | ((0xffull << ((sizeof(size) * 8) - 1))))
 
 class hsva{
 public:

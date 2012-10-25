@@ -28,7 +28,6 @@ void process(ProcessArgs *pa){
     pthread_mutex_lock( &init_lock );
     ViewportIter<VPTY> iter = pa->vp->iter(pa->width, pa->height);
     
-    std::cout << "Starting: " << pa->start_y << " - " << pa->end_y << std::endl;
     iter.skip_y(pa->start_y);
     iter.limit_y(pa->end_y);
 
