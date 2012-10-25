@@ -24,5 +24,8 @@ A cython (c-compiled python module) efficient integer array implementation.  Des
 Sierp
 =====
 
-Largely unmaintained/nearly-working code for generating derevations of the sierpinski gasket as PNG files
+![](http://github.com/stestagg/Personal/raw/master/Sierp/samples/small.png)
 
+Code for efficiently generating derevations of the sierpinski gasket as PNG files
+
+Uses a generational algorithm, rather than more usual random walk
