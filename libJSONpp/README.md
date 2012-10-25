@@ -41,16 +41,16 @@ using namespace std;
  
 int main(int argc, wchar_t* argv[])
 {
-char *json_string="{ hello : \"World\", \"number\": 1}";
-json::parser myparser;
-json::value *myvalue=myparser.parse(json_string,strlen(json_string));
-myvalue->addobjectvalue(L"Boolean",new json::value(true));
-wstring *out_string=myvalue->getstring(L"",true);
-wcout<<L"Output:"<<(out_string->c_str())<<endl;
-delete out_string;
-delete myvalue;
-cin.get();
-return 0;
+ char *json_string="{ hello : \"World\", \"number\": 1}";
+ json::parser myparser;
+ json::value *myvalue=myparser.parse(json_string,strlen(json_string));
+ myvalue->addobjectvalue(L"Boolean",new json::value(true));
+ wstring *out_string=myvalue->getstring(L"",true);
+ wcout<<L"Output:"<<(out_string->c_str())<<endl;
+ delete out_string;
+ delete myvalue;
+ cin.get();
+ return 0;
 }
 ```
 Should output:
