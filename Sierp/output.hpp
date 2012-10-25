@@ -3,7 +3,7 @@
 
 #include "common.hpp"
 #include <stdint.h> 
-#include <libpng/png.h>
+#include <libpng15/png.h>
 
 namespace png{
 	static const int PENDING = -1;

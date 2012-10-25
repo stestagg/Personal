@@ -2,5 +2,5 @@
 
 set +e
 
-g++ -O2 main.cpp mtrand.cpp -o mand  -lpng
-./mand
+g++ -O2 main.cpp mtrand.cpp -o sierp  -lpng
+./sierp 0

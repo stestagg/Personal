@@ -6,8 +6,8 @@
 #include <math.h>
 
 
-static const size_t WIDTH = 500;
-static const size_t HEIGHT = 500;
+static const size_t WIDTH = 5000;
+static const size_t HEIGHT = 5000;
 static const uint16_t STEP = 500;
 static const size_t ITERS = 50000000000;
 static const size_t NUM_SATURATES = 10;
