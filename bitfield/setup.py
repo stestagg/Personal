@@ -7,7 +7,9 @@ from Cython.Distutils import build_ext
 ext_modules=[
     Extension("bitfield",
               ["cimpl/field.pyx"],
-              libraries=[]) # Unix-like specific
+              extra_compile_args=["-g"],
+              extra_link_args=["-g"],
+             )
 ]
 
 setup(

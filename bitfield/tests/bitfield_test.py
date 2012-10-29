@@ -1,5 +1,13 @@
+#!/usr/bin/python
+
 import bitfield
-import unittest
+
+try:
+    # Python 2.6 support
+    import unittest2 as unittest
+except ImportError:
+    import unittest
+
 
 class BitfieldTest(unittest.TestCase):
 
@@ -128,6 +136,36 @@ class BitfieldTest(unittest.TestCase):
         self.assertEqual(len(field1), size)
         self.assertEqual(len(field2), size)
         self.assertEqual(len(field1 | field2), size * 2)
+
+
+class SetEqualityTest(unittest.TestCase):
+
+    def _test_fields(self, a, b, func):
+        set_a = set(a)
+        set_b = set(b)
+        bitfield_result = func(a, b)
+        set_result = func(set_a, set_b)
+        set_as_list = sorted(set_result)
+        self.assertEqual(list(bitfield_result), set_as_list)
+
+    def _test_methods(self, a, b):
+        self._test_fields(a, b, lambda x, y: x | y)
+        self._test_fields(a, b, lambda x, y: x ^ y)
+        self._test_fields(a, b, lambda x, y: x & y)
+        self._test_fields(a, b, lambda x, y: x - y)
+
+    def test_empty(self):
+        self._test_methods(bitfield.Bitfield(), bitfield.Bitfield())
+
+    def test_multi_page(self):
+        def nums(*numbers):
+            return list([page_numbers[n] for n in numbers])
+        page_max = bitfield.get_all_sizes()["PAGE_MAX"]
+        page_numbers = [5 + (page_max * i ) for i in range(10)]
+        a = bitfield.Bitfield(nums(0, 2))
+        b = bitfield.Bitfield(nums(1, 3))
+        self._test_methods(a, b)
+        self._test_methods(b, a)
 
 
 if __name__ == "__main__":

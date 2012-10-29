@@ -57,12 +57,12 @@ cdef usize_t log2(usize_t num):
     return index - 1
 
 cpdef usize_t CHUNK_BYTES = cython.sizeof(CHUNK)
-cdef usize_t CHUNK_FULL_COUNT = 8 * CHUNK_BYTES # All 1s in a chunk = 32 (assuming 32-bit size_t)
+cdef usize_t CHUNK_FULL_COUNT = 8 * CHUNK_BYTES # Count of 1s in a full chunk = 32 (assuming 32-bit size_t)
 cdef usize_t CHUNK_SHIFT = log2(CHUNK_FULL_COUNT) # Ammount to shift a number to look up which chunk to use
 cdef usize_t CHUNK_MASK = (1 << CHUNK_SHIFT) - 1 # When looking up a chunk, only examine the first 5 bits
-cdef usize_t CHUNK_BITS = (
-      (((<usize_t>1) << (CHUNK_BYTES * 8 - 1)) - 1)
-    + ((<usize_t>1) << (CHUNK_BYTES * 8 - 1))) # This is a full chunk (lots of 11111111)
+cpdef usize_t USIZE_MAX = ((((<usize_t>1) << (CHUNK_BYTES * 8 - 1)) - 1)
+                            + ((<usize_t>1) << (CHUNK_BYTES * 8 - 1))) # This is a full usize (lots of 11111111)
+cdef usize_t CHUNK_BITS = USIZE_MAX
 
 cdef usize_t PAGE_CHUNKS = (getpagesize() / CHUNK_BYTES) # Default one page to several system pages to reduce alloc
 cdef usize_t PAGE_FULL_COUNT = CHUNK_FULL_COUNT * PAGE_CHUNKS
@@ -89,9 +89,11 @@ def get_all_sizes():
         CHUNK_MASK=bin(CHUNK_MASK),
         CHUNK_FULL_COUNT=CHUNK_FULL_COUNT,
         CHUNK_BITS=bin(CHUNK_BITS),
+        BITFIELD_MAX=USIZE_MAX,
         PAGE_CHUNKS=PAGE_CHUNKS,
         PAGE_FULL_COUNT=PAGE_FULL_COUNT,
-        PAGE_BYTES=PAGE_BYTES
+        PAGE_BYTES=PAGE_BYTES,
+        PAGE_MAX=PAGE_FULL_COUNT
     )
 
 def get_sizes():
@@ -318,8 +320,17 @@ cdef class IdsPage:
             self.data[chunk_index] &= ~other.data[chunk_index]
         self.calc_length()
 
+    cdef _state(self):
+        if self.page_state == PAGE_EMPTY:
+            return "EMPTY"
+        if self.page_state == PAGE_FULL:
+            return "FULL"
+        if self.page_state == PAGE_PARTIAL:
+            return "PARTIAL"
+        return "ERROR"
+
     cpdef symmetric_difference_update(self, IdsPage other):
-        cdef usize_t chunk_index        
+        cdef usize_t chunk_index
         if self.page_state == PAGE_EMPTY:
             if other.page_state == PAGE_EMPTY:
                 return
@@ -327,7 +338,7 @@ cdef class IdsPage:
                 self._dealloc(PAGE_FULL)
                 return
             elif other.page_state == PAGE_PARTIAL:
-                self._dealloc(PAGE_EMPTY)
+                self._alloc(PAGE_EMPTY)
                 memcpy(self.data, other.data, CHUNK_BYTES * PAGE_CHUNKS)
         elif self.page_state == PAGE_FULL:
             if other.page_state == PAGE_EMPTY:
@@ -398,6 +409,12 @@ cdef str PICKLE_MARKER = "BF:"
 cdef str PICKLE_MARKER_zlib = "BZ:"
 
 cdef class Bitfield:
+    """Efficient storage, and set-like operations on groups of positive integers
+    Currently, all integers must be in the range 0 >= x >= bitfield.get_all_sizes()["BITFIELD_MAX"].
+    Note this does not take into consideration memory limits, which may become a factor in extreme cases.
+
+    The bitfield is designed to handle sets of numbers incrementing from 0.  Adding arbitrary, large numbers
+    to the set will not be efficient."""
 
     cdef list pages
 
@@ -416,12 +433,15 @@ cdef class Bitfield:
             self.pages.pop()
 
     cpdef add(self, usize_t number):
+        """Add a positive integer to the bitfield"""
         cdef usize_t page = number / PAGE_FULL_COUNT
         cdef usize_t page_index = number % PAGE_FULL_COUNT
         self._ensure_page_exists(page)
         self.pages[page].add(page_index)
 
     cpdef remove(self, usize_t number):
+        """Remove a positive integer from the bitfield
+        If the integer does not exist in the field, this method just returns"""
         cdef usize_t page = number / PAGE_FULL_COUNT
         cdef usize_t page_index = number % PAGE_FULL_COUNT
         if page >= len(self.pages):
@@ -429,6 +449,7 @@ cdef class Bitfield:
         self.pages[page].remove(page_index)
 
     property count:
+        """The number of integers in the field"""
         def __get__(self):
             cdef usize_t num = 0
             for page in self.pages:
@@ -436,9 +457,11 @@ cdef class Bitfield:
             return num
 
     def __len__(self):
+        """The number of integers in the field"""
         return self.count
 
     def __contains__(self, number):
+        """Returns true if number is present in the field"""
         cdef usize_t page = number / PAGE_FULL_COUNT
         cdef usize_t page_index = number % PAGE_FULL_COUNT
         if page >= len(self.pages):
@@ -446,6 +469,7 @@ cdef class Bitfield:
         return page_index in self.pages[page]
 
     def __iter__(self):
+        """Iterate over all integers in the field"""
         return BitfieldIterator(self)
 
     def __richcmp__(Bitfield a,Bitfield b, operator):
@@ -464,19 +488,23 @@ cdef class Bitfield:
         raise NotImplementedError()
 
     def __or__(Bitfield x, Bitfield y):
+        """Return a new object that is the union of two bitfields"""
         cdef Bitfield new
         new = x.clone()
         new.update(y)
         return new
 
     def __add__(Bitfield x, usize_t y):
+        """Return a new field with the integer added"""
         cdef Bitfield new
         new = x.clone()
         new.add(y)
         return new
 
     def __iadd__(Bitfield x, usize_t y):
+        """Add a positive integer to the field"""
         x.add(y)
+        return x
 
     def __sub__(Bitfield x, Bitfield y):
         cdef Bitfield new
@@ -494,18 +522,21 @@ cdef class Bitfield:
         return self.symmetric_difference_update(other)
 
     cpdef update(self, Bitfield other):
+        """Add all integers in 'other' to this bitfield"""
         cdef usize_t current_page
         self._ensure_page_exists(len(other.pages))
         for current_page in range(len(other.pages)):
             self.pages[current_page].update(other.pages[current_page])
 
     cpdef difference_update(self, Bitfield other):
+        """Remove all integers in 'other' from this bitfield"""
         cdef usize_t current_page
         cdef usize_t affected_pages = min(len(self.pages), len(other.pages))
         for current_page in range(affected_pages):
             self.pages[current_page].difference_update(other.pages[current_page])        
 
     cpdef symmetric_difference_update(self, Bitfield other):
+        """Update this bitfield to only contain items present in self or other, but not both    """
         cdef usize_t current_page
         cdef usize_t affected_pages = min(len(self.pages), len(other.pages))
         self._ensure_page_exists(len(other.pages))
