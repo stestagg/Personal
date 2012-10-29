@@ -157,6 +157,11 @@ class SetEqualityTest(unittest.TestCase):
     def test_empty(self):
         self._test_methods(bitfield.Bitfield(), bitfield.Bitfield())
 
+    def test_simple(self):
+        self._test_methods(bitfield.Bitfield([1, 2, 3]), bitfield.Bitfield([1, 2, 3]))
+        self._test_methods(bitfield.Bitfield([1, 2, 3]), bitfield.Bitfield([3, 4, 5]))
+        self._test_methods(bitfield.Bitfield([1]), bitfield.Bitfield([1, 3, 4, 5]))
+
     def test_multi_page(self):
         def nums(*numbers):
             return list([page_numbers[n] for n in numbers])

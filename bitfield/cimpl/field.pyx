@@ -306,6 +306,28 @@ cdef class IdsPage:
             self.data[chunk_index] |= other.data[chunk_index]
         self.calc_length()
 
+    cpdef intersection_update(self, IdsPage other):
+        if other.page_state == PAGE_EMPTY:
+            self._dealloc(PAGE_EMPTY)
+        elif other.page_state == PAGE_FULL:
+            return
+        elif other.page_state == PAGE_PARTIAL:
+            if self.page_state == PAGE_EMPTY:
+                return
+            elif self.page_state == PAGE_FULL:
+                self._dealloc(PAGE_EMPTY)
+                memcpy(self.data, other.data, CHUNK_BYTES * PAGE_CHUNKS)
+                self.calc_length()
+                return
+            elif self.page_state == PAGE_PARTIAL:
+                for chunk_index in range(PAGE_CHUNKS):
+                    self.data[chunk_index] &= other.data[chunk_index]
+                self.calc_length()
+            else:
+                raise AssertionError("Invalid page state")
+        else:
+            raise AssertionError("Invalid page state")
+
     cpdef difference_update(self, IdsPage other):
         if other.page_state == PAGE_EMPTY:
             return
@@ -521,6 +543,12 @@ cdef class Bitfield:
     def __ixor__(Bitfield self, Bitfield other):
         return self.symmetric_difference_update(other)
 
+    def __and__(Bitfield self, Bitfield other):
+        return self.intersection(other)
+
+    def __iand__(Bitfield self, Bitfield other):
+        return self.intersection_update(other)
+
     cpdef update(self, Bitfield other):
         """Add all integers in 'other' to this bitfield"""
         cdef usize_t current_page
@@ -538,14 +566,39 @@ cdef class Bitfield:
     cpdef symmetric_difference_update(self, Bitfield other):
         """Update this bitfield to only contain items present in self or other, but not both    """
         cdef usize_t current_page
+        cdef usize_t other_pages = 0
         cdef usize_t affected_pages = min(len(self.pages), len(other.pages))
-        self._ensure_page_exists(len(other.pages))
+        if affected_pages < len(other.pages):
+            other_pages = len(other.pages) - affected_pages
+
         for current_page in range(affected_pages):
             self.pages[current_page].symmetric_difference_update(other.pages[current_page])
+        if affected_pages < len(other.pages):
+            for current_page in range(affected_pages, len(other.pages)):
+                self.pages.append(other.pages[current_page].clone())
 
     cpdef symmetric_difference(self, Bitfield other):
         cdef Bitfield new = self.clone()
         new.symmetric_difference_update(other)
+        return new
+
+    cpdef intersection_update(self, Bitfield other):
+        """Update the bitfield, keeping only integers found in it and 'other'."""
+        cdef IdsPage page
+        cdef usize_t current_page
+        cdef usize_t affected_pages = min(len(self.pages), len(other.pages))
+        for current_page in range(affected_pages):
+            self.pages[current_page].intersection_update(other.pages[current_page])
+        if len(self.pages) > affected_pages:
+            for current_page in range(affected_pages, len(self.pages)):
+                page = self.pages[current_page]
+                page.set_empty()
+
+
+    cpdef intersection(self, Bitfield other):
+        """Return a new bitfield with integers common to both this field, and 'other'."""
+        cdef Bitfield new = self.clone()
+        new.intersection_update(other)
         return new
 
     cpdef clone(self):
