@@ -1,7 +1,5 @@
-# cython: profile=True
 # Imports and boilerplate
 import cython
-import math
 import zlib
 
 ctypedef Py_ssize_t size_t
@@ -51,9 +49,16 @@ cdef void safe_str_to_char(object string, char **buffer, size_t *length):
 ctypedef unsigned long usize_t
 ctypedef usize_t CHUNK # (Chunk must always be <= usize_t)
 
+cdef usize_t log2(usize_t num):
+    cdef usize_t index = 0
+    while num:
+        num >>= 1
+        index += 1
+    return index - 1
+
 cpdef usize_t CHUNK_BYTES = cython.sizeof(CHUNK)
-cdef usize_t CHUNK_FULL_COUNT = 8 * CHUNK_BYTES # All 1s in a chunk = 32
-cdef usize_t CHUNK_SHIFT = int(math.log(CHUNK_FULL_COUNT, 2)) # Ammount to shift a number to look up which chunk to use
+cdef usize_t CHUNK_FULL_COUNT = 8 * CHUNK_BYTES # All 1s in a chunk = 32 (assuming 32-bit size_t)
+cdef usize_t CHUNK_SHIFT = log2(CHUNK_FULL_COUNT) # Ammount to shift a number to look up which chunk to use
 cdef usize_t CHUNK_MASK = (1 << CHUNK_SHIFT) - 1 # When looking up a chunk, only examine the first 5 bits
 cdef usize_t CHUNK_BITS = (
       (((<usize_t>1) << (CHUNK_BYTES * 8 - 1)) - 1)
