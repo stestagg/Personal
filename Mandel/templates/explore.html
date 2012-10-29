@@ -1,0 +1,28 @@
+{% set sec = "explore" %}
+{% extends "base.html" %}
+{% block head %}
+<script src="/static/js/explore.js"></script>
+{% endblock %}
+{% block body %}
+<div class="block">
+<div><a href="pan/up/">up</a><br/>
+	<a href="pan/left/">left</a>
+	<img class="img" id="render" style="vertical-align:middle">
+	<a href="pan/right/">right</a><br/>
+	<a href="pan/down/">down</a>
+</div>
+<a href="scale/0/0/5.0/">Zoom out</a>
+</div>
+<br/>
+<div class="block">
+	<div>Real: <b>{{ real }}</b></div>
+	<div>Imaginary: <b>{{ imag }}</b></div>
+	<div>View Width: <b>{{ wid }}</b></div>
+	<div>Iters: <b><input id="iters" value="{{ iters }}"/>
+		<a href="../{{ iters * 0.6 }}/">-</a> 
+		<a href="../{{ iters * 1.5 }}/">+</a> 
+		<button id="update_button" type="submit">Update</button></b>
+	</div>
+	<a href="/generate/{{ real }}/{{ imag }}/{{ wid }}/{{ iters }}/">Generate</a>
+</div>
+{% endblock %}

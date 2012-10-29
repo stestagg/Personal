@@ -98,11 +98,10 @@ check_gmp:
 
 # Cleanup rules
 clean:
-	- rm mandel
+	- rm -rf bin
 	- rm obj/*.o
 
 distclean: clean
 	- rm -rf obj
 	- rm -rf libs
-	- rm -rf bin
 

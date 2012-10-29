@@ -1,0 +1,17 @@
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css" />
+    {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="menu">
+            <a href="/explore/" {% if sec=="explore"%}class="active"{% endif %}>Explore</a>
+            <a href="/generate/" {% if sec=="generate"%}class="active"{% endif %}>Generate</a>
+            <a href="/convert/" {% if sec=="convert"%}class="active"{% endif %}>Convert</a>
+            <a href="/map/" {% if sec=="map"%}class="active"{% endif %}>Map</a>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
