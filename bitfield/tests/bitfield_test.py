@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 import bitfield
+import cPickle
+import pickle
 
 try:
     # Python 2.6 support
@@ -149,10 +151,17 @@ class SetEqualityTest(unittest.TestCase):
         self.assertEqual(list(bitfield_result), set_as_list)
 
     def _test_methods(self, a, b):
+        a_pure = a.copy()
+        b_pure = b.copy()
         self._test_fields(a, b, lambda x, y: x | y)
         self._test_fields(a, b, lambda x, y: x ^ y)
         self._test_fields(a, b, lambda x, y: x & y)
         self._test_fields(a, b, lambda x, y: x - y)
+        a_2, b_2 = pickle.loads(cPickle.dumps([a, b]))
+        self.assertEqual(a_2, a)
+        self.assertEqual(b_2, b)
+        self.assertEqual(a_pure, a)
+        self.assertEqual(b_pure, b)
 
     def test_empty(self):
         self._test_methods(bitfield.Bitfield(), bitfield.Bitfield())

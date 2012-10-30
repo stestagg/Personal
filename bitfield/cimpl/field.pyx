@@ -139,7 +139,7 @@ cdef class PageIter:
 
 cdef class BitfieldIterator:
     """
-    Designed to 'cope' with bitfields that are mutating during iteration.
+    Performs correctly when bitfields are mutating during iteration.
     """
 
     cdef Bitfield bitfield
@@ -601,7 +601,12 @@ cdef class Bitfield:
         new.intersection_update(other)
         return new
 
+    cpdef copy(self):
+        """Create a copy of the bitfield"""
+        return self.clone()
+
     cpdef clone(self):
+        """Create a copy of the bitfield"""
         new = Bitfield()
         for page in self.pages:
             new.pages.append(page.clone())
@@ -625,12 +630,23 @@ cdef class Bitfield:
         return string
 
     def pickle(self, compress=True):
+        """Return a string representation of the bitfield"""
         cdef str base = self.get_bits().rstrip("\00")
         cdef str marker = PICKLE_MARKER
         if compress:
             base = zlib.compress(base)
             marker = PICKLE_MARKER_zlib
         return "%s%s" % (marker, base)
+
+    @classmethod
+    def unpickle(cls, str data):
+        """Read a bitfield object from a string created by Bitfield.piclke"""
+        cdef Bitfield new = Bitfield()
+        new.load_from_string(data)
+        return new
+
+    def __reduce__(self):
+        return (unpickle_bitfield, (self.pickle(), ))
 
     cdef load(Bitfield self, data):
         if isinstance(data, basestring):
@@ -660,6 +676,8 @@ cdef class Bitfield:
             current = page.set_bits(current, buffer_end)
 
     cdef fill_range(self, low, high):
+        """Add all numbers in range(low, high) to the bitfield, optimising the case where large
+        ranges are supplied"""
         cdef IdsPage page = None
         # start by allocating all the pages we need
         self.add(high-1)
@@ -678,13 +696,9 @@ cdef class Bitfield:
             self.add(num)
 
     @classmethod
-    def unpickle(cls, str data):
-        cdef Bitfield new = Bitfield()
-        new.load_from_string(data)
-        return new
-
-    @classmethod
     def from_intervals(type cls, list):
+        """Given a list of ranges in the form:  [[low1, high1], [low2, high2], ...]
+        Construct a bitfield in which every integer in each range is present"""
         cdef Bitfield new = Bitfield()
         for (low, high) in list:
             new.fill_range(low, high)
@@ -697,3 +711,5 @@ cdef class Bitfield:
         cls = type(self)
         return "%s.%s(%r)" % (cls.__module__, cls.__name__, self.pickle())
 
+cpdef unpickle_bitfield(str data):
+    return Bitfield.unpickle(data)
