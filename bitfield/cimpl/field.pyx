@@ -516,6 +516,9 @@ cdef class Bitfield:
         new.update(y)
         return new
 
+    def union(Bitfield self, Bitfield other):
+        return self | other
+
     def __add__(Bitfield x, usize_t y):
         """Return a new field with the integer added"""
         cdef Bitfield new
@@ -594,12 +597,22 @@ cdef class Bitfield:
                 page = self.pages[current_page]
                 page.set_empty()
 
-
-    cpdef intersection(self, Bitfield other):
+    cpdef intersection(Bitfield self, Bitfield other):
         """Return a new bitfield with integers common to both this field, and 'other'."""
         cdef Bitfield new = self.clone()
         new.intersection_update(other)
         return new
+
+    cpdef isdisjoint(Bitfield self, Bitfield other):
+        """Return True if the bitfield has no integers in common with other. 
+        Bitfields are disjoint if and only if their intersection is the empty set."""
+        return len(self.intersection(other)) == 0
+
+    cpdef issubset(Bitfield self, Bitfield other):
+        return len(self - other) == 0
+
+    cpdef issuperset(Bitfield self, Bitfield other):
+        return other.issubset(self)
 
     cpdef copy(self):
         """Create a copy of the bitfield"""

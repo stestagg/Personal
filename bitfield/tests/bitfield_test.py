@@ -142,7 +142,7 @@ class BitfieldTest(unittest.TestCase):
 
 class SetEqualityTest(unittest.TestCase):
 
-    def _test_fields(self, a, b, func):
+    def _test_field_result(self, a, b, func):
         set_a = set(a)
         set_b = set(b)
         bitfield_result = func(a, b)
@@ -150,13 +150,24 @@ class SetEqualityTest(unittest.TestCase):
         set_as_list = sorted(set_result)
         self.assertEqual(list(bitfield_result), set_as_list)
 
+    def _test_simple_result(self, a, b, func):
+        set_a = set(a)
+        set_b = set(b)
+        bitfield_result = func(a, b)
+        set_result = func(set_a, set_b)
+        self.assertEqual(bitfield_result, set_result)        
+
     def _test_methods(self, a, b):
         a_pure = a.copy()
         b_pure = b.copy()
-        self._test_fields(a, b, lambda x, y: x | y)
-        self._test_fields(a, b, lambda x, y: x ^ y)
-        self._test_fields(a, b, lambda x, y: x & y)
-        self._test_fields(a, b, lambda x, y: x - y)
+        self._test_field_result(a, b, lambda x, y: x | y)
+        self._test_field_result(a, b, lambda x, y: x ^ y)
+        self._test_field_result(a, b, lambda x, y: x & y)
+        self._test_field_result(a, b, lambda x, y: x - y)
+        self._test_simple_result(a, b, lambda x, y: x.isdisjoint(y))
+        self._test_simple_result(a, b, lambda x, y: x.issubset(y))
+        self._test_field_result(a, b, lambda x, y: x.union(y))
+
         a_2, b_2 = pickle.loads(cPickle.dumps([a, b]))
         self.assertEqual(a_2, a)
         self.assertEqual(b_2, b)
@@ -168,6 +179,7 @@ class SetEqualityTest(unittest.TestCase):
 
     def test_simple(self):
         self._test_methods(bitfield.Bitfield([1, 2, 3]), bitfield.Bitfield([1, 2, 3]))
+        self._test_methods(bitfield.Bitfield([1, 2, 3]), bitfield.Bitfield([1, 2]))
         self._test_methods(bitfield.Bitfield([1, 2, 3]), bitfield.Bitfield([3, 4, 5]))
         self._test_methods(bitfield.Bitfield([1]), bitfield.Bitfield([1, 3, 4, 5]))
 
@@ -181,6 +193,14 @@ class SetEqualityTest(unittest.TestCase):
         self._test_methods(a, b)
         self._test_methods(b, a)
 
+    def test_empty_full(self):
+        page_max = bitfield.get_all_sizes()["PAGE_MAX"]
+        page_numbers = [5 + (page_max * i ) for i in range(10)]
+        a = bitfield.Bitfield([[0, page_max]])
+        b = bitfield.Bitfield()
+        self._test_methods(a, b)
+        self._test_methods(b, a)
+        
 
 if __name__ == "__main__":
     unittest.main()
