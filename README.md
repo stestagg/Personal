@@ -28,4 +28,7 @@ Sierp
 
 Code for efficiently generating derevations of the sierpinski gasket as PNG files
 
-Newer code coming soon: Uses a generational algorithm, rather than more usual random walk
+Sierp.js
+========
+
+Canvas based, javascript. Uses a generational algorithm, rather than more usual random walk
