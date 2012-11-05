@@ -1,0 +1,160 @@
+<html>
+<head>
+	<title>Sierpinsky</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="sierp.js"></script>
+	<script>
+	var sides = 7;
+	var has_centre = false;
+	var sierp = new Sierp(400, 400, 1);
+	function onclick(){
+		startLoad();
+		window.setTimeout("run(1)", 10);
+	}
+	function update_points(){
+		sierp.set_points(sides);
+		if (has_centre){
+			sierp.points.push(new Point(200, 200));
+		}
+		$("#sides").text(sides);
+		startLoad();
+		window.setTimeout("run(3)", 10);
+	}
+	function more(){
+		sides += 1;
+		update_points();
+	}
+	function less(){
+		sides -= 1;
+		if (sides < 2) sides=2;
+		update_points();
+	}
+	function centre(){
+		has_centre = $(this).is(':checked');
+		update_points();
+	}
+	function startLoad(){
+		$("#loading").show();
+		$("button").attr("disabled", "disabled");
+	}
+	function run(num){
+		for (var i=0; i<num; ++i){
+			sierp.next();
+		}
+		sierp.render($("#sierp")[0]);
+		$("button").removeAttr("disabled");
+		$("#loading").fadeOut("fast");
+	}
+	$(function(){
+		sierp.set_points(sides);
+		$("button").attr("disabled", "disabled");
+		window.setTimeout("run(5)", 10);
+		$("#next").click(onclick);
+		$("#less").click(less);
+		$("#centre").click(centre);
+		$("#more").click(more);
+	});
+	</script>
+	<style>
+	body{
+		color: #7c473f;
+		text-align:center;
+		font-family: verdana;
+		background: url("noise.png") #69a2cc;
+	}
+	#sierp{
+		background: #e4ecf3;
+		border: 1px solid #7c473f;
+		-moz-box-shadow: 3px 3px 3px #3e7196;
+		-webkit-box-shadow: 3px 3px 3px #3e7196;
+		box-shadow: 3px 3px 3px #3e7196;
+	}
+
+	button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	min-width: 5px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+#loading{
+	opacity: 0.5;
+	background: black;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	width: 150px;
+	height: 30px;
+	border-radius: 10px;
+	padding: 5px;
+	position: absolute;
+	top: 185px;
+	left: 125px;
+}
+button:hover {
+	text-decoration: none;
+}
+button:active {
+	position: relative;
+	top: 1px;
+}
+#sides{ font-weight: bold;}
+button {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+button:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+button:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+button[disabled]{
+	color: #aaa;
+	border: solid 1px #da7c0c;
+	background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#c0c0c0));
+	background: -moz-linear-gradient(top,  #fff,  #c0c0c0);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#c0c0c0');
+}
+.space{
+	margin: 10px;
+}
+	</style>
+</head>
+<body>
+<h1>Sierpinski Generator </h1>
+<div style="margin-bottom: 20px; width: 400px;margin-left: auto;margin-right: auto;position:relative"><canvas id="sierp" width="400" height="400">
+A modern browser is required to view the Sierpinski generator
+</canvas>
+<div id="loading">Loading</div>
+</div>
+<button id="less">-</button>
+Sides: <span id="sides">7</span>
+<button id="more">+</button>
+<button id="next">Next</button>
+<div class="space">
+Looks grainy/dotty?  Click <b>Next</b> to improve the image
+</div>
+<input type="checkbox" name="centre" id="centre"/><label for="centre">Add Centre point</label>
+</body>
+</html>
