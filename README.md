@@ -32,3 +32,5 @@ Sierp.js
 ========
 
 Canvas based, javascript. Uses a generational algorithm, rather than more usual random walk
+
+![](http://github.com/stestagg/Personal/raw/master/Sierp.js/sample.png)
