@@ -1,0 +1,215 @@
+body{
+    color: black;
+    text-align:center;
+    font-family: tahoma, verdana, sans-serif;
+    font-size: 12px;
+    background: #008080;
+}
+
+.panel{
+    display: inline-block;
+    width: auto;
+    border: 1px solid white;
+    border-left-color: #808080;
+    border-top-color: #808080;
+}
+
+.panel_in{
+    background: #fff;
+    border: 1px solid black;
+    border-bottom-color: #dfdfdf;
+    border-right-color: #dfdfdf;
+}
+
+
+button {
+    display: inline-block;
+    outline: none;
+    padding:0;
+    background: #c3c7cb;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+button div{
+    padding: 2px;
+    display: inline-block;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #868a8e;
+    border-bottom: 1px solid #868a8e;
+}
+
+button span{
+    display: inline-block;
+    border: 1px solid #c3c7cb;
+    padding: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+button:focus span,
+button:active span {
+    border: 1px dotted black;
+}
+
+button:active{
+    background: #dedede; 
+    border-color: black;
+    border-right-color: white;
+    border-bottom-color: white;
+}
+
+button:active div{
+    border-color: #808080;
+    border-right-color: #c0c0c0;
+    border-bottom-color: #c0c0c0;    
+}
+
+.window{
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    background: #c0c0c0;
+    border: 1px solid #dfdfdf;
+    border-right-color: black;
+    border-bottom-color: black;
+}
+
+.window_in {
+    border: 1px solid white;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    padding: 2px;
+}
+
+.frame{
+    margin-top: 10px;
+    border: 1px solid #808080;
+    border-bottom-color: white;
+    border-right-color: white;
+}
+.frame_in{
+    position: relative;
+    border: 1px solid white;
+    padding: 6px;
+    border-bottom-color: #808080;
+    border-right-color: #808080;
+}
+
+.frame_in h2{
+    position: absolute;
+    left: 7px;
+    top: -18px;
+    padding-left: 3px;
+    padding-right: 5px;
+    display: inline-block;
+    background: #c0c0c0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.titlebar{
+    min-width: 150px;
+    text-align: left;
+    padding: 2px;
+    background-color: #000080; /* fallback color if gradients are not supported */
+    background-image: -webkit-linear-gradient(left, #000080, #1084d0);
+    background-image:    -moz-linear-gradient(left, #000080, #1084d0); /* For Fx 3.6 to Fx 15 */
+    background-image:     -ms-linear-gradient(left, #000080, #1084d0); /* For IE 10 Platform Previews and Consumer Preview */
+    background-image:      -o-linear-gradient(left, #000080, #1084d0); /* For Opera 11.1 to 12.0 */
+    background-image:         linear-gradient(to right, #000080, #1084d0); /* Standard syntax; must be the last statement */
+    color: white;
+    font-weight: bold;
+}
+
+.titlebar .control{
+    float: right;
+}
+
+#loading{
+    opacity: 0.5;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    top: 185px;
+    left: 125px;
+}
+
+.window.results{
+    margin-left: 20px;
+}
+
+.icon_list{
+    margin-top: 2px;
+    display: block;
+}
+
+.icon_list .panel_in{
+    min-height: 200px;
+    max-height: 460px;
+    overflow: scroll;
+}
+
+button:hover {
+    text-decoration: none;
+}
+
+.result{
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.result span.sel{
+    display: inline-block;
+    margin-top: 2px;
+    border: 1px solid white;
+}   
+
+.result span.label {
+    display: inline-block;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.result.active span.sel{
+    border: 1px dotted black;
+}
+
+.result.active span.label{
+    background: #000080;
+    color: white;
+}
+
+.result img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:disabled,
+button[disabled]{
+    color: #868a8e;
+    text-shadow: 1px 1px 0px white;
+}
+#sides{ font-weight: bold;}
+
+.space{
+    margin: 10px;
+}
