@@ -35,5 +35,6 @@ Canvas based, javascript. Uses a generational algorithm, rather than more usual 
 
 This is an _HTML_ implementation, with a retro styling, not a Windows 98 app
 
-[http://stestagg.github.com/sierp/]
+Hosted: http://stestagg.github.com/sierp/
+
 ![](http://github.com/stestagg/Personal/raw/master/Sierp.js/sample.png)
