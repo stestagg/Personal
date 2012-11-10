@@ -2,7 +2,7 @@ body{
     color: black;
     text-align:center;
     font-family: tahoma, verdana, sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     background: #008080;
 }
 
@@ -16,21 +16,40 @@ body{
 
 .panel_in{
     background: #fff;
-    border: 1px solid black;
+    border: 1px solid #404040;
     border-bottom-color: #dfdfdf;
     border-right-color: #dfdfdf;
 }
 
+button:focus span,
+button:active span {
+    border: 1px dotted black;
+}
 
-button {
+button:active{
+    background: #dedede; 
+    border-color: #404040;
+    border-right-color: white;
+    border-bottom-color: white;
+}
+
+button:active div{
+    border-color: #808080;
+    border-right-color: #c0c0c0;
+    border-bottom-color: #c0c0c0;    
+}
+
+
+button,
+button[disabled] {
     display: inline-block;
     outline: none;
     padding:0;
     background: #c3c7cb;
     border-top: 1px solid white;
     border-left: 1px solid white;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right: 1px solid #404040;
+    border-bottom: 1px solid #404040;
 }
 
 button::-moz-focus-inner {
@@ -38,7 +57,15 @@ button::-moz-focus-inner {
     padding: 0;
 }
 
-button div{
+button:disabled,
+button[disabled]{
+    color: #868a8e;
+    text-shadow: 1px 1px 0px white;
+}
+
+
+button div,
+button[disabled] div{
     padding: 2px;
     display: inline-block;
     border-top: 1px solid #dfdfdf;
@@ -55,39 +82,21 @@ button span{
     padding-right: 6px;
 }
 
-button:focus span,
-button:active span {
-    border: 1px dotted black;
-}
-
-button:active{
-    background: #dedede; 
-    border-color: black;
-    border-right-color: white;
-    border-bottom-color: white;
-}
-
-button:active div{
-    border-color: #808080;
-    border-right-color: #c0c0c0;
-    border-bottom-color: #c0c0c0;    
-}
-
 .window{
     position: relative;
     vertical-align: top;
     display: inline-block;
     background: #c0c0c0;
     border: 1px solid #dfdfdf;
-    border-right-color: black;
-    border-bottom-color: black;
+    border-right-color: #404040;
+    border-bottom-color: #404040;
 }
 
 .window_in {
     border: 1px solid white;
     border-right-color: #808080;
     border-bottom-color: #808080;
-    padding: 2px;
+    padding: 1px;
 }
 
 .frame{
@@ -118,6 +127,7 @@ button:active div{
 
 .titlebar{
     min-width: 150px;
+    min-height: 14px;
     text-align: left;
     padding: 2px;
     background-color: #000080; /* fallback color if gradients are not supported */
@@ -203,11 +213,6 @@ button:hover {
     margin-right: auto;
 }
 
-button:disabled,
-button[disabled]{
-    color: #868a8e;
-    text-shadow: 1px 1px 0px white;
-}
 #sides{ font-weight: bold;}
 
 .space{
