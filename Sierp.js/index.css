@@ -3,7 +3,7 @@ body{
     text-align:center;
     font-family: tahoma, verdana, sans-serif;
     font-size: 11px;
-    background: #008080;
+    background: #21559c;
 }
 
 .panel{
@@ -35,8 +35,8 @@ button:active{
 
 button:active div{
     border-color: #808080;
-    border-right-color: #c0c0c0;
-    border-bottom-color: #c0c0c0;    
+    border-right-color: #d6d3ce;
+    border-bottom-color: #d6d3ce;    
 }
 
 
@@ -45,7 +45,7 @@ button[disabled] {
     display: inline-block;
     outline: none;
     padding:0;
-    background: #c3c7cb;
+    background: #d6d3ce;
     border-top: 1px solid white;
     border-left: 1px solid white;
     border-right: 1px solid #404040;
@@ -76,7 +76,7 @@ button[disabled] div{
 
 button span{
     display: inline-block;
-    border: 1px solid #c3c7cb;
+    border: 1px solid #d6d3ce;
     padding: 1px;
     padding-left: 6px;
     padding-right: 6px;
@@ -86,7 +86,7 @@ button span{
     position: relative;
     vertical-align: top;
     display: inline-block;
-    background: #c0c0c0;
+    background: #d6d3ce;
     border: 1px solid #dfdfdf;
     border-right-color: #404040;
     border-bottom-color: #404040;
@@ -120,7 +120,7 @@ button span{
     padding-left: 3px;
     padding-right: 5px;
     display: inline-block;
-    background: #c0c0c0;
+    background: #d6d3ce;
     font-size: 100%;
     font-weight: normal;
 }
@@ -131,11 +131,11 @@ button span{
     text-align: left;
     padding: 2px;
     background-color: #000080; /* fallback color if gradients are not supported */
-    background-image: -webkit-linear-gradient(left, #000080, #1084d0);
-    background-image:    -moz-linear-gradient(left, #000080, #1084d0); /* For Fx 3.6 to Fx 15 */
-    background-image:     -ms-linear-gradient(left, #000080, #1084d0); /* For IE 10 Platform Previews and Consumer Preview */
-    background-image:      -o-linear-gradient(left, #000080, #1084d0); /* For Opera 11.1 to 12.0 */
-    background-image:         linear-gradient(to right, #000080, #1084d0); /* Standard syntax; must be the last statement */
+    background-image: -webkit-linear-gradient(left, #08246b, #a5cbf7);
+    background-image:    -moz-linear-gradient(left, #08246b, #a5cbf7); /* For Fx 3.6 to Fx 15 */
+    background-image:     -ms-linear-gradient(left, #08246b, #a5cbf7); /* For IE 10 Platform Previews and Consumer Preview */
+    background-image:      -o-linear-gradient(left, #08246b, #a5cbf7); /* For Opera 11.1 to 12.0 */
+    background-image:         linear-gradient(to right, #08246b, #a5cbf7); /* Standard syntax; must be the last statement */
     color: white;
     font-weight: bold;
 }
