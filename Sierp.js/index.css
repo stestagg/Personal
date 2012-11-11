@@ -21,13 +21,37 @@ body{
     border-right-color: #dfdfdf;
 }
 
+button.checkbox{
+    vertical-align: middle;
+    margin-bottom: 4px;
+    background: white;
+    border-top-color: #808080;
+    border-left-color: #808080;
+    border-right-color: white;
+    border-bottom-color: white;
+}
+
+button.checkbox div{
+    width: 10px;
+    height: 10px;
+    padding:0;
+    border-top-color: #404040;
+    border-left-color: #404040;
+    border-bottom-color: #d4d0c8;
+    border-right-color: #d4d0c8;
+}
+
+button.checkbox.checked div{
+    background: url("check.gif") no-repeat 50% 50%;
+}
+
 button:focus span,
 button:active span {
     border: 1px dotted black;
 }
 
 button:active{
-    background: #dedede; 
+    background: #d6d3ce; 
     border-color: #404040;
     border-right-color: white;
     border-bottom-color: white;
@@ -171,7 +195,8 @@ button span{
 .icon_list .panel_in{
     min-height: 200px;
     max-height: 460px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 button:hover {
