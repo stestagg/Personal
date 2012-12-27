@@ -2,6 +2,7 @@
 #define OUTPUT_HPP
 
 #include "common.hpp"
+#include "grid.hpp"
 #include <stdint.h> 
 #include <libpng15/png.h>
 
@@ -13,15 +14,17 @@ namespace png{
 
 	template <class T>
 	class WritePng{
-		int status;
 		png_structp png_ptr;
 		png_infop info_ptr;
-		grid<T> *grd;
+		Grid<T,2> *grd;
 		int transforms;
 		png_bytep *rows;
 		FILE * fp;
 	public:
-		WritePng(const char *file_name, grid<T> &grd){
+
+        int status;
+
+		WritePng(const char *file_name, Grid<T,2> &grd){
 			transforms = PNG_TRANSFORM_IDENTITY;
 			status = PENDING;
 			this->grd = &grd;
@@ -59,35 +62,35 @@ namespace png{
 		};
 
 		void setup_png(){
-			png_set_IHDR(png_ptr, info_ptr, grd->width, grd->height,
+			png_set_IHDR(png_ptr, info_ptr, grd->width(), grd->height(),
        				8, PNG_COLOR_TYPE_GRAY, PNG_INTERLACE_NONE,
        				PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT); 
 		}
 
 		void setup_rows(){
-			rows = new png_bytep[grd->height];
-			for (size_t row=0; row < grd->height; ++row){
-				rows[row] = (png_byte*) &grd->data[row * grd->width];
+			rows = new png_bytep[grd->height()];
+			for (size_t row=0; row < grd->height(); ++row){
+				rows[row] = (png_byte*) &grd->data[row * grd->width()];
 			}
 		}
 
 	};
 
 	template <> void WritePng<rgba<uint8_t> >::setup_png(){
-		png_set_IHDR(png_ptr, info_ptr, grd->width, grd->height,
+		png_set_IHDR(png_ptr, info_ptr, grd->width(), grd->height(),
        				8, PNG_COLOR_TYPE_RGBA, PNG_INTERLACE_NONE,
        				PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT); 
 	};
 
 	template <> void WritePng<uint16_t>::setup_png(){
 		transforms = PNG_TRANSFORM_SWAP_ENDIAN;
-		png_set_IHDR(png_ptr, info_ptr, grd->width, grd->height,
+		png_set_IHDR(png_ptr, info_ptr, grd->width(), grd->height(),
        				16, PNG_COLOR_TYPE_GRAY, PNG_INTERLACE_NONE,
        				PNG_COMPRESSION_TYPE_DEFAULT, PNG_FILTER_TYPE_DEFAULT); 
 	};
 
-	template<class T> int write(grid<T> &grd, const char * file_name){
-		WritePng<T>(file_name, grd);
+	template<class T> int write(Grid<T,2> &grd, const char * file_name){
+		return WritePng<T>(file_name, grd).status;
 	}
 
 }

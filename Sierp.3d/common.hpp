@@ -5,6 +5,8 @@
 #include <stdint.h>
 #include <cstring>
 
+#define UIMAX(size) (size)(((1ull << ((sizeof(size) * 8)-1)) - 1) | ((0xffull << ((sizeof(size) * 8) - 1))))
+
 class hsva{
 public:
 	float h;
@@ -39,37 +41,6 @@ public:
 template <class T> struct gray_alpha{
 	T gray;
 	T alpha;
-};
-
-template <class T> class grid{
-public:
-	size_t width;
-	size_t height;
-	size_t len;
-	T *data;
-
-	grid(size_t width, size_t height){
-		this->width = width;
-		this->height = height;
-		this->len = width * height;
-		this->data = new T[len];
-	};
-
-	~grid(){
-		delete[] this->data;
-	};
-
-	void fill(T color){
-		for (size_t i=this->len; --i; ){
-			this->data[i] = color;
-		}
-	}
-
-
-	T &get_point(size_t x, size_t y){
-		return this->data[x + (y * width)];
-	}
-
 };
 
 
