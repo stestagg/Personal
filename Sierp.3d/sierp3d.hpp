@@ -10,25 +10,25 @@ namespace sierp3d {
 	template <class T>
 	class Point{
 	public:
-		const T x;
-		const T y;
-        const T z;
+		T x;
+		T y;
+        T z;
 
 		Point() : x(0), y(0), z(0) {}
 		Point(T x, T y, T z) : x(x), y(y), z(z) {}
 
-		const Point const approach(const Point other){
+		const Point approach(const Point other) const{
 			return approach(other, 0.5);
 		}
 
-		const Point approach(const Point other, double ratio){
+		const Point approach(const Point other, double ratio) const{
 			return Point(
                 (T)(x + ( (double)(other.x - x) * ratio)),
 			    (T)(y + ( (double)(other.y - y) * ratio)),
                 (T)(z + ( (double)(other.z - z) * ratio)));
 		}
 
-        const Point scale(T xscale, T yscale, T zscale){
+        const Point scale(T xscale, T yscale, T zscale) const{
             return Point(x * xscale, y * yscale, z * zscale);
         }
 	};
