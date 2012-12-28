@@ -8,11 +8,11 @@
 typedef uint16_t ModelType;
 typedef Grid<ModelType, 3> GridType;
 
-static const size_t DEFAULT_WIDTH = 700;
-static const size_t DEFAULT_HEIGHT = 700;
+static const size_t DEFAULT_WIDTH = 100;
+static const size_t DEFAULT_HEIGHT = 100;
 static const size_t INITIAL = 1;
 
-static const size_t SPACE_SIZE = 700;
+static const size_t SPACE_SIZE = 100;
 
 int main(int argc, const char **argv){
     if (argc != 3 && argc != 5){
@@ -33,7 +33,12 @@ int main(int argc, const char **argv){
     for (int blank=0; blank < blanks; ++blank){
         model.points.push_back(sierp3d::Point<double>(SPACE_SIZE/2, SPACE_SIZE/2, SPACE_SIZE/2)); 
     }
-    model.add_regular(SPACE_SIZE, sides);
+    //model.add_tetrahedron(SPACE_SIZE);
+    model.add_rect(SPACE_SIZE);
+
+    for (sierp3d::Point<double> point : model.points){
+        printf(">> %f, %f, %f\n", point.x, point.y, point.z);
+    }
 
     GridType * front = new GridType( {SPACE_SIZE, SPACE_SIZE, SPACE_SIZE} );
     GridType *  back = new GridType( {SPACE_SIZE, SPACE_SIZE, SPACE_SIZE} );
