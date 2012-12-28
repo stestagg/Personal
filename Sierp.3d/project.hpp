@@ -6,19 +6,26 @@
 #include <math.h>
 
 template <class T>
-void project(Grid<T, 3> &source, Grid<T, 2> &output, double distance, double rotation){
+void project(Grid<T, 3> &source, Grid<T, 2> &output, double distance, double y_rot, double x_rot){
     size_t wid = output.dimensions[0];
     size_t hei = output.dimensions[1];
 
     Grid<double, 2> temp({wid, hei});
     temp.fill(0);
 
-    double new_x = cos(rotation) * distance;
-    double new_y = sin(rotation) * distance;
+    
+    double new_x = (sin(y_rot) * cos(x_rot)) * distance;
+    double new_y = sin(x_rot) * distance;
+    double new_z = (cos(y_rot) * cos(x_rot)) * distance;
+
+    std::cout << y_rot << ", " << std::endl;
+    std::cout << new_x << ", " << new_y << ", " << new_z << std::endl;
+
+    
 
     // Based on: http://en.wikipedia.org/wiki/3D_projection
-    sierp3d::Point<double> theta(0.1, -rotation, 0); //Camera rotation
-    sierp3d::Point<double> c(new_y + 0.5, 0.8, -(new_x) + 0.5); // Camera position   
+    sierp3d::Point<double> theta(-x_rot, y_rot, 0); //Camera rotation
+    sierp3d::Point<double> c(new_x + 0.5, new_y + 0.5, new_z + 0.5); // Camera position   
     sierp3d::Point<double> e(0, 0, -2); // Viewer position
 
     double cost_x = cos(theta.x);
@@ -57,7 +64,7 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, double distance, double rot
     }
 
     //double max = temp.max();
-    double scale = 0.015;
+    double scale = 0.02;
     size_t index = 0;
 
     for (double point : temp){

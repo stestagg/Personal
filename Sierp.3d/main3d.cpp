@@ -57,7 +57,7 @@ int main(int argc, const char **argv){
 
     temp = NULL;
     delete back;
-/*
+
     for (size_t x=0; x<SPACE_SIZE; ++x){
         front->get_point({x, 0, 0}) = UIMAX(ModelType);
         front->get_point({x, SS, 0}) = UIMAX(ModelType);
@@ -74,11 +74,11 @@ int main(int argc, const char **argv){
         front->get_point({0, SS, x}) = UIMAX(ModelType);
         front->get_point({SS, SS, x}) = UIMAX(ModelType);
     }
-*/
-    for (double th=0; th <= M_PI/2; th += ((M_PI/2) / 10)){
+
+    for (double th=0; th <= M_PI*2; th += ((M_PI/2) / 20)){
         Grid<ModelType, 2> out({wid, hei});
         out.fill(0);
-        project(*front, out, 3, th + 0.1);
+        project(*front, out, 3, th + 0.1, th);
         char file_name[255];
         sprintf(file_name, "out3d-%f.png", th);
         printf("Output: %s\n",file_name); 
