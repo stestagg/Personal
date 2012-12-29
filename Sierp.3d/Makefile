@@ -1,5 +1,8 @@
 
-CC=clang++ -stdlib=libc++ -std=c++0x -O2 -g
+COMPILER=clang++ -stdlib=libc++
+#COMPILER=g++
+
+CC=${COMPILER} -std=c++0x -O2 -g
 
 all: build
 
@@ -22,5 +25,9 @@ ico.dat: bin/calc
 ico.png: bin/render ico.dat
 	bin/render ico.dat 200 200 0 0.2 3 1 0.1 ico.png
 
-2d.png: bin/sierp2d
+out-0-3.png: bin/sierp2d
 	bin/sierp2d 3 0 200 200
+
+clean:
+	- rm -rf bin/*
+	- rm ico.dat ico.png out-0-3.png
