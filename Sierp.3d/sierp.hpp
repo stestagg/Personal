@@ -10,17 +10,17 @@ namespace sierp2d {
 	template <class T>
 	class Point{
 	public:
-		const T x;
-		const T y;
+		T x;
+		T y;
 
 		Point() : x(0), y(0) {}
 		Point(T x, T y) : x(x), y(y){}
 
-		const Point const approach(const Point other){
+		const Point approach(const Point other) const{
 			return approach(other, 0.5);
 		}
 
-		const Point approach(const Point other, double ratio){
+		const Point approach(const Point other, double ratio) const{
 			return Point(
                 (T)(x + ( (double)(other.x - x) * ratio)),
 			    (T)(y + ( (double)(other.y - y) * ratio)));

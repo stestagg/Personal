@@ -5,7 +5,10 @@
 #include <initializer_list>
 #include <iostream>
 
+#include <cstdlib>
 #include <zlib.h>
+
+#define t_hrow(s) printf(s); abort();
 
 static const char *FILE_TOKEN = "GRID<>";
 
@@ -86,7 +89,7 @@ public:
             baseline += coord * spans[dimension];
             dimension += 1;
         }
-        if (baseline > len){ throw "Out of Bounds"; }
+        if (baseline > len){ t_hrow("Out of Bounds"); }
         return data[baseline];
     }
 
@@ -106,11 +109,11 @@ public:
         gzFile fp = gzopen(file_name.c_str(), "r");
         gzread(fp, magic_token, sizeof(FILE_TOKEN));
         if (std::strcmp(magic_token, FILE_TOKEN)){
-            throw("Invalid grid file");
+            t_hrow("Invalid grid file");
         }
         gzread(fp, &num_dims, sizeof(size_t));
         if (num_dims != N){
-            throw("Invalid number of dimensions");
+            t_hrow("Invalid number of dimensions");
         }
 
         size_t new_dims[N];

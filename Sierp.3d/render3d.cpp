@@ -29,10 +29,11 @@ int main(int argc, const char **argv){
     double density = atof(argv[8]);
     std::string output_file(argv[9]);
 
+    printf("Loading Grid\n");
     GridType data = GridType::load(input_file);
 
     static const size_t SS = data.dimensions[0] - 1;
-
+    printf("Adding Borders\n");
     for (size_t x=0; x<(SS + 1); ++x){
         data.get_point({x, 0, 0}) = UIMAX(ModelType);
         data.get_point({x, SS, 0}) = UIMAX(ModelType);
@@ -49,11 +50,15 @@ int main(int argc, const char **argv){
         data.get_point({0, SS, x}) = UIMAX(ModelType);
         data.get_point({SS, SS, x}) = UIMAX(ModelType);
     }
-
+    printf("Preparing output\n");
     Grid<ModelType, 2> out({wid, hei});
     out.fill(0);
+    
+    printf("Rendering\n");
     project(data, out, dist, y_rot, z_rot, density, perspective);
+    printf("Inverting\n");
     out.invert();
+    printf("Writing Output File\n");
     png::write(out, output_file.c_str());
     
 }

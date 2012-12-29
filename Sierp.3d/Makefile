@@ -1,14 +1,14 @@
 
-COMPILER=clang++ -stdlib=libc++
+COMPILER=clang++ -stdlib=libc++ 
 #COMPILER=g++
 
-CC=${COMPILER} -std=c++0x -O2 -g
+CC=${COMPILER} -std=c++0x -fno-exceptions -O2 -g
 
 all: build
 
 build: bin/calc bin/render bin/sierp2d
 
-test: ico.png 2d.png
+test: ico.png out-0-3.png
 
 bin/calc: calc3d.cpp *.hpp 
 	${CC} calc3d.cpp -o bin/calc -lz
