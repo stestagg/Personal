@@ -6,7 +6,7 @@
 #include <math.h>
 
 template <class T>
-void project(Grid<T, 3> &source, Grid<T, 2> &output, double distance, double y_rot, double x_rot){
+void project(Grid<T, 3> &source, Grid<T, 2> &output, double distance, double y_rot, double x_rot, double density, double perspective){
     size_t wid = output.dimensions[0];
     size_t hei = output.dimensions[1];
 
@@ -21,12 +21,10 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, double distance, double y_r
     std::cout << y_rot << ", " << std::endl;
     std::cout << new_x << ", " << new_y << ", " << new_z << std::endl;
 
-    
-
     // Based on: http://en.wikipedia.org/wiki/3D_projection
     sierp3d::Point<double> theta(-x_rot, y_rot, 0); //Camera rotation
     sierp3d::Point<double> c(new_x + 0.5, new_y + 0.5, new_z + 0.5); // Camera position   
-    sierp3d::Point<double> e(0, 0, -2); // Viewer position
+    sierp3d::Point<double> e(0, 0, -perspective); // Viewer position
 
     double cost_x = cos(theta.x);
     double cost_y = cos(theta.y);
@@ -63,12 +61,10 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, double distance, double y_r
         }
     }
 
-    //double max = temp.max();
-    double scale = 0.02;
     size_t index = 0;
 
     for (double point : temp){
-        double value = scale * point;
+        double value = density * point;
         output.data[index] = (value > UIMAX(T)) ? UIMAX(T) : (T)value;
         ++index;
     }

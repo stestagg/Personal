@@ -2,7 +2,6 @@
 #include "common.hpp"
 #include "output.hpp"
 #include "sierp.hpp"
-#include "color.hpp"
 #include <math.h>
 
 typedef uint16_t ModelType;

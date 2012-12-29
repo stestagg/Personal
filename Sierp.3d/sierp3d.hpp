@@ -5,8 +5,6 @@
 #include <math.h>
 #include <vector>
 
-#include "shapes.h"
-
 namespace sierp3d {
 
 	template <class T>
@@ -32,6 +30,10 @@ namespace sierp3d {
 
         const Point scale(T xscale, T yscale, T zscale) const{
             return Point(x * xscale, y * yscale, z * zscale);
+        }
+
+        const Point offset(T xoffset, T yoffset, T zoffset) const{
+            return Point(x + xoffset, y + yoffset, z + zoffset);
         }
 	};
 
@@ -71,33 +73,6 @@ namespace sierp3d {
             dest += source; 
             return false;           
         }
-
-        void add_icosahedron(size_t SIZE){
-            for (const double (&vertex)[3] : icosa_data){
-                double x = ((vertex[0] * 0.5) + 0.5) * SIZE;
-                double y = ((vertex[1] * 0.5) + 0.5) * SIZE;
-                double z = ((vertex[2] * 0.5) + 0.5) * SIZE;
-                points.push_back(Point<double>(x, y, z));
-            }
-        };
-
-        void add_rect(size_t SIZE){
-            for (const double (&vertex)[3] : rect_data){
-                double x = ((vertex[0] * 0.5) + 0.5) * SIZE;
-                double y = ((vertex[1] * 0.5) + 0.5) * SIZE;
-                double z = ((vertex[2] * 0.5) + 0.5) * SIZE;
-                points.push_back(Point<double>(x, y, z));
-            }
-        };
-
-		void add_tetrahedron(size_t SIZE){
-            for (const double(&vertex)[3] : tetra_data){
-                double x = ((vertex[0] * 0.5) + 0.5) * SIZE;
-                double y = ((vertex[1] * 0.5) + 0.5) * SIZE;
-                double z = ((vertex[2] * 0.5) + 0.5) * SIZE;
-                points.push_back(Point<double>(x, y, z));
-            }
-		};
 	};
 };
 
