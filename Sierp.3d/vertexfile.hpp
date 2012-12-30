@@ -1,7 +1,7 @@
 #ifndef VERTEXFILE__HPP
 #define VERTEXFILE__HPP
 
-#include <vector>
+#include <list>
 #include <istream>
 #include <string>
 #include <iostream>
@@ -11,9 +11,9 @@
 #include <stdlib.h>
 
 template <int N>
-std::vector<std::array<double, N> > getLinesAndSplitIntoTokens(std::istream& str)
+std::list<std::array<double, N> > getLinesAndSplitIntoTokens(std::istream& str)
 {
-    std::vector<std::array<double, N> > result;
+    std::list<std::array<double, N> > result;
     std::string line_str;
     while (std::getline(str, line_str)){
         std::array<double, N> line;

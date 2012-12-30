@@ -28,11 +28,20 @@ int main(int argc, const char **argv){
     
     std::ifstream file(vertexfile);
     auto coords = getLinesAndSplitIntoTokens<3>(file);
-
     double min[3], max[3];
 
+    auto first = coords.begin();
+    auto next = coords.begin();
+    next ++;
     for (size_t i=0; i<3; ++i){
-        min[i] = max[i] = coords[0][i];
+        min[i] = (*first)[i];
+        max[i] = (*next)[i];
+    }
+    coords.pop_front();
+    coords.pop_front();
+    
+    for (size_t i=0; i<3; ++i){
+        min[i] = max[i] = coords.front()[i];
     };
 
     for (auto coord : coords){
