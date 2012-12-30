@@ -39,17 +39,6 @@ int main(int argc, const char **argv){
     }
     coords.pop_front();
     coords.pop_front();
-    
-    for (size_t i=0; i<3; ++i){
-        min[i] = max[i] = coords.front()[i];
-    };
-
-    for (auto coord : coords){
-        for (size_t i=0; i<3; ++i){
-            min[i] = (coord[i] < min[i]) ? coord[i] : min[i];
-            max[i] = (coord[i] > max[i]) ? coord[i] : max[i];
-        }
-    }
 
     double diff[] = {max[0] - min[0], max[1] - min[1], max[2] - min[2]};
     double scale[] = {(size - 1) / diff[0], (size - 1) / diff[1], (size - 1) / diff[2]};
