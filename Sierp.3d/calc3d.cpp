@@ -16,8 +16,8 @@ int main(int argc, const char **argv){
         return 1;
     }
     std::string vertexfile(argv[1]);
-    int blanks = atol(argv[2]);
-    int size = atol(argv[3]);
+    size_t blanks = atol(argv[2]);
+    size_t size = atol(argv[3]);
     std::string outputfile(argv[4]);
 
     sierp3d::Model<double, ModelType, GridType> model;

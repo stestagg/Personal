@@ -6,6 +6,7 @@
 #include <math.h>
 #include <stdio.h>
 
+
 template <class T>
 void project(Grid<T, 3> &source, Grid<T, 2> &output, const double distance, const double y_rot, const double x_rot, const double density, const double perspective){
     const size_t wid = output.dimensions[0];
@@ -42,19 +43,17 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, const double distance, cons
         for (size_t y=0; y<source.dimensions[1]; ++y){
             for (size_t x=0; x<source.dimensions[0]; ++x){
                 const T val = source.get_point({x, y, z});
-                if (val){
-                    const sierp3d::Point<double> a(x/scale_x, y/scale_y, z/scale_z);
-                    const double dx = cost_y * (sint_z * (a.y - c.y) + cost_z * (a.x - c.x)) - sint_y * (a.z - c.z);
-                    const double dy = sint_x * (cost_y * (a.z - c.z) + sint_y * (sint_z * (a.y - c.y) + cost_z * (a.x - c.x))) + cost_x * (cost_z * (a.y - c.y) - sint_z * (a.x - c.x));
-                    const double dz = cost_x * (cost_y * (a.z - c.z) + sint_y * (sint_z * (a.y - c.y) + cost_z * (a.x - c.x))) - sint_x * (cost_z * (a.y - c.y) - sint_z * (a.x - c.x));                    
+                if (!val) continue;
+                const sierp3d::Point<double> a(x/scale_x, y/scale_y, z/scale_z);
+                const double dx = cost_y * (sint_z * (a.y - c.y) + cost_z * (a.x - c.x)) - sint_y * (a.z - c.z);
+                const double dy = sint_x * (cost_y * (a.z - c.z) + sint_y * (sint_z * (a.y - c.y) + cost_z * (a.x - c.x))) + cost_x * (cost_z * (a.y - c.y) - sint_z * (a.x - c.x));
+                const double dz = cost_x * (cost_y * (a.z - c.z) + sint_y * (sint_z * (a.y - c.y) + cost_z * (a.x - c.x))) - sint_x * (cost_z * (a.y - c.y) - sint_z * (a.x - c.x));                    
 
-                    const double y = (((dx - e.x) * (e.z / dz)) + 0.5) * hei;
-                    const double x = (((dy - e.y) * (e.z / dz)) + 0.5) * wid;
+                const double new_y = (((dx - e.x) * (e.z / dz)) + 0.5) * hei;
+                const double new_x = (1-(((dy - e.y) * (e.z / dz)) + 0.5)) * wid;
 
-                    if (x >= 0 && x < wid && y >= 0 && y < hei){
-                        double &point = temp.get_point({(size_t)x, (size_t)y});
-                        point += val;
-                    }
+                if (new_x >= 0 && new_x < wid && new_y >= 0 && new_y < hei){
+                    temp.get_point({(size_t)new_x, (size_t)new_y}) += val;
                 }
             }
         }

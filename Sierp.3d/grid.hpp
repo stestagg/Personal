@@ -82,7 +82,7 @@ public:
         return max;
     }
 
-    T& get_point( std::initializer_list<size_t> coords ){
+    inline T& get_point( std::initializer_list<size_t> coords ) const{
         int baseline = 0;
         int dimension = 0;
         for (size_t coord : coords){
@@ -107,6 +107,7 @@ public:
         size_t num_dims;
         char magic_token[sizeof(FILE_TOKEN)];
         gzFile fp = gzopen(file_name.c_str(), "r");
+        gzbuffer(fp, 128 * 1024);
         gzread(fp, magic_token, sizeof(FILE_TOKEN));
         if (std::strcmp(magic_token, FILE_TOKEN)){
             t_hrow("Invalid grid file");

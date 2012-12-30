@@ -2,7 +2,7 @@
 COMPILER=clang++ -stdlib=libc++ 
 #COMPILER=g++
 
-CC=${COMPILER} -std=c++0x -fno-exceptions -O2 -g
+CC=${COMPILER} -std=c++0x -fno-exceptions -O3 -g
 
 all: build
 

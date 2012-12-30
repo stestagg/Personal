@@ -34,7 +34,7 @@ int main(int argc, const char **argv){
 
     static const size_t SS = data.dimensions[0] - 1;
     printf("Adding Borders\n");
-    for (size_t x=0; x<(SS + 1); ++x){
+    /*for (size_t x=0; x<(SS + 1); ++x){
         data.get_point({x, 0, 0}) = UIMAX(ModelType);
         data.get_point({x, SS, 0}) = UIMAX(ModelType);
         data.get_point({x, SS, SS}) = UIMAX(ModelType);
@@ -49,7 +49,7 @@ int main(int argc, const char **argv){
         data.get_point({SS, 0, x}) = UIMAX(ModelType);
         data.get_point({0, SS, x}) = UIMAX(ModelType);
         data.get_point({SS, SS, x}) = UIMAX(ModelType);
-    }
+    }*/
     printf("Preparing output\n");
     Grid<ModelType, 2> out({wid, hei});
     out.fill(0);
