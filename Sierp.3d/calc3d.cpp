@@ -53,7 +53,7 @@ int main(int argc, const char **argv){
  
     GridType * front = new GridType( {size, size, size} );
     GridType *  back = new GridType( {size, size, size} );
-    GridType * temp = NULL;
+    GridType *  temp = NULL;
 
     front->get_point({size/2, size/2, size/2}) = 1;
     static const size_t SS = size-1;

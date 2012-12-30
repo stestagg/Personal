@@ -33,8 +33,8 @@ int main(int argc, const char **argv){
     GridType data = GridType::load(input_file);
 
     static const size_t SS = data.dimensions[0] - 1;
-    printf("Adding Borders\n");
-    /*for (size_t x=0; x<(SS + 1); ++x){
+    /*printf("Adding Borders\n");
+    for (size_t x=0; x<(SS + 1); ++x){
         data.get_point({x, 0, 0}) = UIMAX(ModelType);
         data.get_point({x, SS, 0}) = UIMAX(ModelType);
         data.get_point({x, SS, SS}) = UIMAX(ModelType);

@@ -38,6 +38,10 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, const double distance, cons
     const double scale_y = source.dimensions[1];
     const double scale_x = source.dimensions[0];
 
+    // TODO: remove
+    double min_z = 1000;
+    double max_z = -1000;
+
     printf("  Drawing Cloud\n");
     for (size_t z=0; z<source.dimensions[2]; ++z){
         for (size_t y=0; y<source.dimensions[1]; ++y){
@@ -52,8 +56,13 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, const double distance, cons
                 const double new_y = (((dx - e.x) * (e.z / dz)) + 0.5) * hei;
                 const double new_x = (1-(((dy - e.y) * (e.z / dz)) + 0.5)) * wid;
 
+                min_z = (min_z > dz) ? dz : min_z;
+                max_z = (max_z < dz) ? dz : max_z;
                 if (new_x >= 0 && new_x < wid && new_y >= 0 && new_y < hei){
-                    temp.get_point({(size_t)new_x, (size_t)new_y}) += val;
+                    double factor = (2 - (dz + (distance + 1))) / 2.5;
+                    if (factor > 0){
+                        temp.get_point({(size_t)new_x, (size_t)new_y}) += val * factor;
+                    }
                 }
             }
         }
