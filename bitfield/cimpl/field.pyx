@@ -1,9 +1,9 @@
+# cython: profile=True
 # Imports and boilerplate
 import cython
 import zlib
 
 ctypedef Py_ssize_t size_t
-
 
 cdef extern:
     int __builtin_popcountl(size_t)
@@ -461,9 +461,20 @@ cdef class Bitfield:
         self._ensure_page_exists(page)
         self.pages[page].add(page_index)
 
-    cpdef remove(self, usize_t number):
+    cpdef remove(Bitfield self, usize_t number):
         """Remove a positive integer from the bitfield
-        If the integer does not exist in the field, this method just returns"""
+        If the integer does not exist in the field, raise a KeyError"""
+        cdef usize_t page = number / PAGE_FULL_COUNT
+        cdef usize_t page_index = number % PAGE_FULL_COUNT
+        if page >= len(self.pages):
+            raise KeyError()
+        if page_index not in self.pages[page]:
+            raise KeyError()
+        self.pages[page].remove(page_index)
+
+    cpdef discard(Bitfield self, usize_t number):
+        """Remove a positive integer from the bitfield if it is a member.
+        If the element is not a member, do nothing."""
         cdef usize_t page = number / PAGE_FULL_COUNT
         cdef usize_t page_index = number % PAGE_FULL_COUNT
         if page >= len(self.pages):
@@ -495,7 +506,11 @@ cdef class Bitfield:
         return BitfieldIterator(self)
 
     def __richcmp__(Bitfield a,Bitfield b, operator):
-        cdef usize_t current
+        cdef usize_t current_pageent
+        if operator == 0:
+            return (b != a) and (a.issubset(b))
+        if operator == 1:
+            return a.issubset(b)
         if operator == 2:
             a._cleanup()
             b._cleanup()
@@ -505,8 +520,12 @@ cdef class Bitfield:
                 if a.pages[current] != b.pages[current]:
                     return False
             return True
-        elif operator == 3:
+        if operator == 3:
             return not a == b
+        if operator == 4:
+            return (a != b) and (b.issubset(a))
+        if operator == 5:
+            return b.issubset(a)
         raise NotImplementedError()
 
     def __or__(Bitfield x, Bitfield y):
@@ -515,6 +534,9 @@ cdef class Bitfield:
         new = x.clone()
         new.update(y)
         return new
+
+    def __ior__(Bitfield x, Bitfield y):
+        return x.update(y)
 
     def union(Bitfield self, Bitfield other):
         return self | other
@@ -536,6 +558,9 @@ cdef class Bitfield:
         new = x.clone()
         new.difference_update(y)
         return new
+
+    def __isub__(Bitfield x, Bitfield y):
+        return x.difference_update(y)
 
     def __isub__(Bitfield x, Bitfield y):
         return x.difference_update(y)
@@ -723,6 +748,10 @@ cdef class Bitfield:
     def __repr__(self):
         cls = type(self)
         return "%s.%s(%r)" % (cls.__module__, cls.__name__, self.pickle())
+
+    def clear(self):
+        self.pages = []
+
 
 cpdef unpickle_bitfield(str data):
     return Bitfield.unpickle(data)

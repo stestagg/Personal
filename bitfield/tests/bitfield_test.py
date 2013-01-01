@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
+# For coverage script
 import bitfield
+
 import cPickle
 import pickle
 
@@ -164,9 +166,15 @@ class SetEqualityTest(unittest.TestCase):
         self._test_field_result(a, b, lambda x, y: x ^ y)
         self._test_field_result(a, b, lambda x, y: x & y)
         self._test_field_result(a, b, lambda x, y: x - y)
+        self._test_field_result(a, b, lambda x, y: x.union(y))
         self._test_simple_result(a, b, lambda x, y: x.isdisjoint(y))
         self._test_simple_result(a, b, lambda x, y: x.issubset(y))
-        self._test_field_result(a, b, lambda x, y: x.union(y))
+        self._test_simple_result(a, b, lambda x, y: x < y)
+        self._test_simple_result(a, b, lambda x, y: x <= y)
+        self._test_simple_result(a, b, lambda x, y: x == y)
+        self._test_simple_result(a, b, lambda x, y: x != y)
+        self._test_simple_result(a, b, lambda x, y: x >= y)
+        self._test_simple_result(a, b, lambda x, y: x > y)
 
         a_2, b_2 = pickle.loads(cPickle.dumps([a, b]))
         self.assertEqual(a_2, a)
