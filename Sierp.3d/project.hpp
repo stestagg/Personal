@@ -59,7 +59,8 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, const double distance, cons
                 min_z = (min_z > dz) ? dz : min_z;
                 max_z = (max_z < dz) ? dz : max_z;
                 if (new_x >= 0 && new_x < wid && new_y >= 0 && new_y < hei){
-                    double factor = (2 - (dz + (distance + 1))) / 2.5;
+                    double factor = ((dz + (distance + 1)));
+                    printf("%f\n", factor);
                     if (factor > 0){
                         temp.get_point({(size_t)new_x, (size_t)new_y}) += val * factor;
                     }
@@ -67,6 +68,8 @@ void project(Grid<T, 3> &source, Grid<T, 2> &output, const double distance, cons
             }
         }
     }
+
+    printf("%f > %f\n", (min_z + (distance+1)), (max_z + (distance+1)));
 
     size_t index = 0;
 
