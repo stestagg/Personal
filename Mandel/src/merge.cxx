@@ -3,30 +3,14 @@
 #include "output.hpp"
 #include "color.hpp"
 #include <iostream>
+#include <vector>
 
-
-typedef uint8_t in_T;
-typedef rgba<in_T> in_type;
-
-in_T ave(in_T a, in_T b, in_T c){
-    unsigned long z=a;
-    z += b;
-    z += c;
-    return in_T(z/3);
-}
-
-in_type average(in_type a, in_type b, in_type c){
-    return rgba<in_T>(
-        ave(a.r, b.r, c.r), 
-        ave(a.g, b.g, c.g), 
-        ave(a.b, b.b, c.b), 
-        ave(a.a, b.a, c.a));
-}
+typedef PIXEL_TYPE in_type;
 
 int main(int argc, const char **argv){
 
-    if (argc != 5){
-        printf("Usage: %s out_file file1 file2 file3\n", argv[0]);
+    if (argc < 4){
+        printf("Usage: %s out_file file1 factor [file2 factor]...\n", argv[0]);
         exit(1);
     }
 
@@ -34,7 +18,16 @@ int main(int argc, const char **argv){
 
     const char *out_file = argv[1];
 
-    grid<in_type> * ina = reader.read(argv[2]);
+    for (int argi=2; argi < argc; argi+=2){
+        const char *merge_filename = argv[argi];
+        const char *factor_a = argv[argi + 1];
+        double factor = atof(factor_a);
+        printf("%s %f factor\n", merge_filename, factor);
+
+
+    }
+    return 1;
+    /*grid<in_type> * ina = reader.read(argv[2]);
     grid<in_type> * inb = reader.read(argv[3]);
     grid<in_type> * inc = reader.read(argv[4]);
     grid<in_type> output(ina->width, ina->height);
@@ -67,5 +60,5 @@ int main(int argc, const char **argv){
         }
     }
 
-    png::write(output, out_file);
+    png::write(output, out_file);*/
 };
