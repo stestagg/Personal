@@ -46,7 +46,7 @@ obj/gmp.tbz: | obj
 	curl ftp://ftp.gmplib.org/pub/gmp-5.0.5/gmp-5.0.5.tar.bz2 > obj/gmp.tbz
 
 obj/png.tgz: | obj
-	curl ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.5.12.tar.gz > obj/png.tgz
+	curl ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.5.13.tar.gz > obj/png.tgz
 
 # 3. Unpack libs
 libs/gmp/configure: obj/gmp.tbz
