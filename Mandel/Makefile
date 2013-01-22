@@ -13,10 +13,10 @@ LINK += -static -shared-libgcc
 endif
 
 # Final target
-all: merge mandel scale_rgb scale_g 2bw pp info
+all: merge_g mandel scale_rgb scale_g 2bw pp info
 
-merge: obj/libgmp.a obj/libpng.a obj/merge.o bin
-	$(LINK) ${HPP_OBJ_FILES} obj/merge.o obj/libgmp.a obj/libpng.a -lz -o bin/merge $(LINK_AFTER)
+merge_g: obj/libgmp.a obj/libpng.a obj/merge_g.o bin
+	$(LINK) ${HPP_OBJ_FILES} obj/merge_g.o obj/libgmp.a obj/libpng.a -lz -o bin/merge_g $(LINK_AFTER)
 
 scale_rgb: obj/libgmp.a obj/libpng.a obj/scale_rgb.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/scale_rgb.o obj/libgmp.a obj/libpng.a -lz -o bin/scale_rgb $(LINK_AFTER)

@@ -27,20 +27,32 @@ int main(int argc, const char **argv){
         exit(1);
     }
 
-    double min_val = UIMAX(in_T);
-    double max_val = 0;
+    double min_val;
+    double max_val;
+    size_t histogram[UIMAX(in_T)] = {0};
 
     for (size_t i=0; i<grd->len; ++i){
         uint16_t val = (*grd)[i].g;
         if (val == UIMAX(in_T)) continue;
-
-        double offset = cubes[(*grd)[i].a];
-        double combined = val + offset;
-        max_val = MAX(max_val, combined);
-        min_val = MIN(min_val, combined);
+        histogram[val] += 1;
     }
 
-    grayalpha<uint16_t> maxga = grd->max();
+    size_t cutoff = ((grd->len) * 0.5) / 100;
+    size_t seen = 0;
+
+    for (size_t i=0; i<grd->len; ++i){
+        seen += histogram[i];
+        min_val = i;
+        if (seen >= cutoff) break;
+    }
+
+    seen=0;
+    for (size_t i=(UIMAX(in_T) - 1); i>=0; --i){
+        seen += histogram[i];
+        max_val = i;
+        if (seen >= cutoff) break;
+    }
+
     double scaling = (UIMAX(in_T) - 1) / (max_val - min_val);
 
     grid<in_T> output(grd->width, grd->height);
@@ -52,7 +64,8 @@ int main(int argc, const char **argv){
         }
         double offset = cubes[(*grd)[i].a];
         double combined = (val + offset);
-        output[i] = (uint16_t)((combined - min_val) * scaling) ;
+        if (combined < min_val) output[i] = 0;
+        else output[i] = (uint16_t)MIN(((combined - min_val) * scaling), (double)UIMAX(in_T)) ;
     }
 
     png::write(output, out_file);

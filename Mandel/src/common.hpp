@@ -105,6 +105,9 @@ double cubic(double p0, double p1, double p2, double p3, double x) {
 }
 
 template<class T, double (*V)(T&)>double interp(grid<T> &g, double x, double y){
+    if (x < 0 || y < 0 || x >= g.width || y >= g.height){
+    	return 0;
+    }
     size_t base_x = (size_t)x;
     size_t base_y = (size_t)y;
     double xratio = x - base_x;
@@ -219,20 +222,22 @@ public:
 	}
 
 	grid<T> scale(double scale){
-		size_t new_width = size_t(width * scale);
-    	size_t new_height = size_t(height * scale);
-    	double step = width / (double)new_width;
-    	grid<T> out(new_width, new_height);
-    	double oldx=0;
-    	double oldy=0;
-    	for (size_t newy=0; newy<new_height; ++newy){
-        	oldx=0; 
-        	oldy += step;
-        	for (size_t newx=0; newx<new_width; ++newx){
-            	out.get_point(newx, newy) = cubic_interpolate<T>(*this, oldx, oldy);
-            	oldx += step;
-        	};
-    	};
+		grid<T> out(width, height);
+		double step_y = 1.0 / height;
+		double step_x = 1.0 / width;
+		double factor = 1/scale;
+		for (size_t posy = 0; posy < height; ++posy){
+			double vposy = posy / (double)height;
+			for (size_t posx = 0; posx < width; ++posx){
+				double vposx = posx / (double)width;
+
+				T &point = out.get_point(posx, posy);
+
+				double source_x = (0.5 + ((vposx - 0.5) * factor)) * width;
+				double source_y = (0.5 + ((vposy - 0.5) * factor)) * height;
+				point = cubic_interpolate<T>(*this, source_x, source_y);
+			};
+		};
     	return out;
 	};
 
