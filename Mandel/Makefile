@@ -1,5 +1,6 @@
 
 SRC_FILES = $(notdir $(wildcard src/*.cpp))
+CXX_FILES = $(wildcard src/*.cxx)
 HPP_FILES =  $(wildcard src/*.hpp)
 FILE_BASES = $(basename $(SRC_FILES))
 OBJ_FILES = $(addsuffix .o,$(addprefix obj/,$(notdir $(FILE_BASES))))
@@ -13,16 +14,26 @@ LINK += -static -shared-libgcc
 endif
 
 # Final target
-all: merge_g mandel scale_rgb scale_g 2bw pp info
+all: merge_g mandel scale_rgb scale_g 2bw pp info zoom_g zoom_rgb merge_rgb
 
 merge_g: obj/libgmp.a obj/libpng.a obj/merge_g.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/merge_g.o obj/libgmp.a obj/libpng.a -lz -o bin/merge_g $(LINK_AFTER)
+
+merge_rgb: obj/libgmp.a obj/libpng.a obj/merge_rgb.o bin
+	$(LINK) ${HPP_OBJ_FILES} obj/merge_rgb.o obj/libgmp.a obj/libpng.a -lz -o bin/merge_rgb $(LINK_AFTER)
 
 scale_rgb: obj/libgmp.a obj/libpng.a obj/scale_rgb.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/scale_rgb.o obj/libgmp.a obj/libpng.a -lz -o bin/scale_rgb $(LINK_AFTER)
 
 scale_g: obj/libgmp.a obj/libpng.a obj/scale_g.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/scale_g.o obj/libgmp.a obj/libpng.a -lz -o bin/scale_g $(LINK_AFTER)
+
+zoom_rgb: obj/libgmp.a obj/libpng.a obj/zoom_rgb.o bin
+	$(LINK) ${HPP_OBJ_FILES} obj/zoom_rgb.o obj/libgmp.a obj/libpng.a -lz -o bin/zoom_rgb $(LINK_AFTER)
+
+zoom_g: obj/libgmp.a obj/libpng.a obj/zoom_g.o bin
+	$(LINK) ${HPP_OBJ_FILES} obj/zoom_g.o obj/libgmp.a obj/libpng.a -lz -o bin/zoom_g $(LINK_AFTER)
+
 
 mandel: obj/libgmp.a obj/libpng.a obj/main.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/main.o obj/libgmp.a obj/libpng.a -lz -o bin/mandel $(LINK_AFTER)
@@ -83,7 +94,7 @@ obj/libjson.la: json/Makefile
 	cd json && make
 	cp json/bin/libJSONpp.la obj/libjson.la
 
-${OBJ_FILES} : ${HPP_FILES}
+${OBJ_FILES} : ${HPP_FILES} ${CXX_FILES}
 
 # 6. Compile source
 ${OBJ_FILES} : obj/%.o : src/%.cpp obj/libjson.la
