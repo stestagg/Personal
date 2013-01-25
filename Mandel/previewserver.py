@@ -45,7 +45,7 @@ def mandel():
     x = request.args.get("x", "0")
     y = request.args.get("y", "0")
     wid = request.args.get("wid", "2")
-    out = subprocess.check_output(["./mandel", x, y, wid, iters, "/dev/stdout", str(SIZE), str(SIZE)])
+    out = subprocess.check_output(["./bin/mandel", x, y, wid, iters, "/dev/stdout", str(SIZE), str(SIZE)])
     return out, 200, {"Content-type": "image/png"}
 
 @app.route("/s/<int:dx>/<int:dy>")

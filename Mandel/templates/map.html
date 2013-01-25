@@ -1,116 +1,42 @@
-<html>
-    <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
-    </script>
-    <script type="text/javascript">
-    var map = {{ map|safe }};
-    </script>
+{% set sec = "map" %}
+{% extends "base.html" %}
+{% block head %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="stylesheet" href="/static/css/colorpicker.css" type="text/css" />
-    <style>
-    body{
-        font-family: sans-serif;
-        font-size: 12px;
-        background: #eee;
-        text-align:center;
-    }
-    .mainimg{
-        width:480px; height: 270px; 
-        background: #eee;
-    }
-    .lnks{
-        margin-top: 10px;
-    }
-    .lnk{
-        background: #aaa;
-        color: white;
-        text-decoration: none;
-        border-radius: 3px;
-        padding: 5px;
-    }
-
-    #map_edit{
-        float: left;
-        width: 400px;
-
-    }
-
-    #map_section{
-        width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #map_items{
-        background: white;
-        border-radius: 5px;
-        box-shadow: inset 2px 2px 2px #ccc;
-        width: 350px;
-        height:200px;
-        overflow: auto;;
-        margin-left: auto;
-        padding: 10px;
-        margin-top: 10px;
-    }
-    .item[active=true]{ color: blue; }
-    </style>
     <script type="text/javascript" src="/static/js/colorpicker.js"></script>
     <script type="text/javascript" src="/static/js/eye.js"></script>
     <script type="text/javascript" src="/static/js/utils.js"></script>
     <script type="text/javascript">
     $(function(){
-        var current_color;
-        $('.mycp').ColorPicker({
+        $('.picker').ColorPicker({
             flat: true,
             onChange: function (hsb, hex, rgb) {
-                current_color = hex;
+                
             }
-        }).ColorPickerSetColor("#0f0");
-
-        $.each(map, function(k, v){
-            var item = $('<div class="item"/>');
-            var key = $('<span class="key"/>');
-            var val = $('<span class="val"/>');
-            key.text(k);
-            val.text(v);
-            item.append(key);
-            item.append(": ");
-            item.append(val);
-            item.append('  <a href="del/'+k+'/">x</a>');
-            item.click(function(){
-                var num = $(".key", this).text();
-                var col = $(".val", this).text();
-                $(".edit_iter").val(num);
-                $('.mycp').ColorPickerSetColor(col);
-                current_color = col;
-                $(".item").attr("active", false);
-                $(this).attr("active", true);
-
-            });
-            $("#map_items").append(item);
-        });
-        $(".save").click(function(){
-            var iter = $(".edit_iter").val();
-            window.location = "edit/" + iter + "/" + current_color.replace(/#/g, "") + "/";
         });
     });
     </script>
-    </head>
-    <body>
-        <img src="/image/{{ num }}/" class="mainimg"/>
-        <div>{{ range }}</div>
-        <div class="lnks">
-            <a class="lnk" href="/{{ num - 30 }}/">-30</a>
-            <a class="lnk" href="/{{ num - 10 }}/">-10</a>
-            <a class="lnk" href="/{{ num + 10 }}/">+10</a>
-            <a class="lnk" href="/{{ num + 30 }}/">+30</a>
-        </div>  
-        <div id="map_section">
-            <div id="map_edit">
-                <input class="edit_iter" />
-                <div class="mycp"></div>
-                <button type="button" class="save">Add/Edit</button>
-            </div>
-            <div id="map_items"></div>
-        </div>
-    </body>
-</html>
+{% endblock %}
+{% block body %}
+<div class="block">
+<div>
+    <a href="../{{ img_no - 10 }}/">-10</a>
+    <a href="../{{ img_no - 1 }}/">previous</a>
+    <img class="img" id="render" src="../bw/{{img_no}}.png" style="vertical-align:middle">
+    <img class="img" id="render" src="../mapped/{{img_no}}.png" style="vertical-align:middle">
+    <a href="../{{ img_no + 1}}/">next</a>
+    <a href="../{{ img_no + 10}}/">+10</a><br/>
+</div>
+Image {{ img_no }}
+</div>
+<br/>
+<div class="block">
+   
+    <div class="picker"></div>
+     <div class="colors">
+        {% for name, color in colors.iteritems|sorted %}
+        <div class="color">{{ </div>
+        {% endfor %}
+     </div>
+</div>
+{% endblock %}

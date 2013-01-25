@@ -222,6 +222,24 @@ public:
 	}
 
 	grid<T> scale(double scale){
+		size_t new_width = size_t(width * scale);
+    	size_t new_height = size_t(height * scale);
+    	double step = width / (double)new_width;
+    	grid<T> out(new_width, new_height);
+    	double oldx=0;
+    	double oldy=0;
+    	for (size_t newy=0; newy<new_height; ++newy){
+        	oldx=0; 
+        	oldy += step;
+        	for (size_t newx=0; newx<new_width; ++newx){
+            	out.get_point(newx, newy) = cubic_interpolate<T>(*this, oldx, oldy);
+            	oldx += step;
+        	};
+    	};
+    	return out;
+	};
+
+	grid<T> zoom(double scale){
 		grid<T> out(width, height);
 		double step_y = 1.0 / height;
 		double step_x = 1.0 / width;
