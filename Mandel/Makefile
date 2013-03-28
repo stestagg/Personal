@@ -14,37 +14,41 @@ LINK += -static -shared-libgcc
 endif
 
 # Final target
-all: merge_g mandel scale_rgb scale_g 2bw pp info zoom_g zoom_rgb merge_rgb
+all: bin/merge_g bin/mandel bin/scale_rgb bin/scale_g bin/2bw bin/pp bin/info bin/zoom_g bin/zoom_rgb bin/merge_rgb
 
-merge_g: obj/libgmp.a obj/libpng.a obj/merge_g.o bin
+bin/recolor: obj/libpng.a obj/recolor.o bin
+	$(LINK) ${HPP_OBJ_FILES} obj/recolor.o obj/libgmp.a obj/libpng.a -lz -o bin/recolor $(LINK_AFTER)
+
+
+bin/merge_g: obj/libgmp.a obj/libpng.a obj/merge_g.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/merge_g.o obj/libgmp.a obj/libpng.a -lz -o bin/merge_g $(LINK_AFTER)
 
-merge_rgb: obj/libgmp.a obj/libpng.a obj/merge_rgb.o bin
+bin/merge_rgb: obj/libgmp.a obj/libpng.a obj/merge_rgb.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/merge_rgb.o obj/libgmp.a obj/libpng.a -lz -o bin/merge_rgb $(LINK_AFTER)
 
-scale_rgb: obj/libgmp.a obj/libpng.a obj/scale_rgb.o bin
+bin/scale_rgb: obj/libgmp.a obj/libpng.a obj/scale_rgb.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/scale_rgb.o obj/libgmp.a obj/libpng.a -lz -o bin/scale_rgb $(LINK_AFTER)
 
-scale_g: obj/libgmp.a obj/libpng.a obj/scale_g.o bin
+bin/scale_g: obj/libgmp.a obj/libpng.a obj/scale_g.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/scale_g.o obj/libgmp.a obj/libpng.a -lz -o bin/scale_g $(LINK_AFTER)
 
-zoom_rgb: obj/libgmp.a obj/libpng.a obj/zoom_rgb.o bin
+bin/zoom_rgb: obj/libgmp.a obj/libpng.a obj/zoom_rgb.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/zoom_rgb.o obj/libgmp.a obj/libpng.a -lz -o bin/zoom_rgb $(LINK_AFTER)
 
-zoom_g: obj/libgmp.a obj/libpng.a obj/zoom_g.o bin
+bin/zoom_g: obj/libgmp.a obj/libpng.a obj/zoom_g.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/zoom_g.o obj/libgmp.a obj/libpng.a -lz -o bin/zoom_g $(LINK_AFTER)
 
 
-mandel: obj/libgmp.a obj/libpng.a obj/main.o bin
+bin/mandel: obj/libgmp.a obj/libpng.a obj/main.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/main.o obj/libgmp.a obj/libpng.a -lz -o bin/mandel $(LINK_AFTER)
 
-2bw: obj/libgmp.a obj/libpng.a obj/blackwhite.o bin
+bin/2bw: obj/libgmp.a obj/libpng.a obj/blackwhite.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/blackwhite.o obj/libgmp.a obj/libpng.a -lz -o bin/2bw 
 
-pp: obj/libgmp.a obj/libpng.a obj/postprocess.o obj/libjson.la bin 
+bin/pp: obj/libgmp.a obj/libpng.a obj/postprocess.o obj/libjson.la bin 
 	$(LINK) ${HPP_OBJ_FILES} obj/postprocess.o obj/libgmp.a obj/libpng.a obj/libjson.la -lz -o bin/pp
 
-info: obj/libgmp.a obj/libpng.a obj/info.o bin
+bin/info: obj/libgmp.a obj/libpng.a obj/info.o bin
 	$(LINK) ${HPP_OBJ_FILES} obj/info.o obj/libgmp.a obj/libpng.a -lz -o bin/info
 
 

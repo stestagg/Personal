@@ -19,7 +19,7 @@ shared : bin/libJSONpp.so
 
 # Build shared library
 bin/libJSONpp.so : obj/ bin/ $(addsuffix .o,$(addprefix obj/,${FILES})) 
-	$(CXX) -shared -fPIC -Wl -o bin/libJSONpp.so $(addsuffix .o,$(addprefix obj/,${FILES})) 
+	$(CXX) -shared -fPIC -o bin/libJSONpp.so $(addsuffix .o,$(addprefix obj/,${FILES})) 
 
 # Build static library
 bin/libJSONpp.la : obj/ bin/ $(addsuffix .o,$(addprefix obj/,${FILES}))

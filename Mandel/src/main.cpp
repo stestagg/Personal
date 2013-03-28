@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <stdint.h>
 #include "common.hpp"
 #include "output.hpp"
