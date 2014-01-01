@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "parser_UTF8.h"
 #include "convert.h"
 

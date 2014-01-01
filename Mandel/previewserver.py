@@ -22,6 +22,7 @@ def hello_world():
         $("#i").click(function(e){
             var ox = e.offsetX;
             var oy = e.offsetY;
+            console.log(ox, oy);
             window.location = "/s/" + ox + "/" + oy + "" + window.location.search;
             })
         })
@@ -55,11 +56,11 @@ def subdivide(dx, dy):
     y = request.args.get("y", "0")
     wid = request.args.get("wid", "2")
     gwid=gmpy.mpf(wid)
-    dx = ((int(dx)/float(SIZE)) - 0.5) * (gwid*2)
-    dy = ((int(dy)/float(SIZE)) - 0.5) * (gwid*2)
+    dx = ((int(dx)/float(SIZE)) - 0.5) * (gwid)
+    dy = ((int(dy)/float(SIZE)) - 0.5) * (gwid)
     gx = gmpy.mpf(x) + dx
     gy = gmpy.mpf(y) + dy
-    gwid/=5
+    gwid/=2
     return redirect("/?iters=%s&x=%s&y=%s&wid=%s" % (iters, str(gx), str(gy), str(gwid)))
 
 @app.route("/out/<ratio>/")

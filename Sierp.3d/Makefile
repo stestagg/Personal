@@ -10,8 +10,11 @@ build: bin/calc bin/render bin/sierp2d
 
 test: ico.png out-0-3.png
 
-bin/calc: calc3d.cpp *.hpp 
-	${CC} calc3d.cpp -o bin/calc -lz
+bin/calc1: calc1.cpp *.hpp 
+	${CC} calc1.cpp -o bin/calc1 -lz
+
+bin/calc2: calc2.cpp *.hpp 
+	${CC} calc2.cpp -o bin/calc2 -lz
 
 bin/render: render3d.cpp *.hpp
 	${CC} render3d.cpp -o bin/render -lpng -lz

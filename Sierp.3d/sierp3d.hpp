@@ -4,6 +4,7 @@
 #include "grid.hpp"
 #include <math.h>
 #include <vector>
+#include <cstdlib>
 
 namespace sierp3d {
 
@@ -45,6 +46,11 @@ namespace sierp3d {
 		std::vector<Point<double> > points;
 
 		Model(){}
+
+        const Point<T> approachRandom(const Point<T> current) {
+            int point_num = rand() % points.count();
+            return current.approach(points[point_num]);
+        }
 
 		bool next(GridT &from, GridT &to){
             to.copy_from(from);

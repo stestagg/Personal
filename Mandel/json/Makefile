@@ -3,7 +3,7 @@
 
 CXXFLAGS = -O2 -fPIC -DJSON_POSIX -I./libJSONpp/maps
 CXX = g++ $(CXXFLAGS)
-LD = ld
+LD = $(CXX) # ld
 #-Wall
 
 FILES = value parser_errors parser_UNI parser_UTF8 convert types maps/sfh
