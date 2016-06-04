@@ -123,7 +123,7 @@ char *tochar(const wchar_t *src,size_t len,size_t &olen){
 	#ifdef JSON_POSIX
 		const wchar_t cranges[4]={0x00007F, 0x0007FF, 0x00FFFF, 0x10FFFF};
 		const wchar_t masks[4]  ={0X3F,     0xFC0,    0x3F000,  0x1C0000};
-		const char pfx[4]  ={0X0,     0xC0,    0xE0,  0xF0};
+		const unsigned char pfx[4]  ={0X0, 0xC0, 0xE0,0xF0};
 		const wchar_t *i=src;
 		const wchar_t *ie = src+len;
 		size_t bc=0;
@@ -132,7 +132,7 @@ char *tochar(const wchar_t *src,size_t len,size_t &olen){
 			else if (*i < cranges[1]) bc+=2;
 			else if (*i < cranges[2]) bc+=3;
 			else if (*i < cranges[3]) bc+=4;
-			else return false;
+			else return NULL;
 		}
 		olen = bc;
 		i=src;

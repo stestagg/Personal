@@ -1288,7 +1288,7 @@ value *value::childexists(value *aval){
 			if ((*cur) == aval) return aval;
 		}
 	}
-	return false;
+	return NULL;
 }
 
 	/*!
