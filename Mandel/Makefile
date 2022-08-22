@@ -58,10 +58,10 @@ libs obj bin:
 
 # 2. Download libs
 obj/gmp.tbz: | obj
-	curl https://gmplib.org/download/gmp/gmp-6.1.0.tar.bz2 > obj/gmp.tbz
+	curl https://gmplib.org/download/gmp/gmp-6.2.1.tar.lz > obj/gmp.tbz
 
 obj/png.tgz: | obj
-	curl ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng16/libpng-1.6.22.tar.gz > obj/png.tgz
+	curl https://kumisystems.dl.sourceforge.net/project/libpng/libpng16/1.6.37/libpng-1.6.37.tar.xz > obj/png.tgz
 
 # 3. Unpack libs
 libs/gmp/configure: obj/gmp.tbz

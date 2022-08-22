@@ -2,7 +2,7 @@
 
 from flask import Flask, request, redirect, render_template 
 import subprocess
-import cStringIO as StringIO
+from io import StringIO
 import json
 import gmpy
 import os
@@ -65,8 +65,7 @@ def map(img_no=0):
 @app.route("/map/bw/<img_no>/")
 def bw_img(img_no=0):
     from_name = "%s" % img_no
-    base = "/Users/sstagg/tmp/short1small/%s" % from_name
-    print base
+    base = "/Users/sstagg/tmp/short1small/%s" % from_name    
     bw = check_png("2bw", [base, "/dev/stdout"], stdin=None)
     return bw, 200, {"Content-type": "image/png"}
 

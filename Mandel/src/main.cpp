@@ -67,7 +67,7 @@ int main(int argc, const char **argv){
     const char *file_name = argv[5];
     double aspect_ratio = image_height / double(image_width)    ;
 
-    mpf_set_default_prec(255);
+    mpf_set_default_prec(512);
 
     grid<grayalpha<itertype, double> > final(image_width, image_height);
 
